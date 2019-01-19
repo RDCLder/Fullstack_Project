@@ -41,8 +41,8 @@
     - Be able to filter by ingredients available, by category, whatever else might be relevant
         - Potentially kitchen tools/equipment (e.g. air fryer)?
     - Use image recognition to be able to recognize separate ingredients
-        - Have to use external API for this.  Computer vision is currrently beyond our scope.
-        - I think just uploading pictures or maybe directly using the camera on separate ingredients is viable.
+        - Consider [Food](https://clarifai.com/models/food-image-recognition-model-bd367be194cf45149e75f01d59f77ba7) API
+        - Provide ability to upload images/video.
 
 ### Just For Fun
 
