@@ -1,0 +1,12 @@
+
+.container {
+    height: 1000px;
+}
+
+.popularVisual {
+    border: solid blue;
+}
+
+.row {
+    height: 10%;
+}   
