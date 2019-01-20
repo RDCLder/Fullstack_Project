@@ -18,6 +18,11 @@
     - Have upvotes and downvotes available by default
     - Allow downvotes to be reserved to those who meet a certain karma/seniority/other metric threshold like Hackernews
     - What other features could be improved upon?
+  - API Calls
+    - Popular Words Data Visualization
+	  - [Example](https://io9.gizmodo.com/fascinating-data-visualization-shows-which-words-we-use-1720354752)
+	  - Need to find actual API
+
 
 - Open source journal for hosting scientific papers
   - Look into the layout and logic for websites like elsevier, sci-hub, etc.
