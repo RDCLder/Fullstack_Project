@@ -150,6 +150,19 @@ a.article:hover {
     z-index: 2;
 }
 
+#navbarRow {
+    height: 50px;
+    width: 100%;
+}
+
+#navbarCol {
+    height: 100%;
+    display: flex;
+    border: solid orange;
+    justify-content: center;
+    align-items: center;
+}
+
 a,
 a:hover,
 a:focus {
@@ -180,35 +193,83 @@ body {
 }
 
 .container {
-    height: 1000px;
-    /* z-index: 1; */
-    border: solid orange;
+    height: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    z-index: 1;
+    /* border: solid orange; */
 }
 
 .row {
+    display: flex;
     height: 10%;
-    border: solid blue;
+    /* border: solid blue; */
+    margin: 0;
+    padding: 0;
 }
 
 .col {
+    display: flex;
     height: auto;
-    border: solid green;
+    /* border: solid green; */
     width: auto;
+    margin: 0;
+    padding: 0;
 }
 
-.card {
-    margin-top: 2%;
+#topicCard {
+    margin-top: 5px;
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    border-radius: 3%;
+    border: solid #DDDDDD;
+    border-width: thin;
 }
 
-p {
-    /* font-family: 'Poppins', sans-serif; */
+#communityCard {
+    margin-top: 5px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+#trendingCommunity {
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    padding-left: 5%;
+    /* border-bottom: solid #DDDDDD; */
+    /* border-width: thin; */
+}
+
+.card-header {
+    color: white; 
+    background-color: #4B8AE5;
+}
+
+.card-body {
+    display: inline-block;
+    width: 100%;
+    /* border: solid orange; */
+}
+
+#card-side {
+    background-color: #D9E8FB;
+}
+
+/* h6 {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
+} */
+
+p {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.0em;
 }
 
 /* ---------------------------------------------------
@@ -217,4 +278,13 @@ p {
 
 .popularVisual {
     border: solid blue;
+}
+
+.colorPalette {
+    color: #D9E8FB;
+    color: #FEFEFE;
+    color: #4B8AE5;
+    color: #D0D0D0;
+    color: #878889;
+    color: #B1C9EF;
 }

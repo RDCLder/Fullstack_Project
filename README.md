@@ -1,69 +1,53 @@
-# Fullstack Project
+# Trender: A Reddit Clone
 
-## Project Ideas
+## General
 
-### Practical/Useful
-
-- Platform for connecting people looking to learn new professional skills or learn how the actual process of beginning a professional career from education to industry is like to actual professionals who can provide insight and mentoring.
-    - Erick's idea
-    - Look into how Thinkful's data science bootcamp works
-        - They connect aspiring data science students with actual professional data scientists
-
-- Reddit/hackernews hybrid
-  - See [this React and Node clone](https://www.reddit.com/r/reactjs/comments/9g8xxm/i_made_a_reddit_clone_with_reactjs_and_nodejs_for/)
-  - Need it addresses
+- Need it addresses
     - Hackernews is a well-curated community
     - Reddit's biggest pitfall is the lack of quality content because of the "hivemind" mentality that downvoting encourages.
-  - My approach
-    - Have upvotes and downvotes available by default
-    - Allow downvotes to be reserved to those who meet a certain karma/seniority/other metric threshold like Hackernews
-    - What other features could be improved upon?
-  - API Calls
+
+- API Calls
     - Popular Words Data Visualization
-	  - [Example](https://io9.gizmodo.com/fascinating-data-visualization-shows-which-words-we-use-1720354752)
-	  - Need to find actual API
+        - [Example](https://io9.gizmodo.com/fascinating-data-visualization-shows-which-words-we-use-1720354752)
+        - Need to find actual API
+    - [Clarifai Computer Vision AI](https://clarifai.com/)
+        - Upload image/video and the AI will classify what the image with a certain probability
+        - Can be used to help users filter by topics similar to results
+            - Maybe tie to first five results
+            - Give user the chance to remove result that is inaccurate
+            - Could this be used to train their model?
 
 
-- Open source journal for hosting scientific papers
-  - Look into the layout and logic for websites like elsevier, sci-hub, etc.
-  - Look into EU's zenodo.org
-  - How do you rank credibility/prestige?
-      - Is there an ELO system that we can use like PageRank?
-  - arxiv is apparently good for tech
-  - Can we use blockchain for this?
+- Database
+    - Sequelize & PostgreSQL
+    - Tables
+        - Subreddits
+        - Topics
+        - Users
+        - Posts
 
-- Unified ride-hailing platform for:
-  - Cars
-  - Scooters
-  - Bikes?
-  - Other?
+## Ideas
 
-- Recipe Platform with version control and image recognition
-    - Use git to allow users to make branches/clones of recipes and iterate upon them
-        - Keeps track of different versions to allow for better experimenting
-    - Have user accounts so users can save and upload recipes
-        - Allow users to save ingredients and anything else that might be relevant
-    - Be able to filter by ingredients available, by category, whatever else might be relevant
-        - Potentially kitchen tools/equipment (e.g. air fryer)?
-    - Use image recognition to be able to recognize separate ingredients
-        - Consider [Food](https://clarifai.com/models/food-image-recognition-model-bd367be194cf45149e75f01d59f77ba7) API
-        - Provide ability to upload images/video.
+- Allow for custom subs
+    - Merge together existing subs
 
-### Just For Fun
+- Reactions Instead of Upvote/Downvote
+    - Generic upvote/like/good reaction by default
+    - Add ability to have other reactions enabled
+        - Funny
+        - Informative
+        - Sad/Angry
+    - Downvote/dislike/bad reaction restricted by a certain metric
+        - Default metric could be 500 good/neutral reactions/karma
+        - Other metrics:
+            - Time subscribed to sub
+            - Age of account
+        - Make it customizable by subcreator/moderators
 
-- Maybe a combined games app that offers:
-  - Card games (e.g. Blackjack, Texas Hold 'Em)
-  - Rubik's Cube generator (see below)
-  - Sudoku generator (see below)
-
-- Rubik’s Cube with customizable dimensions
-  - Provide algorithmic solution if player requests it
-  - Provide moves necessary for shortest path
-  - Provide challenges like solve within x moves
-
-- Sudoku with non-square patterns
-  - Sudoku has 9 3x3 squares, but what if those shapes weren’t squares?
-  - They would still have 9 total spaces for filling 1-9, but they could be an irregular shape like a 2x4 rectangle with an extra space attached somewhere.
+- Inspiration & Guides
+    - [Dribble Designs](https://dribbble.com/RDCLder/buckets/1011227-Reddit-Clone)
+    - [React/Firebase Clone](https://www.sitepoint.com/reddit-clone-react-firebase/)
+    - [Official Reddit Github](https://github.com/reddit/)
 
 ## Schedule
 

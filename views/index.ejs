@@ -10,28 +10,36 @@
     <% include partials/sidebar.ejs %>
     <% include partials/navbar.ejs %>
 
-    <div class="container">
+    <div class="container m-0 p-0">
+        <div class="row" style="height: 80px;"></div>
+        <div class="row m-0 p-0">
 
-        <!-- Visualization for popular subs and searchwords -->
-        <!-- <div class="row" id="popularVisual"></div> -->
+            <!-- Visualization for popular subs and searchwords -->
+            <!-- <div class="row" id="popularVisual"></div> -->
 
-        <!-- Main Content -->
-        <div class="col-8">
+            <div class="col-1"></div>
 
-            <!-- Mock-up Example -->
-            <% include partials/topicCard.ejs %>
+            <!-- Main Content -->
+            <div class="col-7 m-0 p-0">
+
+                <!-- Mock-up Example -->
+                <% include partials/cards/topicText.ejs %>
+                <% include partials/cards/topicLink.ejs %>
+                <% include partials/cards/topicText.ejs %>
+                <% include partials/cards/topicLink.ejs %>
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Side Content -->
+            <div class="col-4 m-0 p-0">
+
+                <% include partials/cards/trendingCommunity.ejs %>
+
+            </div>
+            <!-- End of Side Content -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Side Content -->
-        <div class="col-4">
-
-
-
-        </div>
-        <!-- End of Side Content -->
-
     </div>
 
     <% include partials/jsdefaults.ejs %>
