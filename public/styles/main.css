@@ -10,3 +10,76 @@
 .row {
     height: 10%;
 }   
+
+#subforum-title {
+    background-color: #4B8AE5;
+    height: 10vh;
+
+}
+
+#subforum-logo {
+    border-radius: 50%;
+}
+
+#subforum-navi{
+    background-color: #D9E8FB; 
+}
+
+.subforum-body{
+    height: auto;
+    width: auto;
+}
+
+#subforum-body-content {
+    border: 1px solid red;
+    height: auto;
+}
+
+#subforum-body-sidebar {
+    border: 1px solid blue;
+    height: auto;
+}
+
+.community-details{
+    text-align: left;    
+    height: auto;
+    width: auto;
+    margin-bottom: 20%;
+    background-color: white;
+}
+
+.community-name{
+    background-color: rgb(68, 127, 209);
+    color: white;
+}
+
+.subforum-container {
+    background-color: rgb(192, 198, 219);
+}
+
+.moderators {
+    text-align: left;    
+    height: auto;
+    width: auto;
+    margin-bottom: 20%;
+}
+
+.moderators-title {
+    background-color: rgb(68, 127, 209);
+    color: white;
+}
+
+.subforum-rules {
+    margin-bottom: 20%;
+    height: auto;
+    width: auto;
+}
+
+.rules-title {
+    background-color: rgb(68, 127, 209);
+    color: white;
+}
+
+#rule-description-1 #rule-description-2 #rule-description-3{
+    display: none;
+}

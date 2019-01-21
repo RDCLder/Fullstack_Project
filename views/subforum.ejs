@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+    <div class="subforum-container">
+        <div class="subforum-header">
+            <div class="row" id="subforum-title">
+                <nav class="navbar navbar-dark">
+                    <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG" width="30" height="30" alt="" id="subforum-logo"> <%= pageTitle %>
+                    </a>
+                </nav>
+            </div>
+            <div class="row" id="subforum-navi">
+                <nav class="navbar navbar-dark">
+                    <a class="nav-link" href="/subforum">Posts</a>
+                </nav>
+            </div>
+        </div>
+        <div class="subforum-body container">
+            <div class="row">
+                <div class="col-9" id="subforum-body-content" >
+                </div>
+                <div class="col-3" id="subforum-body-sidebar">
+                    <div class="row community-details">
+                        <div class="card community-body">
+                            <h5 class="card-header community-name"><%= pageTitle %></h5>
+                            <p class="community-content">If you love to imagine the planet-exploding battles of the fictional gods who will never be, taking pointless knowledge gathered from a life spent reading and gaming and swinging it like a gladiator's sword in discussions on reddit... then welcome home, my friend. You are indeed where you belong. Come join our discussions, post your own battles and kick some ass!</p>     
+                            <input class="btn" style="background-color: rgb(68, 127, 209); color: white;" type="submit" value="Subscribe">
+                            <a class="btn" style="background-color: rgb(68, 127, 209); color: white;"  href="#" role="button">Create Post</a>
+                        </div>
+                    </div>
+                    <div class="row subforum-rules">
+                        <div class="card rules-body" style="width: 18rem;">
+                            <div class="card-header rules-title">
+                                <%= pageTitle %> RULES
+                            </div>
+                            <ol class="list-group list-group-flush">
+                                <li class="list-group-item" onclick="toggledisplay('rule-description-1')">Cras justo odio<div id="rule-description-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut commodi dolores ratione dignissimos ipsa quidem. Eaque eius eveniet eos architecto! Voluptatem velit molestias possimus deserunt consequatur odio expedita porro deleniti!</div></button></li>
+                                <li class="list-group-item" onclick="toggledisplay('rule-description-2')">Dapibus ac facilisis in<div id="rule-description-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum velit corporis assumenda sit alias aliquam quis odit, illum, consectetur nam quidem. Consequuntur pariatur enim quae vitae maxime, incidunt omnis?</div></li>
+                                <li class="list-group-item" onclick="toggledisplay('rule-description-3')">Vestibulum at eros<div id="rule-description-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi dolorem reprehenderit esse dicta exercitationem odio distinctio libero dolore! Sit voluptas ad quae suscipit quia! Temporibus vero labore nostrum explicabo?</div></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row moderators">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-header moderators-title">
+                                MODERATORS
+                            </div>
+                            <ul class="list-group list-group-flush" id="moderator-list">
+                                <li class="list-group-item"><a href="#" class="moderator-link">Phong</a></li>
+                                <li class="list-group-item"><a href="#" class="moderator-link">Ray</a></li>
+                                <li class="list-group-item"><a href="#" class="moderator-link">Test</a></li>                                           
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include partials/jsdefaults.ejs %>
+</body>
+</html>

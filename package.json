@@ -1,0 +1,27 @@
+{
+  "name": "fullstack_project",
+  "version": "1.0.0",
+  "description": "## Project Ideas",
+  "main": "app.js",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "pg-promise": "^8.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RDCLder/Fullstack_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RDCLder/Fullstack_Project/issues"
+  },
+  "homepage": "https://github.com/RDCLder/Fullstack_Project#readme"
+}

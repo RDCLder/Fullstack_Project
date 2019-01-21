@@ -6,6 +6,7 @@ app.set('views', 'views');
 
 app.use(express.static("public"));
 app.use(require("./routes/index"));
+app.use(require("./routes/subforum"))
 
 app.listen(3000, ()=>{
     console.log('listening on port 3000')
