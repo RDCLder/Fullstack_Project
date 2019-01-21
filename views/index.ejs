@@ -7,24 +7,30 @@
 
 <body>
 
-    <div class="container" style="background-color: midnightblue;">
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+
+    <div class="container">
 
         <!-- Visualization for popular subs and searchwords -->
-        <div class="row" id="popularVisual">
+        <!-- <div class="row" id="popularVisual"></div> -->
+
+        <!-- Main Content -->
+        <div class="col-8">
+
+            <!-- Mock-up Example -->
+            <% include partials/topicCard.ejs %>
 
         </div>
+        <!-- End of Main Content -->
 
-        <div class="row" style="background-color: darkgoldenrod"></div>
+        <!-- Side Content -->
+        <div class="col-4">
 
-        <div class="row" style="background-color: midnightblue"></div>
 
-        <div class="row" style="background-color: darkgoldenrod"></div>
 
-        <div class="row" style="background-color: midnightblue"></div>
-
-        <div class="row" style="background-color: darkgoldenrod"></div>
-
-        <div class="row" style="background-color: midnightblue"></div>
+        </div>
+        <!-- End of Side Content -->
 
     </div>
 
