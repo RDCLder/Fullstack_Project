@@ -11,31 +11,31 @@
     height: 10%;
 }   
 
-#subforum-title {
+#community-title {
     background-color: #4B8AE5;
     height: 10vh;
 
 }
 
-#subforum-logo {
+#community-logo {
     border-radius: 50%;
 }
 
-#subforum-navi{
+#community-navi{
     background-color: #D9E8FB; 
 }
 
-.subforum-body{
+.community-body{
     height: auto;
     width: auto;
 }
 
-#subforum-body-content {
+#community-body-content {
     border: 1px solid red;
     height: auto;
 }
 
-#subforum-body-sidebar {
+#community-body-sidebar {
     border: 1px solid blue;
     height: auto;
 }
@@ -53,7 +53,7 @@
     color: white;
 }
 
-.subforum-container {
+.community-container {
     background-color: rgb(192, 198, 219);
 }
 
@@ -69,7 +69,7 @@
     color: white;
 }
 
-.subforum-rules {
+.community-rules {
     margin-bottom: 20%;
     height: auto;
     width: auto;
