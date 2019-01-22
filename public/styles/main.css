@@ -83,3 +83,7 @@
 #rule-description-1 #rule-description-2 #rule-description-3{
     display: none;
 }
+
+.btn {
+    border: .2px solid blue;
+}
