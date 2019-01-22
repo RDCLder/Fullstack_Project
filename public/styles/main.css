@@ -1,4 +1,6 @@
-
+body {
+    background-color: whitesmoke;
+}
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -11,7 +13,7 @@
     right: -250px;
     height: 100vh;
     z-index: 999;
-    background: #4B8AE5;
+    background: #3A66A7;
     color: white;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -31,7 +33,7 @@
     height: 35px;
     line-height: 35px;
     text-align: center;
-    background: #4B8AE5;
+    background: #3A66A7;
     position: absolute;
     top: 10px;
     right: 8px;
@@ -64,14 +66,13 @@
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #4B8AE5;
-    border: solid orange;
+    background: #3A66A7;
     color: white;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #4B8AE5;
+    border-bottom: 1px solid #3A66A7;
 }
 
 #sidebar ul p {
@@ -93,7 +94,7 @@
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #4B8AE5;
+    background: #3A66A7;
 }
 
 a[data-toggle="collapse"] {
@@ -111,7 +112,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-right: 30px !important;
-    background: #4B8AE5;
+    background: #3A66A7;
 }
 
 ul.CTAs {
@@ -126,14 +127,9 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
 a.article,
 a.article:hover {
-    background: #4B8AE5 !important;
+    background: #3A66A7 !important;
     color: #fff !important;
 }
 
@@ -144,9 +140,8 @@ a.article:hover {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: #4B8AE5;
+    background-color: #3A66A7;
     color: white;
-    /* border: solid orange; */
     z-index: 2;
 }
 
@@ -158,9 +153,9 @@ a.article:hover {
 #navbarCol {
     height: 100%;
     display: flex;
-    border: solid orange;
     justify-content: center;
     align-items: center;
+    /* border: solid orange; */
 }
 
 a,
@@ -218,8 +213,15 @@ body {
 }
 
 #topicCard {
-    margin-top: 5px;
     margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+#dashboardCard {
+    margin-bottom: 4%;
     margin-left: 2%;
     margin-right: 2%;
     border: solid #DDDDDD;
@@ -227,15 +229,14 @@ body {
 }
 
 #communityCard {
-    margin-top: 5px;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     margin-left: 2%;
     margin-right: 2%;
     border: solid #DDDDDD;
     border-width: thin;
 }
 
-#trendingCommunity {
+#communityBody {
     margin: 0;
     padding: 0;
     padding-top: 2%;

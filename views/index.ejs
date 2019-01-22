@@ -20,7 +20,7 @@
             <div class="col-1"></div>
 
             <!-- Main Content -->
-            <div class="col-7 m-0 p-0">
+            <div class="col-7 m-0" id="mainContent">
 
                 <!-- Mock-up Example -->
                 <% include partials/cards/topicText.ejs %>
@@ -32,8 +32,9 @@
             <!-- End of Main Content -->
 
             <!-- Side Content -->
-            <div class="col-4 m-0 p-0">
+            <div class="col-4 m-0 p-0" id="sideContent">
 
+                <% include partials/cards/dashboard.ejs %>
                 <% include partials/cards/trendingCommunity.ejs %>
 
             </div>
