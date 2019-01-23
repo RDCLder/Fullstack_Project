@@ -295,6 +295,9 @@ Community Page
     border-width: thin;
 }
 
+.ruleDescription {
+    display: none;
+}
 /* #community-title {
     background-color: #4B8AE5;
     height: 10vh;
