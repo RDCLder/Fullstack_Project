@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "fullstack_project",
   "version": "1.0.0",
   "description": "## Project Ideas",
+=======
+  "name": "trender",
+  "version": "1.0.0",
+  "description": "## General",
+>>>>>>> 12e1f150a4f4da7a15653e4f5bd617289f96ceab
   "main": "app.js",
   "dependencies": {
     "bluebird": "^3.5.3",
