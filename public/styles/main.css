@@ -256,7 +256,7 @@ body {
     /* border: solid orange; */
 }
 
-#card-side {
+.card-side {
     background-color: #D9E8FB;
 }
 
@@ -284,8 +284,18 @@ p {
 .row {
     height: 10%;
 }   
+/* -----------------------------------------------------  
+Community Page 
+--------------------------------------------------------*/
+#communityDeatails {
+    margin-bottom: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
 
-#community-title {
+/* #community-title {
     background-color: #4B8AE5;
     height: 10vh;
 
@@ -360,7 +370,8 @@ p {
 
 .btn {
     border: .2px solid blue;
-}
+} */
+/* -------------------------------------------- */
 .colorPalette {
     color: #D9E8FB;
     color: #FEFEFE;
