@@ -5,10 +5,10 @@ const initOptions = {
 }
 
 const config = {
-    host: 'localhost',
+    host: 'postgres',
     port: 5432,
     database: 'fullstackDB',
-    user: 'rdclder'
+    user: 'postgres'
 }
 
 const pgp = require('pg-promise')(initOptions);

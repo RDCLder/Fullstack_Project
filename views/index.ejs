@@ -7,25 +7,40 @@
 
 <body>
 
-    <div class="container" style="background-color: midnightblue;">
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+    
+    <div class="container m-0 p-0">
+        <div class="row" style="height: 80px;"></div>
+        <div class="row m-0 p-0">
 
-        <!-- Visualization for popular subs and searchwords -->
-        <div class="row" id="popularVisual">
+            <!-- Visualization for popular subs and searchwords -->
+            <!-- <div class="row" id="popularVisual"></div> -->
+
+            <div class="col-1"></div>
+
+            <!-- Main Content -->
+            <div class="col-7 m-0" id="mainContent">
+
+                <!-- Mock-up Example -->
+                <% include partials/cards/topicText.ejs %>
+                <% include partials/cards/topicLink.ejs %>
+                <% include partials/cards/topicText.ejs %>
+                <% include partials/cards/topicLink.ejs %>
+
+            </div>
+            <!-- End of Main Content -->
+            
+            <!-- Side Content -->
+            <div class="col-4 m-0 p-0" id="sideContent">
+
+                <% include partials/cards/dashboard.ejs %>
+                <% include partials/cards/trendingCommunity.ejs %>
+
+            </div>
+            <!-- End of Side Content -->
 
         </div>
-
-        <div class="row" style="background-color: darkgoldenrod"></div>
-
-        <div class="row" style="background-color: midnightblue"></div>
-
-        <div class="row" style="background-color: darkgoldenrod"></div>
-
-        <div class="row" style="background-color: midnightblue"></div>
-
-        <div class="row" style="background-color: darkgoldenrod"></div>
-
-        <div class="row" style="background-color: midnightblue"></div>
-
     </div>
 
     <% include partials/jsdefaults.ejs %>
