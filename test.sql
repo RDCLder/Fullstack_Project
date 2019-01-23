@@ -1,12 +1,13 @@
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(30),
-    bio VARCHAR(100)
+    username VARCHAR(20),
+    email VARCHAR(40),
+    bio VARCHAR(500)
 );
 
 CREATE TABLE community (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(30),
+    name VARCHAR(30),
     description VARCHAR(10000)
 );
 
@@ -16,24 +17,25 @@ CREATE TABLE community (
 
 CREATE TABLE rule (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(50),
+    name VARCHAR(100),
     body VARCHAR(200),
     community_id INTEGER REFERENCES community (id)
 );
 
 CREATE TABLE topic (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(50),
+    title VARCHAR(100),
+    body VARCHAR(10000),
     author_id INTEGER REFERENCES users (id),
     community_id INTEGER REFERENCES community (id)
 );
 
 CREATE TABLE comment (
     id SERIAL PRIMARY KEY,
+    body VARCHAR(2000),
     author_id INTEGER REFERENCES users (id),
     topic_id INTEGER REFERENCES community (id),
-    parent_id INTEGER REFERENCES comment (id), -- Can be null if there is no parent comment
-    body VARCHAR(1000)
+    parent_id INTEGER REFERENCES comment (id) -- Can be null if there is no parent comment
 );
 
 ------------------------------

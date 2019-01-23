@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     const topic = sequelize.define(
         "topic",
         {
-            tile: DataTypes.STRING
+            title: DataTypes.STRING(100),
+            body: DataTypes.STRING(10000)
         },
         {
             freezeTableName: true

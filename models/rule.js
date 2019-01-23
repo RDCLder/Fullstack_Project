@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     const rule = sequelize.define(
         "rule",
         {
-            tile: DataTypes.STRING
+            name: DataTypes.STRING(100),
+            body: DataTypes.STRING(200)
         },
         {
             freezeTableName: true
