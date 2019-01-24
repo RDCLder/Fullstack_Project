@@ -1,6 +1,13 @@
-<div id="loginModal" class="modal">
+<!doctype html>
+<html lang="en">
 
-    <form class="modal-content animate" action="/action_page.php">
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <form class="modal-content" action="/action_page.php">
         <div class="imgcontainer">
             <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="#" alt="" class="avatar">
@@ -35,4 +42,7 @@
         </div>
     </form>
 
-</div>
+    <% include partials/jsdefaults.ejs %>
+</body>
+
+</html>
