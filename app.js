@@ -37,7 +37,7 @@ app.set('views', 'views');
 app.use(express.static("public"));
 app.use(require("./routes/index"));
 app.use(require("./routes/community"));
-app.use(require("./routes/login"));
+// app.use(require("./routes/login"));
 
 // db.sequelize.migrate;
 // db.sequelize.drop();
