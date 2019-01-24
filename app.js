@@ -38,10 +38,11 @@ app.use(express.static("public"));
 app.use(require("./routes/index"));
 app.use(require("./routes/community"));
 // app.use(require("./routes/login"));
+// app.use(require("./routes/register"));
 
 // db.sequelize.migrate;
 // db.sequelize.drop();
-db.sequelize.sync();
+// db.sequelize.sync();
 
 app.listen(3000, ()=>{
     console.log('listening on port 3000')

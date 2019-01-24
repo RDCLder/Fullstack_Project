@@ -9,16 +9,17 @@
         <% include partials/sidebar.ejs %>
     </header>
     <% include partials/navLogin.ejs %>
+    <% include partials/navSignup.ejs %>
     <div class="container-fluid m-0 p-0">
         <div class="row" style="height: 60px;"></div>
-        <div class="row m-0 p-0" style="border: 1px solid red">
+        <div class="row m-0 p-0">
             <div class="col-1 m-0 p-0"></div>
             <!-- Community Main Content-->
-            <div class="col-6 m-0 p-0" id="communityMainContent" style="border: 1px solid green">
+            <div class="col-6 m-0 p-0" id="communityMainContent">
                 <% include partials/cards/communityTopicText.ejs %>
             </div>
              <!-- Community Side Content-->
-            <div class="col-4 m-0 p-0" id="communitySideContent" style="border: 1px solid orange">
+            <div class="col-4 m-0 p-0" id="communitySideContent">
                 <% include partials/cards/communityDetails.ejs %>
                 <% include partials/cards/communityRules.ejs %>
                 <% include partials/cards/communityModerators %>

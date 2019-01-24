@@ -29,12 +29,12 @@ myStore.sync();
 router.use(passport.initialize());
 router.use(passport.session());
 
-router.get("/login", (req, res) => {
-    res.render("/login", {
+router.get('/login', function (req, res) {
+    res.render('login',{
         pageTitle: "Login",
-        pageID: "login"
-    });
-});
+        pageId: "login"
+    }); //end of res.send
+});//end of app.get
 
 router.post("/login",
     passport.authenticate("local", {
