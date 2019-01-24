@@ -8,7 +8,7 @@
         <% include partials/navbar.ejs %>
         <% include partials/sidebar.ejs %>
     </header>
-    
+    <% include partials/navLogin.ejs %>
     <div class="container-fluid m-0 p-0">
         <div class="row" style="height: 60px;"></div>
         <div class="row m-0 p-0" style="border: 1px solid red">
@@ -21,6 +21,7 @@
             <div class="col-4 m-0 p-0" id="communitySideContent" style="border: 1px solid orange">
                 <% include partials/cards/communityDetails.ejs %>
                 <% include partials/cards/communityRules.ejs %>
+                <% include partials/cards/communityModerators %>
             </div>
             <div class="col-1 m-0 p-0"></div>
         </div>

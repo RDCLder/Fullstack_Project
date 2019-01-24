@@ -14,13 +14,41 @@
 <script>
   function toggledisplay(elementID)
     {
-        (function(style) {
-            style.display = style.display === 'none' ? '' : 'none';
-        })(document.getElementById(elementID).style);
+        if(document.getElementById(elementID).style.display ==='none'){
+            document.getElementById(elementID).style.display='block';
+        } else {
+            document.getElementById(elementID).style.display='none';
+        }
     }
        
 </script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('loginModal');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+<script>
+    // var coll = document.getElementsByClassName("collapsible");
+    // var i;
 
+    // for (i = 0; i < coll.length; i++) {
+    // coll[i].addEventListener("click", function() {
+    //     this.classList.toggle("active");
+    //     var content = this.closest('.card-body');
+    //     if (content.style.display === "inline-block") {
+    //     content.style.display = "none";
+    //     } else {
+    //     content.style.display = "inline-block";
+    //     }
+    // });
+    // }
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#sidebar").mCustomScrollbar({
