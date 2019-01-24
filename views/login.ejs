@@ -7,7 +7,7 @@
 
 <body>
 
-    <form class="modal-content" action="/action_page.php">
+    <form class="modal-content" action="/">
         <div class="imgcontainer">
             <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="#" alt="" class="avatar">
@@ -34,14 +34,12 @@
             <div class="row">
                 <div class="col"><button type="button" onclick="document.getElementById('loginModal').style.display='none'"
                         class="cancelbtn">Cancel</button></div>
-                <div close="col"><span class="forgotusr">
-                        <div class="col"><a href="#">Forgot Username?</a>
-                    </span></div>
-                <div class="col"><span class="forgotpsw"><a href="#">Forgot Password?</a></div>
+                <div close="col"><span class="forgotusr"><a href="#">Forgot Username?</a></span></div>
+                <div class="col"><span class="forgotpsw"><a href="#">Forgot Password?</a></span>></div>
             </div>
         </div>
     </form>
-
+    
     <% include partials/jsdefaults.ejs %>
 </body>
 

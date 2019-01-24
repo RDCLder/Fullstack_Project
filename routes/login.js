@@ -29,40 +29,35 @@ myStore.sync();
 router.use(passport.initialize());
 router.use(passport.session());
 
-router.get("/login", (req, res) => {
+router.get("/navLogin", (req, res) => {
     res.render("/login", {
         pageTitle: "Login",
         pageID: "login"
     });
 });
 
-router.post("/login",
+router.post("/navLogin",
     passport.authenticate("local", {
         successRedirect: "back",
-        failureRedirect: "/login",
+        failureRedirect: "/navLogin",
         failureFlash: true
     })
 );
 
 passport.use(new LocalStrategy((username, password, done) => {
-    console.log("Im in passp;ort");
-    db.users.findAll({ where: { username: username } }).then((results) => {
+    db.user.findAll({ where: { username: username } }).then((results) => {
 
         if (results != null) {
             const data = results[0];
             bcrypt.compare(password, data.password, function (err, res) {
                 if (res) {
-                    console.log("Hello world")
-                    console.log(data)
                     done(null, { id: data.id, username: data.username })
                 } else {
-                    console.log("Returned nothing")
                     done(null, false)
                 }
             })
         } 
         else {
-            console.log("just out there")
             done(null, false)
         }
     })
@@ -73,7 +68,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    db.users.findById(parseInt(id, 10)).then((data) => {
+    db.user.findById(parseInt(id, 10)).then((data) => {
         done(null, data)
     })
 });
