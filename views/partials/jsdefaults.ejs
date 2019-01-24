@@ -10,19 +10,19 @@
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!-- Optional JavaScript -->
+<!-- Toggle Cards JS -->
 <script>
-// Toggle Display For Commumnity Rules
-  function toggledisplay(elementID)
-    {
-        if(document.getElementById(elementID).style.display ==='none'){
-            document.getElementById(elementID).style.display='block';
+    function toggledisplay(elementID) {
+        if (document.getElementById(elementID).style.display === 'none') {
+            document.getElementById(elementID).style.display = 'block';
         } else {
-            document.getElementById(elementID).style.display='none';
+            document.getElementById(elementID).style.display = 'none';
         }
     }
-       
 </script>
+<!-- End of Toggle Cards JS -->
+
+<!-- Login Modal -->
 <script>
     // Get the modal
     var modal1 = document.getElementById('loginModal');
@@ -37,7 +37,9 @@
             modal2.style.display = "none";
         }
     }
-    </script>
+</script>
+<!-- End of Login Modal -->
+
 <script>
     // var coll = document.getElementsByClassName("collapsible");
     // var i;
@@ -54,7 +56,8 @@
     // });
     // }
 </script>
-<!-- Start of Sidebar JS-->
+
+<!-- Sidebar JS -->
 <script type="text/javascript">
     $(document).ready(function () {
         $("#sidebar").mCustomScrollbar({

@@ -244,7 +244,9 @@ body {
     /* border-bottom: solid #DDDDDD; */
     /* border-width: thin; */
 }
-
+.card {
+    filter: drop-shadow(0 0 0.3rem grey);
+}
 .card-header {
     color: white; 
     background-color: #4B8AE5;

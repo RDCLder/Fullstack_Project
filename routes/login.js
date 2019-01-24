@@ -1,77 +1,74 @@
-
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const db = require('./../models');
-const LocalStrategy = require('passport-local').Strategy
-const passport = require('passport');
-const bcrypt = require('bcryptjs');
-const cookieParser = require('cookie-Parser');
-const bodyParser = require('body-parser');
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const db = require("./../models");
+const LocalStrategy = require("passport-local").Strategy
+const passport = require("passport");
+const bcrypt = require("bcryptjs");
+const cookieParser = require("cookie-Parser");
+const bodyParser = require("body-parser");
+const session = require("express-session");
+//const Sequelize = require("sequelize");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+
+// Middleware
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
+router.use(cookieParser());
 
 var myStore = new SequelizeStore({
     db: db.sequelize
-})
+});
 router.use(session({
-    secret: 'mySecret',
+    secret: "keyboard cat",
     store: myStore,
     resave: false,
     proxy: true
-}))
+}));
 myStore.sync();
 
-router.use(cookieParser());
 router.use(passport.initialize());
 router.use(passport.session());
 
 router.get('/login', function (req, res) {
-  
     res.render('login',{
         pageTitle: "Login",
         pageId: "login"
     }); //end of res.send
 });//end of app.get
 
-router.post(
-    "/login",
+router.post("/login",
     passport.authenticate("local", {
-        successRedirect: "/back",
-        failureRedirect: "/back"
+        successRedirect: "back",
+        failureRedirect: "/login",
+        failureFlash: true
     })
 );
 
 passport.use(new LocalStrategy((username, password, done) => {
-    db.users.findAll({ where: { username: username } }).then((results) => {
+    db.user.findAll({ where: { username: username } }).then((results) => {
 
         if (results != null) {
             const data = results[0];
             bcrypt.compare(password, data.password, function (err, res) {
                 if (res) {
-                    console.log("Hello world")
-                    console.log(data)
                     done(null, { id: data.id, username: data.username })
                 } else {
-                    console.log("Returned nothing")
                     done(null, false)
                 }
             })
         } 
         else {
-            console.log("just out there")
             done(null, false)
         }
     })
-}))
+}));
 
 passport.serializeUser((user, done) => {
     done(null, user.id)
-})
+});
 
 passport.deserializeUser((id, done) => {
-    db.users.findById(parseInt(id, 10)).then((data) => {
+    db.user.findById(parseInt(id, 10)).then((data) => {
         done(null, data)
     })
 });
