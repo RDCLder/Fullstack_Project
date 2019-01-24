@@ -9,8 +9,8 @@
 
     <% include partials/sidebar.ejs %>
     <% include partials/navbar.ejs %>
-
-    <div class="container m-0 p-0">
+    
+    <div class="container-fluid" style="border: 1px solid orange">
         <div class="row" style="height: 80px;"></div>
         <div class="row m-0 p-0">
 
@@ -20,7 +20,7 @@
             <div class="col-1"></div>
 
             <!-- Main Content -->
-            <div class="col-7 m-0" id="mainContent">
+            <div class="col-6 m-0" id="mainContent" style="border: 1px solid blue">
 
                 <!-- Mock-up Example -->
                 <% include partials/cards/topicText.ejs %>
@@ -30,15 +30,17 @@
 
             </div>
             <!-- End of Main Content -->
-
+            
             <!-- Side Content -->
-            <div class="col-4 m-0 p-0" id="sideContent">
+            <div class="col-4 m-0 p-0" id="sideContent" style="border: 1px solid red">
 
                 <% include partials/cards/dashboard.ejs %>
                 <% include partials/cards/trendingCommunity.ejs %>
 
             </div>
             <!-- End of Side Content -->
+
+            <div class="col-1"></div>
 
         </div>
     </div>

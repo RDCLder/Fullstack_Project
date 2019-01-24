@@ -46,6 +46,7 @@ app.get('/', (req, res)=>{
 
 app.use(express.static("public"));
 app.use(require("./routes/index"));
+app.use(require("./routes/community"))
 
 // db.sequelize.migrate;
 // db.sequelize.drop();
