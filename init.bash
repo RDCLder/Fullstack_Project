@@ -1,5 +1,5 @@
-sequelize model:generate --name users \
-  --attributes username:string,bio:string
+# sequelize model:generate --name users \
+#   --attributes username:string,bio:string
 
 # sequelize model:generate --name community \
 #   --attributes title:string,description:string
