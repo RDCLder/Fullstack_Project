@@ -29,17 +29,17 @@ myStore.sync();
 router.use(passport.initialize());
 router.use(passport.session());
 
-router.get("/navLogin", (req, res) => {
+router.get("/login", (req, res) => {
     res.render("/login", {
         pageTitle: "Login",
         pageID: "login"
     });
 });
 
-router.post("/navLogin",
+router.post("/login",
     passport.authenticate("local", {
         successRedirect: "back",
-        failureRedirect: "/navLogin",
+        failureRedirect: "/login",
         failureFlash: true
     })
 );
