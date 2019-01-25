@@ -5,7 +5,30 @@
         <% include partials/head.ejs %>
     </head>
     <body>
-        
+
+        <form action="/register" class="modal-content" method="POST">
+            <div class="mcontainer">
+                <div class="row">
+                    <h5 style="font-weight:bold"><%= pageTitle %></h3>
+                </div>
+                <div class="row">
+                    <label><b>Username</b></label>
+                    <input class="form-control mr-sm-2" type="text" name="username" placeholder="Please enter Username." value=""/>
+                </div>
+                <div class="row">
+                    <label><b>Password</b></label>
+                    <input class="form-control mr-sm-2" type="password" name="password" placeholder="Please enter Password" value=""/>
+                </div>
+                <div class="row">
+                    <label><b>Email</b></label>
+                    <input class="form-control mr-sm-2" type="text" name="email" placeholder="Please enter Email" value=""/>
+                </div>
+                <div class="row">
+                    <input class="btn" style="background-color:royalblue; color:white" type="submit" />
+                </div>
+            </div>
+        </form>
+
         <% include partials/jsdefaults.ejs %>
     </body>
 </html>

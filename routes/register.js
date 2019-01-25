@@ -4,13 +4,13 @@ let db = require('./../models');
 var bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 
-router.use(bodyParser.json());
+// router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/register', function(req, res) {
 
     res.render('register', {
-        title: "Register"
+        pageTitle: "Register"
     })
 });
 
@@ -23,8 +23,8 @@ router.post('/register',function(req,res){
     
     // hashing the password
     let password = bcrypt.hashSync(req.body.password,8);
-
-    db.users.create({username: req.body.username, password: password})
+    
+    db.user.create({username: req.body.username, password: password, email: req.body.email})
     .then(() => {
         // success;
         res.redirect('/login');
