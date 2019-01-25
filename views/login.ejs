@@ -7,7 +7,7 @@
 
 <body>
 
-    <form class="modal-content animate" action="login" method="POST">
+    <form class="modal-content animate" id="loginForm">
         <div class="imgcontainer">
             <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="#" alt="" class="avatar">
@@ -16,12 +16,12 @@
         <div class="mcontainer">
             <div class="row"><h4 style="font-weight: bold;">Sign In</h4></div>
             <div class="row">
-                <label for="uname"><b>Username</b></label>
-                <input class="form-control mr-sm-2" type="text" oninvalid="this.setCustomValidity('Please enter a valid Username')" placeholder="Enter Username" name="uname" required>
+                <label for="username"><b>Username</b></label>
+                <input class="form-control mr-sm-2" type="text" oninvalid="this.setCustomValidity('Please enter a valid Username')" placeholder="Enter Username" name="username" required>
             </div>
             <div class="row">
                 <label for="psw"><b>Password</b></label>
-                <input class="form-control mr-sm-2" type="password" oninvalid="this.setCustomValidity('Please enter a valid Password')" placeholder="Enter Password" name="psw" required>
+                <input class="form-control mr-sm-2" type="password" oninvalid="this.setCustomValidity('Please enter a valid Password')" placeholder="Enter Password" name="password" required>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
@@ -41,7 +41,8 @@
     </form>
         
 
-    <% include partials/jsdefaults.ejs %>
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
 </body>
 
 </html>
