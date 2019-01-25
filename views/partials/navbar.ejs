@@ -1,30 +1,18 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg m-0 p-0">
-    <div class="container-fluid d-flex m-0 p-0">
-        <div class="row m-0 p-0" id="navbarRow">
-
-            <!-- Start of Navbar Content -->
-            <div class="col-2 m-0 p-0" id="navbarCol">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            Community
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-2 m-0 p-0" id="navbarCol">
-                Display Options
-            </div>
-
-            <div class="col-2 m-0 p-0 justify-content-around" id="navbarCol">
+    <div class="container-fluid m-0 p-0" style="display: block;">
+        <!-- Start of Navbar Content -->
+        <div class="row" id="navbarRow">
+            <!-- Trender Icon -->
+            <div class="col-3 pl-3" id="navbarCol">
                 <a href="/">Trender Icon</a>
-                <a href="#"><i class="fas fa-arrow-up"></i></a>
+                <button class="btn btn-outline-success" type="submit" style="background-color:transparent; border:none">
+                    <i class="fas fa-search" style="color: white;"></i>
+                </button>
             </div>
-
-            <div class="col-2 m-0 p-0" id="navbarCol">
-                <form class="form-inline">
+            <!-- Search Bar -->
+            <!-- <div class="col-4 align-items-center" id="navbarCol">
+                <form class="form-inline" style="width: 80%;">
                     <div class="input-group">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:transparent; border:none">
@@ -32,26 +20,52 @@
                         </button>
                     </div>
                 </form>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:transparent; border:none">
+                            <i class="fas fa-search" style="color: white;"></i>
+                        </button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search" aria-label="searchBar" aria-describedby="Search Bar">
+                </div>
+            </div> -->
+            <!-- Topic Display -->
+            <div class="col-6 justify-content-around" id="navbarCol">
+                <a href="#">HOT</a>
+                <a href="#">NEW</a>
+                <a href="#">TOP</a>
+                <a href="#">FUNNY</a>
+                <a href="#">SAD</a>
+                <a href="#">SKETCHY</a>
+                <a href="#">LAST 24 HOURS</a>
             </div>
-           <!-- Login and Signup Button -->
-            <div class="col-2 m-0 p-0" id="navbarCol">
-                <button  type="button" class="btn btn-primary" id="loginButton" onclick="document.getElementById('loginModal').style.display='block'" style="width: 100%; margin-right:2%;">Login</button>
-                <button  type="button" class="btn btn-light" id="signupButton" onclick="document.getElementById('signupModal').style.display='block'" style="width: 100%;border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">Sign Up</button>
+            <!-- Login and Signup Button -->
+            <div class="col-3 justify-content-end" id="navbarCol">
+                <button type="button" class="btn btn-primary" id="loginButton" onclick="document.getElementById('loginModal').style.display='block'"
+                    style="margin-right:2%;">Login</button>
+                <button type="button" class="btn btn-light mr-3" id="signupButton" onclick="document.getElementById('signupModal').style.display='block'"
+                    style="border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">Sign Up</button>
             </div>
-            <!-- Right Sidebar Button -->
-            <div class="col-2 m-0 p-0" id="navbarCol" style="justify-content: space-around;">
-                <!-- <a href="#">Account Icon</a> -->
-                <button type="button" id="sidebarCollapse" class="btn" style="background-color:transparent; border:none">
-                    <i class="fas fa-bars" style="float: right;"></i>
-                </button>
-                <!-- <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-align-justify"></i>
-                </button> -->
-            </div>
-            <!-- End of Navbar Content -->
-
         </div>
+        <!-- End of Navbar Content -->
     </div>
 </nav>
 <!-- End of Navbar -->
+
+<!-- Home Button -->
+<a href="#">
+    <button type="button" class="btn btn-primary floatButton1">
+        <i class="fas fa-home my-float"></i>
+    </button>
+</a>
+<!-- End of Home Button -->
+
+<!-- Sidebar Button -->
+<button type="button" id="sidebarCollapse" class="btn btn-primary floatButton2">
+    <i class="fas fa-bars my-float"></i>
+</button>
+<div class="homeLabel1">
+    <div class="homeText">Communities</div>
+    <i class="fa fa-play label-arrow"></i>
+</div>
+<!-- End of Sidebar Button -->

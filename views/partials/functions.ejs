@@ -1,0 +1,80 @@
+<!-- Toggle Cards JS -->
+<script>
+
+    function toggledisplay(elementID) {
+        if (document.getElementById(elementID).style.display === 'none') {
+            document.getElementById(elementID).style.display = 'block';
+        }
+        else {
+            document.getElementById(elementID).style.display = 'none';
+        }
+    }
+    //  End of Toggle Cards JS
+
+    // Toggle Trending Communities
+    // $(document).ready(function () {
+    //     $trendingCommunities = $(".communityBody").toArray();
+    //     $trendingCommunities[i].onclick
+    //     $(".communityBody").style.display = "none";
+    // });
+    // End of Toggle Trending Communities
+
+    //  Login Modal
+    var modal1 = document.getElementById('loginModal');
+    var modal2 = document.getElementById('signupModal');
+    window.onclick = function (event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+    //  End of Login Modal
+
+    // var coll = document.getElementsByClassName("collapsible");
+    // var i;
+
+    // for (i = 0; i < coll.length; i++) {
+    // coll[i].addEventListener("click", function() {
+    //     this.classList.toggle("active");
+    //     var content = this.closest('.card-body');
+    //     if (content.style.display === "inline-block") {
+    //     content.style.display = "none";
+    //     } else {
+    //     content.style.display = "inline-block";
+    //     }
+    // });
+    // }
+
+    // Sidebar JS
+    $(document).ready(() => {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+        $('#dismiss').on('click', () => {
+            $('#sidebar').removeClass('active');
+            // $('.overlay').removeClass('active');
+        });
+        $('#sidebarCollapse').on('click', () => {
+            $('#sidebar').addClass('active');
+            // $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    // End of Sidebar JS
+
+    for (const btn of document.querySelectorAll('.upvote')) {
+        btn.addEventListener('click', event => {
+            event.target.classList.toggle('on');
+        });
+    }
+
+    for (const btn of document.querySelectorAll('.downvote')) {
+        btn.addEventListener('click', event => {
+            event.target.classList.toggle('on');
+        });
+    }
+
+</script>
