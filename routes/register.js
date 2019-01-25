@@ -7,12 +7,11 @@ const bcrypt = require('bcryptjs');
 // router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get('/register', function(req, res) {
-
-    res.render('register', {
-        pageTitle: "Register"
-    })
-});
+// router.get('/register', function(req, res) {
+//     res.render('register', {
+//         pageTitle: "Register"
+//     })
+// });
 
 router.post('/register',function(req,res){
 

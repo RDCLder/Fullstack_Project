@@ -10,16 +10,11 @@ app.set('views', 'views');
 app.use(express.static("public"));
 app.use(require("./routes/index"));
 app.use(require("./routes/community"));
-<<<<<<< HEAD
 app.use(require("./routes/login"));
 app.use(require("./routes/register"));
 app.use(require("./routes/logout"));
-app.use(require("./routes/authenticate"))
-=======
-// app.use(require("./routes/login"));
-// app.use(require("./routes/register"));
+app.use(require("./routes/authenticate"));
 
->>>>>>> 184f717ee94883acc7ad7301dcd2ccc4be78f733
 // db.sequelize.migrate;
 // db.sequelize.drop();
 // db.sequelize.sync();

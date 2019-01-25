@@ -11,7 +11,7 @@ const flash = require('connect-flash');
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Middleware
-// router.use(bodyParser.json());
+router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(cookieParser());
 router.use(flash());
