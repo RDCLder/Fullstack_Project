@@ -1,11 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/index.js");
+const db = require("./../models/");
 
 router.get("/", (req, res) => {
+
+    function isLoggedIn(req, res, next) {
+        if (req.isAuthenticated()) {
+            req.isLogged = true;
+            return next();
+        }
+        res, redirect("/");
+    }
+
     res.render("index", {
         pageTitle: "Home",
-        pageID: "home"
+        pageID: "home",
+        isLoggedIn: req.isAuthenticated(),
+        user: req.user
     });
 });
 

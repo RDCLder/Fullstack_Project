@@ -1,0 +1,54 @@
+<div id="modalLogin" class="modal">
+
+
+    <form class="modal-content animate" id="loginForm">
+        <!-- <div class="imgcontainer">
+            <span onclick="document.getElementById('modalLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="#" alt="" class="avatar">
+        </div> -->
+
+        <div class="container">
+            <div class="row loginRow" style="background-color: #4B8AE5">
+                <div class="col-11">
+                    <h5 style="font-weight:bold">
+                        <%= pageTitle %>
+                    </h5>
+                </div>
+                <div class="col-1">
+                    <div onclick="document.getElementById('modalLogin').style.display='none'" class="close" title="Close Modal">&times;</div>
+                </div>
+            </div>
+
+            <div class="row loginRow">
+                <label for="username"><b>Username</b></label>
+                <input class="form-control mr-sm-2" type="text" oninvalid="this.setCustomValidity('Please enter a valid Username')"
+                    placeholder="Enter Username" name="username" required id="loginUsername">
+            </div>
+
+            <div class="row loginRow">
+                <label for="psw"><b>Password</b></label>
+                <input class="form-control mr-sm-2" type="password" oninvalid="this.setCustomValidity('Please enter a valid Password')"
+                    placeholder="Enter Password" name="password" required id="loginPassword">
+                <!-- <label>
+                    <input type="checkbox" checked="checked" name="remember">Remember me
+                </label> -->
+            </div>
+
+            <div class="row loginRow d-flex justify-content-center" style="background-color: #4B8AE5">
+                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-light" type="">Register</button>
+            </div>
+        </div>
+        
+        <!-- <div class="mcontainer" style="background-color:#f1f1f1">
+            <div class="row">
+                <div class="col"><button type="button" onclick="document.getElementById('modalLogin').style.display='none'"
+                        class="cancelbtn">Cancel</button></div>
+                <div close="col"><span class="forgotusr"><a href="#">Forgot Username?</a></span></div>
+                <div class="col"><span class="forgotpsw"><a href="#">Forgot Password?</a></span>></div>
+            </div>
+        </div> -->
+    </form>
+
+</div>
+<!-- Closes Overlay -->

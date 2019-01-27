@@ -11,6 +11,8 @@
     }
     //  End of Toggle Cards JS
 
+    // ------------------------------------------------------------------------
+
     // Toggle Trending Communities
     // $(document).ready(function () {
     //     $trendingCommunities = $(".communityBody").toArray();
@@ -19,18 +21,22 @@
     // });
     // End of Toggle Trending Communities
 
-    //  Login Modal
-    var modal1 = document.getElementById('loginModal');
-    var modal2 = document.getElementById('signupModal');
-    window.onclick = function (event) {
-        if (event.target == modal1) {
-            modal1.style.display = "none";
-        }
-        if (event.target == modal2) {
-            modal2.style.display = "none";
-        }
-    }
-    //  End of Login Modal
+    // ------------------------------------------------------------------------
+
+    //  Modal Login/Register
+    // var modal1 = document.getElementById('modalLogin');
+    // var modal2 = document.getElementById('modalRegister');
+    // window.onclick = function (event) {
+    //     if (event.target == modal1) {
+    //         modal1.style.display = "none";
+    //     }
+    //     if (event.target == modal2) {
+    //         modal2.style.display = "none";
+    //     }
+    // }
+    //  End of Modal Login/Register
+
+    // ------------------------------------------------------------------------
 
     // var coll = document.getElementsByClassName("collapsible");
     // var i;
@@ -46,6 +52,8 @@
     //     }
     // });
     // }
+
+    // ------------------------------------------------------------------------
 
     // Sidebar JS
     $(document).ready(() => {
@@ -65,16 +73,45 @@
     });
     // End of Sidebar JS
 
-    for (const btn of document.querySelectorAll('.upvote')) {
-        btn.addEventListener('click', event => {
-            event.target.classList.toggle('on');
-        });
-    }
+    // ------------------------------------------------------------------------
 
-    for (const btn of document.querySelectorAll('.downvote')) {
-        btn.addEventListener('click', event => {
-            event.target.classList.toggle('on');
+    // // Vote Buttons
+    for (let i = 0; i < $(".upvote").length; i ++) {
+        
+        let $upvote = $(".upvote")[i];
+        let $downvote = $(".downvote")[i];
+        let $count = $(".count")[i];
+        
+        $upvote.addEventListener("click", event => {
+            event.target.classList.toggle("on");
+            if ($($upvote).hasClass("on")) {
+                $count.textContent = Number($count.textContent) + 1;   
+            }
+            else {
+                $count.textContent = Number($count.textContent) - 1; 
+            }
+            if ($($downvote).hasClass("on")) {
+                $downvote.classList.toggle("on");
+                $count.textContent = Number($count.textContent) + 1;
+            }
+        });
+
+        $downvote.addEventListener("click", event => {
+            event.target.classList.toggle("on");
+            if ($($downvote).hasClass("on")) {
+                $count.textContent = Number($count.textContent) - 1;   
+            }
+            else {
+                $count.textContent = Number($count.textContent) + 1; 
+            }
+            if ($($upvote).hasClass("on")) {
+                $upvote.classList.toggle("on");
+                $count.textContent = Number($count.textContent) - 1;
+            }
         });
     }
+    // // End of Vote Buttons
+
+    // ------------------------------------------------------------------------
 
 </script>

@@ -8,11 +8,17 @@ const bcrypt = require('bcryptjs');
 router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get('/register', function(req, res) {
-
     res.render('register', {
         pageTitle: "Register"
     })
 });
+
+// router.get('/register', function(req, res) {
+//     res.redirect("index", {
+//         pageTitle: "Home",
+//         pageID: "home"
+//     })
+// });
 
 router.post('/register',function(req,res){
 
@@ -27,7 +33,7 @@ router.post('/register',function(req,res){
     db.user.create({username: req.body.username, password: password, email: req.body.email})
     .then(() => {
         // success;
-        res.redirect('/login');
+        res.redirect("/");
     })
     .catch(error => {
         // error;
