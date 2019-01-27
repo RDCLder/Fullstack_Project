@@ -42,12 +42,17 @@
             <!-- Login/Register Button -->
             <div class="col-3 justify-content-end" id="navbarCol">
                 <% if (isLoggedIn) { %>
-                    User Profile
+                User Profile
                 <% } else { %>
-                    <button type="button" class="btn btn-primary" id="loginButton" onclick="document.getElementById('modalLogin').style.display='block'"
+                <!-- <button type="button" class="btn btn-primary" id="loginButton" onclick="document.getElementById('modalLogin').style.display='block'"
                         style="margin-right:2%;">Login</button>
                     <button type="button" class="btn btn-light mr-3" id="signupButton" onclick="document.getElementById('modalRegister').style.display='block'"
-                        style="border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">Register</button>
+                        style="border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">Register</button> -->
+
+                <button type="button" class="btn btn-primary" id="loginButton" style="margin-right:2%;">
+                    <a href="/login">Login</a></button>
+                <button type="button" class="btn btn-light mr-3" id="registerButton" style="border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">
+                    <a href="/register">Register</a></button>
                 <% } %>
             </div>
             <!-- End of Login/Register Buttons -->

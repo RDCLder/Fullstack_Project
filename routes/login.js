@@ -70,7 +70,7 @@ passport.use(new LocalStrategy((username, password, done) => {
             })
         }
         else {
-            console.log("Result is null")
+            console.log("Result is null");
             done(null, false)
         }
     })
