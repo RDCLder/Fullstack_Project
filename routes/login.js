@@ -48,7 +48,7 @@ passport.use(new LocalStrategy((username, password, done) => {
     console.log('We are in the passport');
     db.user.findAll({ where: { username: username } }).then((results) => {
         console.log(results);
-        if (results != null) {
+        if (results.length != 0) {
             const data = results[0];
             bcrypt.compare(password, data.password, function (err, res) {
                 if (err) {

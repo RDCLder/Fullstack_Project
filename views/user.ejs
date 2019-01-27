@@ -5,8 +5,117 @@
 </head>
 
 <body>
-    Hello
+    <div class="container-fluid">
+        <div class="row">
+            <div id="userHome">
+                <div class="modal-content" id="userHomeContent">
+                    <div class="row" style="height: 100%">
+                        <div class="col-3 p-0">
+                            <div id="userSideContent" style="border: 1px solid red">
+                                <div class="row" style="height: auto">
+                                    <h4>Trender</h4>
+                                </div>
+                                <div class="row" style="height: auto">
+                                    <div class="col-4" id="userAvatar">
+                                        <img src="" alt="" class="avatar">
+                                    </div>
+                                    <div class="col-8" id="userInformation">
+                                        <div class="row" style="height: auto">
+                                            <div class="col-12">
+                                                <h6>Username</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="height: auto">
+                                            <div class="col-12">
+                                                <h6>Created Date</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="height: auto">
+                                            <div class="col-12">
+                                                <h6>Last Login</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="height: auto">
+                                    <h5>General</h5>
+                                </div>
+                                <div class="row" style="height: auto">
+                                    <ul style="list-style-type: none; width: 100%;" >
+                                        <li><a href="#" class="topicList" id="topicNew"><div>New</div></a></li>
+                                        <li><a href="#" class="topicList" id="topicRecent"><div>Recent</div></a></li>
+                                        <li><a href="#" class="topicList" id="topicTrending"><div>Trending</div></a></li>
+                                        <li><a href="#" class="topicList" id="topicSketchy"><div>Sketchy</div></a></li>
+                                        <li><a href="#" class="topicList" id="topicFunny"><div>Funny</div></a></li>
+                                        <li><a href="#" class="topicList" id="topicSad"><div>Sad</div></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 m-0 p-0" style="border: 1px solid blue">
+                            <div id="useMainContent">
+                                <input id="userTab1" type="radio" name="tabs" checked="">
+                                <label class="userTabsLabel" for="userTab1">Bio</label>
+                                
+                                <input id="userTab2" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab2">Profile</label>
+                                
+                                <input id="userTab3" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab3">Friends</label>
+                                
+                                <input id="userTab4" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab4">Feed Settings</label>
 
+                                <input id="userTab5" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab5">Account Settings</label>
+                                
+                                <div class="tabContent">
+                                    <div id="userBio">
+                                        <p>
+                                        This area will contain the username bio.
+                                        </p>
+                                    </div>
+                                    <div id="userProfileSettings">
+                                        <p>
+                                            This area will contain the user profile customization.
+                                        </p>
+                                    </div>
+                                
+                                    <div id="userFriends">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col"><span class="oi oi-people"></span></div>
+                                                        <div class="col"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col"></div>
+                                            </div>
+                                            <div class="row">
+
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div id="userFeedSettings">
+                                            <p>
+                                                This area will contain the Feed Settings 
+                                            </p>
+                                  
+                                        </div>
+                                    <div id="userAccountSettings">
+                                        <p>
+                                            This area will contain the user account settings.
+                                        </p>
+                                    </div>
+                                </div>                 
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>
 </body>

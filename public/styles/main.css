@@ -487,7 +487,96 @@ Community Page
 #ruleDescription5{
     display: none;
 }
-<<<<<<< HEAD
+/* ---------------------------------------
+    USER HOMEPAGE
+---------------------------------------- */
+.h100{
+    height: 100%;
+    padding: 1%;
+}
+
+#userHomeContent{
+    height: 80%;
+    width: 80%;
+    margin: 3% 10% 10% 10%;
+    border-radius: 1%;
+    filter: drop-shadow(0 0 0.3rem rgb(90, 127, 231))
+}
+
+#userHome {
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(64, 113, 185); /* Fallback color */
+    background-color: rgba(64, 113, 185,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal#userHome{
+    display: initial;
+  }
+
+#userSideContent {
+    height: 100%;   
+    width: 100%;
+    padding: 2%;
+}
+li .topicList div {
+    width: 100%;
+    margin-top: 2%;
+}
+#userMainContent {
+    height: 100%;
+    width: 100%;
+}
+
+.tabContent {
+    background: #fff;
+    color: #373737;
+    text-align:left;
+    border-top: 1px solid #D0D0D0;
+}
+
+.tabContent > div {
+    display: none;
+    padding: 20px 25px 5px;
+}
+
+#userTab1, #userTab2, #userTab3, #userTab4, #userTab5{
+    display: none;
+}
+
+.userTabsLabel {
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.userTabsLabel:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
+
+input:checked + .userTabsLabel {
+    background: #B1C9EF;
+    color: #fff;
+}
+
+#userTab1:checked ~ .tabContent #userBio,
+#userTab2:checked ~ .tabContent #userProfileSettings,
+#userTab3:checked ~ .tabContent #userFriends,
+#userTab4:checked ~ .tabContent #userFeedSettings, 
+#userTab5:checked ~ .tabContent #userAccountSettings{
+  display: block;
+}
+
+@media screen and (max-width: 400px) { .userTabsLabel {padding: 15px 10px;} }
+
 /* ----------------------------------------
   Login Modal 
   -----------------------------------------*/
@@ -500,9 +589,6 @@ Community Page
     color: white;
     filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
 }
-=======
-
->>>>>>> 184f717ee94883acc7ad7301dcd2ccc4be78f733
 /* --------------------------------------------
  Collapsible Button for Cards
  ---------------------------------------------*/
@@ -584,7 +670,7 @@ Modal login form
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */

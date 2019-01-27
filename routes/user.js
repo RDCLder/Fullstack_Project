@@ -15,11 +15,11 @@ router.get('/user',(req,res)=>{
 router.get('/user/:username',(req,res)=>{
   
     var username = db.user[req.params.username]
-  
+
     
     res.render("user",{
         pageTitle: username,
-        pageID: username,
+        usr: username,
 
     })
   })
