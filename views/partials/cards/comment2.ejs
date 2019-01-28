@@ -2,27 +2,22 @@
     <div class="row m-0 p-0">
         <!-- Card Content -->
         <div class="col-11 m-0 p-0">
-            <div class="card-header">
-                <div class="row m-0 p-0">
-                    <div class="col">
-                        <div class="card-text">
-                            <%= comment.user.dataValues.username %>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card-text">
-                            Flair Goes Here
-                        </div>
-                    </div>
+            <div class="m-0 pl-2 commentHeader">
+                <div class="card-text">
+                    <%= comment.user.dataValues.username %>
                 </div>
             </div>
-            <div class="card-body textBody show" aria-expanded="true" id="titleID">
+            <div class="card-body commentText show" aria-expanded="true" id="titleID">
                 <h6 class="card-text">
                     <%= comment.body %>
                 </h6>
             </div>
             <div class="card-body commentOptions show" aria-expanded="true" id="titleID">
-                <a href="#" class="btn btn-light ml-3">
+                <div class="smallText mr-2"><a href="#">Reply</a></div>
+                <div class="smallText mr-2"><a href="#">Share</a></div>
+                <div class="smallText mr-2"><a href="#">Save</a></div>
+                <div class="smallText mr-2"><a href="#">Report</a></div>
+                <!-- <a href="#" class="btn btn-light ml-3">
                     <div class="smallText">Reply</div>
                 </a>
                 <a href="#" class="btn btn-light">
@@ -33,7 +28,7 @@
                 </a>
                 <a href="#" class="btn btn-light">
                     <div class="smallText">Report</div>
-                </a>
+                </a> -->
             </div>
         </div>
         <!-- End of Card Content -->

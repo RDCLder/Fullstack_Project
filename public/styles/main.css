@@ -422,9 +422,9 @@ p {
     align-items: baseline;
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-bottom: 18px solid #5AB9EA;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-bottom: 2.5vh solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-bottom: 0%;
@@ -435,20 +435,20 @@ p {
     align-items: initial;
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-top: 18px solid #5AB9EA;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-top: 2.5vh solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-top: 0;
 }
 
 .upvote.on {
-    border-bottom: 18px solid orange;
+    border-bottom: 2.5vh solid orange;
 }
 
 .downvote.on {
-    border-top: 18px solid mediumslateblue;
+    border-top: 2.5vh solid mediumslateblue;
 }
 
 .count {
@@ -466,13 +466,9 @@ p {
     height: auto;
 }
 
-.comment {
+/* .comment {
     height: auto;
-}
-
-.commentCard {
-    height: auto;
-}
+} */
 
 .commentRow {
     margin: 0;
@@ -482,14 +478,29 @@ p {
     border: solid orange;
 }
 
+.commentCard {
+    height: auto;
+    margin-bottom: 2%;
+}
+
+.commentText {
+    margin: 0;
+    padding: 1%;
+}
+
+.commentHeader, .commentOptions {
+    background-color: cornflowerblue;
+}
+
 .commentOptions {
     margin: 0;
-    padding: 0;
+    padding: 1%;
     font-size: 1vh;
 }
 
 .smallText {
-
+    display: inline-block;
+    font-size: 2vh;
 }
 
 /* ---------------------------------------------------
