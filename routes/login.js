@@ -11,7 +11,7 @@ const flash = require('connect-flash');
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Middleware
-// router.use(bodyParser.json());
+router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(cookieParser());
 router.use(flash());
@@ -32,11 +32,17 @@ router.use(passport.initialize());
 router.use(passport.session());
 
 router.get('/login', function (req, res) {
-    res.render('login',{
-        pageTitle: "Login",
-        pageId: "login"
-    }); //end of res.send
-});//end of app.get
+
+    if (!req.isAuthenticated()) {
+        res.render('login', {
+            pageTitle: "Login",
+            pageId: "login"
+        });
+    }
+    else {
+        res.redirect("/");
+    }
+});
 
 // router.get('/login', (req, res) => {
 //     res.redirect('login',{
@@ -47,8 +53,8 @@ router.get('/login', function (req, res) {
 
 router.post('/login',
     passport.authenticate('local', {
-        successRedirect: "/",
-        failureRedirect: "/community",
+        successRedirect: "/user",
+        failureRedirect: "/",
         failureFlash: true,
         successFlash: 'Welcome!'
     })
@@ -71,7 +77,7 @@ passport.use(new LocalStrategy((username, password, done) => {
             })
         }
         else {
-            console.log("Result is null")
+            console.log("Result is null");
             done(null, false)
         }
     })
@@ -83,7 +89,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    console.log("User is deserialized.")
+    console.log(`User is deserialized`)
     db.user.findById(parseInt(id, 10)).then((data) => {
         done(null, data)
     })

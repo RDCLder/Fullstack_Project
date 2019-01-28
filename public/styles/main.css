@@ -147,21 +147,24 @@ a.article:hover {
     z-index: 2;
 }
 
-#navbarRow {
-    height: 50px;
+.navbarRow {
+    /* height: 100%; */
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-#navbarCol {
+.navbarCol {
     height: 100%;
     display: flex;
     align-items: center;
-    /* margin-left: 2%;
-    margin-right: 2%; */
+    margin: 0;
     padding: 0;
-    /* border: solid red; */
+    border: solid red;
+}
+
+#trenderLogo {
+    width: 6vw;
 }
 
 a,
@@ -176,6 +179,12 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
+}
+
+#registerButton {
+    border: #4B8AE5;
+    border-width: thin; 
+    color:#4B8AE5;
 }
 
 .line {
@@ -318,19 +327,21 @@ body {
     filter: drop-shadow(0 0 0.3rem grey);
     /* min-height: 220px; */
     /* border: solid green; */
+    max-height: 300px;
 }
 .card-header {
     color: white; 
     background-color: #4B8AE5;
-    height: auto;
-    min-height: 30%;
+    /* height: auto; */
+    /* min-height: 30%; */
+    /* max-height: 40%; */
     /* border: solid orange; */
 }
 
 .card-body {
     /* display: inline-block; */
     width: 100%;
-    /* border: solid orange; */
+    /* border: solid #3A66A7; */
 }
 
 .videoBody {
@@ -339,15 +350,31 @@ body {
 }
 
 .textBody {
-    height: auto;
+    /* height: auto; */
+    max-height: 11.5vh;
+    overflow: hidden;
     /* border: solid red; */
 }
 
 .commentBody {
-    height: auto;
+    /* height: auto; */
+    /* max-height: 20%; */
     padding: 0;
     padding-top: 2%;
     padding-bottom: 2%;
+    /* border: solid orange; */
+}
+
+/* .btn-primary {
+    border: solid red;
+} */
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 14px;
 }
 
 .card-side {
@@ -382,28 +409,26 @@ p {
 }
 
 .upvote {
-    /* color: #878889; */
     display: flex;
     align-items: baseline;
     width: 0;
     height: 0;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
-    border-bottom: 18px solid #878889;
+    border-bottom: 18px solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-bottom: 0%;
 }
 
 .downvote {
-    /* color: #878889; */
     display: flex;
     align-items: initial;
     width: 0;
     height: 0;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
-    border-top: 18px solid #878889;
+    border-top: 18px solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-top: 0;
@@ -423,26 +448,6 @@ p {
     line-height: 1.0em;
     margin: auto;
 }
-
-/* .upvote {
-    display: inline-block;
-    overflow: hidden;
-    width: 40px;
-    height: 25px;
-    cursor: pointer;
-    background: url('http://i.stack.imgur.com/iqN2k.png');
-    background-position: 0 -25px;
-}  
-
-.downvote {
-    display: inline-block;
-    overflow: hidden;
-    width: 40px;
-    height: 25px;
-    cursor: pointer;
-    background: url('http://i.stack.imgur.com/iqN2k.png');
-    background-position: 0 -25px;
-}   */
 
 /* ---------------------------------------------------
     POPULAR SUBS VISUAL
@@ -610,9 +615,9 @@ input:checked + .userTabsLabel {
 
 /* Friends Tab */
 
-.buttonFriend {
+/* .buttonFriend {
 
-}
+} */
 
 /*  Profile Tab */
 #userProfile{
@@ -716,7 +721,7 @@ img.logo {
     width: 100%;
     margin: 0;
     padding: 0;
-    border: solid orange;
+    /* border: solid orange; */
 }
 
 span.forgotpsw {
