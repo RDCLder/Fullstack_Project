@@ -5,16 +5,19 @@ const db = require("./../models/");
 router.get("/", (req, res) => {
 
     if (!req.isAuthenticated()) {
+        console.log("NOT AUTHENTICATED!");
         res.render("index", {
             pageTitle: "Home",
-            pageID: "home",
+            pageID: "index",
             isLoggedIn: false
         });
     }
-    else {
+    else if (req.isAuthenticated()) {
+        console.log("AUTHENTICATED!");
+        console.log(req.user.username);
         res.render("index", {
             pageTitle: "Home",
-            pageID: "home",
+            pageID: "index",
             isLoggedIn: true,
             user: req.user
         });

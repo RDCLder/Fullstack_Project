@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <% include partials/head.ejs %>
 </head>
+
 <body>
     <header>
         <% include partials/navbar.ejs %>
         <% include partials/sidebar.ejs %>
     </header>
     <div class="container-fluid m-0 p-0">
-        <div class="row" style="height: 60px;"></div>
         <div class="row m-0 p-0">
-            <div class="col-1 m-0 p-0"></div>
+
+            <div class="col-1"></div>
+
             <!-- Community Main Content-->
-            <div class="col-6 m-0 p-0" id="communityMainContent">
-                <% include partials/cards/communityTopicText.ejs %>
+            <div class="col-6 m-0 p-0 communityMain">
+                <% for (var i = 0; i < topics.length; i ++) { %>
+                <% var topic = topics[i].dataValues %>
+                <% include partials/cards/topicTest.ejs %>
+                <% } %>
             </div>
-             <!-- Community Side Content-->
-            <div class="col-4 m-0 p-0" id="communitySideContent">
+
+            <!-- Community Side Content-->
+            <div class="col-4 m-0 p-0 communitySide">
                 <% include partials/cards/communityDetails.ejs %>
                 <% include partials/cards/communityRules.ejs %>
                 <% include partials/cards/communityModerators %>
             </div>
-            <div class="col-1 m-0 p-0"></div>
-        </div>
 
+            <div class="col-1"></div>
+
+        </div>
     </div>
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>
 </body>
+
 </html>
