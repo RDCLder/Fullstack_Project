@@ -561,7 +561,7 @@ li .topicList div {
     margin:0;
 }
 /* USER TABS */
-.tabContent {
+.userTabContent {
     background: #fff;
     color: #373737;
     text-align:left;
@@ -570,7 +570,7 @@ li .topicList div {
     overflow-y: scroll;
 }
 
-.tabContent > div {
+.userTabContent > div {
     display: none;
     padding: 20px 25px 5px;
 }
@@ -603,11 +603,11 @@ input:checked + .userTabsLabel {
     color: #fff;
 }
 
-#userTab1:checked ~ .tabContent #userBio,
-#userTab2:checked ~ .tabContent #userProfile,
-#userTab3:checked ~ .tabContent #userFriends,
-#userTab4:checked ~ .tabContent #userFeedSettings, 
-#userTab5:checked ~ .tabContent #userAccountSettings{
+#userTab1:checked ~ .userTabContent #userBio,
+#userTab2:checked ~ .userTabContent #userProfile,
+#userTab3:checked ~ .userTabContent #userFriends,
+#userTab4:checked ~ .userTabContent #userFeedSettings, 
+#userTab5:checked ~ .userTabContent #userAccountSettings{
   display: block;
 }
 
@@ -623,18 +623,7 @@ input:checked + .userTabsLabel {
 #userProfile{
     height: auto;
 }
-/* ----------------------------------------
-  Login Modal 
-  -----------------------------------------*/
-#loginPage {
-    height: 100%;
-    width: 100%;
-}
-#loginModal{
-    background-color: #4B8AE5;
-    color: white;
-    filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
-}
+
 /* --------------------------------------------
  Collapsible Button for Cards
  ---------------------------------------------*/
@@ -652,7 +641,7 @@ input:checked + .userTabsLabel {
     width: 100%; 
     height: 100%;
   }
-#loginOverlay {
+/* #loginOverlay {
     opacity:    0.3; 
     background: rgb(1, 27, 66); 
     width:      100%;
@@ -661,8 +650,65 @@ input:checked + .userTabsLabel {
     top:        0; 
     left:       0; 
     position:   absolute; 
+  } */
+  .mediaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
   }
-
+.videoContainer {
+    width: 100%;
+}
+.headerOverlay1{ 
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+    filter: drop-shadow(0 0 0.05rem black);
+}
+.headerOverlay{ 
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    z-index: 3;
+    background-color: #4B8AE5;
+    filter: drop-shadow(0 0 0.05rem black);
+    color: white;
+}
+.footerOverlay1{
+    position: absolute;
+    bottom:0;
+    height: 7%;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+.footerOverlay{
+    position: absolute;
+    bottom:0;
+    height: 7%;
+    width: 100%;
+    z-index: 3;
+    background-color: #4B8AE5;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+.videoContainer video {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px; /* fixed to left. Replace it by right if you want.*/
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+}
 
 /* -------------------------------------------- */
 .colorPalette {
@@ -716,6 +762,54 @@ img.logo {
     padding-top: 2px;
 } */
 
+#loginPage {
+    height: 100%;
+    width: 100%;
+}
+.mcontainer {
+    width: 70%;
+    margin: 0 auto;
+}
+#buttonLogin {
+    background-color: white;
+}
+#buttonLogin:hover {
+    color:#4B8AE5;
+}
+#modalLogin{
+    background-color: #4B8AE5;
+    color: white;
+    padding: 20px;
+    top: 20%;;
+    height: 50%;
+    width: 50%;
+    filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
+}
+.logoNSlogan {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%;  
+}
+
+.logoNSlogan img{
+    width: 30%;
+}
+
+
+#modalRegister {
+    background-color: white;
+    color: #4B8AE5;
+    padding: 20px;
+    top: 20%;;
+    height: 50%;
+    width: 50%;
+    filter: drop-shadow(0 0 0.2rem #4B8AE5);
+}
+
+
+
 .loginRow {
     height: auto;
     width: 100%;
@@ -732,8 +826,16 @@ span.forgotpsw {
 span.forgotusr {
     float: right;
 }
-  
 
+.mcontainer .row h5,
+.mcontainer .row a {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%; 
+}
+.mcontainer .row a:hover{
+    transform: scale(1.2);
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -806,4 +908,9 @@ span.forgotusr {
     .cancelbtn {
        width: 100%;
     }
+}
+
+/*   CREATE/DISCUSS TOPIC  */
+#createTopic form div, #createTopic form button{
+    color: Grey;
 }

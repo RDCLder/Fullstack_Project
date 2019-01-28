@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+    <div class="container" id="createTopic">
+
+        <input class="discussTopicTab" id="topicText" type="radio" name="tabs" checked="" name="tabs">
+        <label class="discussTopicTabLabel" for="topicText">Topic Text</label>
+
+        <input class="discussTopicTab" id="topicMedia" type="radio" name="tabs" name="tabs">
+        <label class="discussTopicTabLabel" for="topicMedia">Media</label>
+
+        <input class="discussTopicTab" id="topicLink" type="radio" name="tabs" name="tabs">
+        <label class="discussTopicTabLabel" for="topicLink">Link</label>
+
+        <div class="discussTopicTabContent">
+            <div id="discussTopicText">
+                <form action="discussTopic" method="POST">
+                    <div class="form-group">
+                        <label for="discussTopicTitle" >Title</label>
+                        <input type="text" class="form-control" id="article_title" name="title" placeholder="Title of your topic.">
+                    </div>
+                    <div class="form-group">
+                        <label for="discussTopicBody">Body</label>
+                        <textarea type="text" placeholder="Text(optional)" class="form-control" id="article_body" name="body"
+                            rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right">DISCUSS</button>
+                </form>
+            </div>
+            <div id="discussTopicMedia">
+                <form action="discussTopic" method="POST">
+                    <div class="form-group">
+
+                    </div>
+                    <div class="form-group">
+
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right">DISCUSS</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
+</body>
+
+</html>

@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models/");
 
+router.get("/community",(req,res)=>{
+    res.redirect('/');
+})
+
 router.get("/community/:communityPage", (req, res) => {
 
     let communityPage = req.params.communityPage;
