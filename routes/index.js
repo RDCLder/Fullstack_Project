@@ -4,18 +4,29 @@ const db = require("./../models/");
 
 router.get("/", (req, res) => {
 
-    function isLoggedIn(req, res, next) {
-        if (req.isAuthenticated()) {
-            req.isLogged = true;
-            return next();
-        }
-        res, redirect("/");
-    }
-
+    // if (!req.isAuthenticated()) {
+    //     res.redirect("/login");
+    //     return;
+    // }
+    // res.render("index",{
+    //     pageTitle: "Home",
+    //     pageID: "home",
+    //     isLoggedIn: true,
+    //     user:req.user
+    // })
+    // else if (req.isAuthenticated()){
+    //     res.render("index",{
+    //         pageTitle: "Home",
+    //         pageID: "home",
+    //         isLoggedIn: true,
+    //         user:req.user
+    //     })
+    // }
+    
     res.render("index", {
         pageTitle: "Home",
         pageID: "home",
-        isLoggedIn: req.isAuthenticated(),
+        // isLoggedIn: req.isAuthenticated(),
         user: req.user
     });
 });

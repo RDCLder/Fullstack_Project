@@ -7,6 +7,7 @@ router.get("/user", (req, res) => {
         res.redirect("/login");
         return;
     }
+    
     console.log(req.user.id);
     res.send("you've arrived here, so you must be authenticated");
 });

@@ -111,6 +111,17 @@
         });
     }
     // // End of Vote Buttons
+    $(document).ready(()=>{
+    var hash = window.location.hash;
+    hash && $('.userTabsLabel a[href="' + hash + '"]').tab('show');
+
+    $('input.userTabs').click(function (e) {
+        $(this).tab('show');
+        var scrollmem = $('body').scrollTop() || $('html').scrollTop();
+        window.location.hash = this.hash;
+        $('html,body').scrollTop(scrollmem);
+    });
+    });
 
     // ------------------------------------------------------------------------
 

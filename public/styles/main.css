@@ -516,9 +516,11 @@ Community Page
 #userHomeContent{
     height: 80%;
     width: 80%;
-    margin: 3% 10% 10% 10%;
+    top: 0;
+    left: 0;
+    margin: 7% 10% 10% 10%;
     border-radius: 1%;
-    filter: drop-shadow(0 0 0.3rem rgb(90, 127, 231))
+    filter: drop-shadow(0 0 0.3rem rgb(90, 127, 231));
 }
 
 #userHome {
@@ -527,10 +529,10 @@ Community Page
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    /* overflow: hidden; Enable scroll if needed */
     background-color: rgb(64, 113, 185); /* Fallback color */
     background-color: rgba(64, 113, 185,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 0;
 }
 
 .modal#userHome{
@@ -541,6 +543,7 @@ Community Page
     height: 100%;   
     width: 100%;
     padding: 2%;
+    background-color: #7386D5
 }
 li .topicList div {
     width: 100%;
@@ -549,13 +552,17 @@ li .topicList div {
 #userMainContent {
     height: 100%;
     width: 100%;
+    padding:0;
+    margin:0;
 }
-
+/* USER TABS */
 .tabContent {
     background: #fff;
     color: #373737;
     text-align:left;
     border-top: 1px solid #D0D0D0;
+    height: 92%; 
+    overflow-y: scroll;
 }
 
 .tabContent > div {
@@ -566,7 +573,10 @@ li .topicList div {
 #userTab1, #userTab2, #userTab3, #userTab4, #userTab5{
     display: none;
 }
-
+.userTabs{
+    padding: 0;
+    margin: 0;
+}
 .userTabsLabel {
     display: inline-block;
     padding: 15px 25px;
@@ -579,14 +589,17 @@ li .topicList div {
     color: #4B8AE5;
     cursor: pointer;
 }
-
+#iconFriend:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
 input:checked + .userTabsLabel {
     background: #B1C9EF;
     color: #fff;
 }
 
 #userTab1:checked ~ .tabContent #userBio,
-#userTab2:checked ~ .tabContent #userProfileSettings,
+#userTab2:checked ~ .tabContent #userProfile,
 #userTab3:checked ~ .tabContent #userFriends,
 #userTab4:checked ~ .tabContent #userFeedSettings, 
 #userTab5:checked ~ .tabContent #userAccountSettings{
@@ -595,6 +608,16 @@ input:checked + .userTabsLabel {
 
 @media screen and (max-width: 400px) { .userTabsLabel {padding: 15px 10px;} }
 
+/* Friends Tab */
+
+.buttonFriend {
+
+}
+
+/*  Profile Tab */
+#userProfile{
+    height: auto;
+}
 /* ----------------------------------------
   Login Modal 
   -----------------------------------------*/

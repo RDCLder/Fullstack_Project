@@ -41,14 +41,11 @@
             </div>
             <!-- Login/Register Button -->
             <div class="col-3 justify-content-end" id="navbarCol">
-                <% if (isLoggedIn) { %>
-                    User Profile
-                <% } else { %>
+                <%= pageTitle %>
                     <button type="button" class="btn btn-primary" id="loginButton" onclick="document.getElementById('modalLogin').style.display='block'"
                         style="margin-right:2%;">Login</button>
                     <button type="button" class="btn btn-light mr-3" id="signupButton" onclick="document.getElementById('modalRegister').style.display='block'"
                         style="border:#4B8AE5;border-width:thin;color:#4B8AE5; margin-left:2%;">Register</button>
-                <% } %>
             </div>
             <!-- End of Login/Register Buttons -->
         </div>
