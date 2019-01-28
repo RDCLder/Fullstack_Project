@@ -155,7 +155,7 @@ a.article:hover {
 }
 
 .navbarCol {
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     margin: 0;
