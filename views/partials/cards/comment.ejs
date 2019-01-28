@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        
+        <!-- Main Comment Content -->
+        <div class="col-11" style="height: 100%; border: solid red;">
+            <!-- User -->
+            <div class="row commentRow">
+                <div class="col">
+                    s
+                </div>
+            </div>
+            <!-- Comment Body -->
+            <div class="row commentRow">
+                <div class="card-text">
+                    <%= comment.body %>
+                </div>
+            </div>
+            <!-- Comment Options -->
+            <div class="row commentRow">
+                <a href="#" class="btn btn-light ml-3">
+                    <div class="smallText">Reply</div>
+                </a>
+                <a href="#" class="btn btn-light">
+                    <div class="smallText">Share</div>
+                </a>
+                <a href="#" class="btn btn-light">
+                    <div class="smallText">Save</div>
+                </a>
+                <a href="#" class="btn btn-light">
+                    <div class="smallText">Report</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Side Upvote/Downvote -->
+        <div class="col-1 show" aria-expanded="true" id="titleID">
+            <div class="upvote" id=""></div>
+            <div class="count" id="">1</div>
+            <div class="downvote" id=""></div>
+        </div>
+
+    </div>
+</div>

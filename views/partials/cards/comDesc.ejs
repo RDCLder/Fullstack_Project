@@ -1,10 +1,16 @@
-<div class="card" id="communityDeatails">
+<div class="card" id="communityDescription">
     <!-- Card Content-->
     <div class="row m-0 p-0">
         <div class="col-12 m-0 p-0">
             <!-- Card Title-->
             <div class="card-header">
-                <h6 class="card-title m-0 p-0"><%= pageTitle.toUpperCase() %> COMMUNITY</h6>
+                <h6 class="card-title m-0 p-0">
+                    <% if (pageType == "community") { %>
+                    <%= pageTitle.toUpperCase() %> COMMUNITY
+                    <% } else if (pageType == "topic") { %>
+                    <%= community.name.toUpperCase() %> COMMUNITY
+                    <% } %>
+                </h6>
             </div>
             <!-- End of Card Title-->
             <!-- Card Body-->
@@ -13,11 +19,16 @@
                     <div class="col-12 m-0 p-0" id="communityName"></div>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col m-0 p-0 d-flex justify-content-center" id="communitySubscribers">1000000 Followers</div>
-                    <!-- <div class="col m-2 p-0 d-flex justify-content-center" id="communitySubscribersOnline"><p>3000</p><br>Followers Online</div> -->
+                    <div class="col m-0 p-0 d-flex justify-content-center" id="communityFollowers">1000000 Followers</div>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col-12 m-2 p-0" id="communityDetailsText">This is part belongs to the community details text.</div>
+                    <div class="col-12 m-2 p-0" id="communityDescription">
+                        <% if (pageType == "community") { %>
+                        <%= topic.community.dataValues.description %>
+                        <% } else if (pageType == "topic") { %>
+                        <%= community.description %>
+                        <% } %>
+                    </div>
                 </div>
                 <div class="row m-2">
                     <a href="#" class="btn btn-primary" style="width: 100%;">SUBSCRIBE</a>

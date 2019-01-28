@@ -22,7 +22,7 @@ var myStore = new SequelizeStore({
 router.use(session({
     secret: "keyboard cat",
     store: myStore,
-    // saveUninitialized: true,
+    saveUninitialized: true,
     resave: false,
     proxy: true
 }));
@@ -53,7 +53,7 @@ router.get('/login', function (req, res) {
 
 router.post('/login',
     passport.authenticate('local', {
-        successRedirect: "/user",
+        successRedirect: "/",
         failureRedirect: "/",
         failureFlash: true,
         successFlash: 'Welcome!'
