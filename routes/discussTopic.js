@@ -9,16 +9,31 @@ router.get("/discussTopic", (req, res) => {
             pageID: "discussTopic",
             pageType: "submission",
             isLoggedIn: false
-        })
-    }
-    else {
+        });
+    } else {
         res.render("discussTopic", {
             pageTitle: "Discuss Topic",
             pageID: "discussTopic",
             pageType: "submission",
             isLoggedIn: true
-        })
+        });
     }
-})
+});
+
+router.post("/discussTopic", (req, res) => {
+    var title = req.body.title;
+    var body = req.body.body;
+    db.topic
+        .create({
+            title: title,
+            body: body
+        })
+        .then(() => {
+            res.redirect("..");
+        })
+        .catch(() => {
+            res.redirect("/discussTopic");
+        });
+});
 
 module.exports = router;

@@ -29,7 +29,7 @@ router.post("/register", function (req, res) {
             email: req.body.email
         })
         .then(() => {
-            res.redirect("/");
+            res.redirect("/login");
         })
         .catch(error => {
             console.log(error);
