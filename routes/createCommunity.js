@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models/");
+var flash = require('connect-flash')
 var bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: false }));
+router.use(flash());
 
 router.get('/createCommunity',(req, res)=>{
     console.log(req.user)
@@ -28,7 +30,14 @@ router.post('/createCommunity',(req,res)=>{
         name: name,
         description: description
     })
-    res.redirect('..')
+    .then(()=>{
+        res.redirect('..');
+    })
+    .catch(()=>{
+        res.redirect('/createCommunity')
+        // res.redirect('/createCommunity');
+    });
+
 })
 
 module.exports = router;

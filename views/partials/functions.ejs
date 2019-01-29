@@ -129,8 +129,8 @@
     // ------------------------------------------------------------------------
 
     $(document).ready(function(){
-        $('mediaDrgDrpBox input').change(function () {
-            $('mediaDrgDrpBox label').text(this.files.length + " file(s) selected");
+        $('#mediaDrgDrpBox input').change(()=> {
+            $('#mediaDrgDrpBox label').text(this.files.length + " file(s) selected");
         });
     });
 
@@ -145,5 +145,8 @@
     //     options += '<option value="'+mycars[i]+'" />';
 
     // document.getElementById('anrede').innerHTML = options;
+    //////////////////////////////////////////////////////////////////////////////////////
+
+    // Alert Message //
     
 </script>

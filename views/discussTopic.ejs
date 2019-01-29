@@ -52,7 +52,7 @@
             </datalist>      
         </form>
 
-        <input class="discussTopicTab" id="topicText" type="radio" name="tabs" checked="" name="tabs"><label class="discussTopicTabLabel" for="topicText">Topic Text</label><input class="discussTopicTab" id="topicMedia" type="radio" name="tabs" name="tabs"><label class="discussTopicTabLabel" for="topicMedia">Media</label><input class="discussTopicTab" id="topicLink" type="radio" name="tabs" name="tabs"><label class="discussTopicTabLabel" style="border-right:none;"for="topicLink">Link</label>
+        <input class="discussTopicTab" id="topicText" type="radio" name="tabs" checked=""><label class="discussTopicTabLabel" for="topicText">Topic Text</label><input class="discussTopicTab" id="topicMedia" type="radio" name="tabs" name="tabs"><label class="discussTopicTabLabel" for="topicMedia">Media</label><input class="discussTopicTab" id="topicLink" type="radio" name="tabs" name="tabs"><label class="discussTopicTabLabel" style="border-right:none;"for="topicLink">Link</label>
 
         <div class="discussTopicTabContent">
             <div id="discussTopicText">
@@ -75,10 +75,10 @@
                 <form action="discussTopic" method="POST">
                     <div class="form-group">
                         <label for="topicMediaTitle" >Title</label>
-                        <input type="text" class="form-control" id="topicMediaTitle" name="title" placeholder="Title of your topic.">
+                        <input type="text" class="form-control" id="topicMediaTitle" name="title" placeholder="Title of your topic." >
                     </div>
                     <div class="form-group" id="mediaDrgDrpBox">
-                        <input type="file" id="fileDrop" multiple placeholder="Drag your files here or click in this area.">
+                        <input type="file" id="fileDrop" multiple placeholder="Drag your files here or click in this area." name="body">
                         <label for="fileDrop">Drag your files here or click in this area.</label>
                     </div>
                     <button class="btn btn-default pull-right">Save Draft</button>
