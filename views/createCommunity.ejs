@@ -30,14 +30,14 @@
                             <div class="row">
                                 <div class="col-12" id="createCommunityNameSection" >
                                     <label for="createCommunityName">Community Name</label>
-                                    <input type="text" id="createCommunityName" class="form-control" placeholder="Community Name ~">
+                                    <input type="text" id="createCommunityName" class="form-control" placeholder="Community Name ~" name="name">
                                     <p>Community names including capitalization cannot be changed.</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12" id="createCommunityDescriptionSection">
                                     <label for="createCommunityDescription">Community Description</label>
-                                    <textarea class="form-control" id="createCommunityDescription" rows="3" placeholder="Community Description ~"></textarea>
+                                    <textarea class="form-control" id="createCommunityDescription" rows="3" placeholder="Community Description ~" name="description"></textarea>
                                     <p>This will provide new members an understanding of the community.</p>
                                 </div>
                             </div>
@@ -52,13 +52,13 @@
                                     </div>
                                     <div>
                                         <input type="radio" id="createCommunityRestricted" name="communityType" value="restricted"
-                                        checked>
+                                        >
                                         <label for="createCommunityRestricted"><i class="fas fa-exclamation-circle" style="color:gold"></i>Restricted</label>
                                         <p>Commuity is accessible to anyone but only authorized users can submit topics.</p>
                                     </div>
                                     <div>
                                         <input type="radio" id="createCommunityPrivate" name="communityType" value="private"
-                                        checked>
+                                        >
                                         <label for="createCommunityPrivate"><i class="fas fa-user-secret" style="color:#444444"></i>Private</label>
                                         <p>Only authorized users can view and submit to the community.</p>
                                     </div>
