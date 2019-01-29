@@ -32,7 +32,7 @@
             </div>
             <!-- Login/Register Button -->
             <div class="col-3 justify-content-end navbarCol pr-3">
-                <% if (isLoggedIn) { %>
+                <% if (isLoggedIn == true) { %>
                 <a href="/user/<%= user.username %>">
                     <%= user.username %>'s Profile
                 </a>

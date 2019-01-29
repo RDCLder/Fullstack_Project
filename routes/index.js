@@ -4,9 +4,8 @@ const db = require("./../models/");
 
 router.get("/", (req, res) => {
 
-    console.log(req.user)
     if (!req.user) {
-        console.log("NOT AUTHENTICATED IN INDEX!");
+        // console.log("NOT AUTHENTICATED IN INDEX!");
         res.render("index", {
             pageTitle: "Home",
             pageID: "index",
@@ -15,7 +14,7 @@ router.get("/", (req, res) => {
         });
     }
     else {
-        console.log("AUTHENTICATED IN INDEX!");
+        // console.log("AUTHENTICATED IN INDEX!");
         res.render("index", {
             pageTitle: "Home",
             pageID: "index",

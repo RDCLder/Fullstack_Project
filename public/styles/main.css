@@ -424,7 +424,7 @@ p {
     height: 0;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
-    border-bottom: 2.5vh solid #5AB9EA;
+    border-bottom: 2.5vh solid lightslategray;
     cursor: pointer;
     margin: auto;
     margin-bottom: 0%;
@@ -437,7 +437,7 @@ p {
     height: 0;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
-    border-top: 2.5vh solid #5AB9EA;
+    border-top: 2.5vh solid lightslategray;
     cursor: pointer;
     margin: auto;
     margin-top: 0;
@@ -462,8 +462,19 @@ p {
     TOPIC
 ----------------------------------------------------- */
 
+.topicPostCard {
+    height: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 4%;
+}
+
 .topicBody {
     height: auto;
+    margin-bottom: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
+    /* border: solid orange; */
 }
 
 .commentContainer {
@@ -527,6 +538,16 @@ p {
     padding: 0;
     color: white;
     font-weight: bold; 
+}
+
+.submitComment {
+    margin: 0;
+    padding: 0;
+}
+
+.submitCommentLabel {
+    background-color: #4B8AE5;
+    color: white;
 }
 
 .smallText {
