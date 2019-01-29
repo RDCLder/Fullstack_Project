@@ -10,7 +10,6 @@ router.get("/community/:communityPage", (req, res) => {
 
     let communityPage = req.params.communityPage;
 
-    // Query with Sequelize
     db.topic
         .findAll({
             include: [
@@ -27,11 +26,9 @@ router.get("/community/:communityPage", (req, res) => {
         })
         .then(topic => {
             if (topic.length > 0) {
-                // console.log(topic[0].dataValues);
-                // console.log(topic[0].dataValues.user);
                 console.log(req.isAuthenticated());
-                if (!req.isAuthenticated()) {
-                    // console.log("NOT AUTHENTICATED IN COMMUNITY!");
+                if (!req.user) {
+                    console.log("NOT AUTHENTICATED IN COMMUNITY!");
                     res.render("community", {
                         pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
                         pageID: communityPage,
@@ -40,8 +37,8 @@ router.get("/community/:communityPage", (req, res) => {
                         isLoggedIn: false
                     });
                 }
-                else {
-                    // console.log("AUTHENTICATED IN COMMUNITY!");
+                else if(req.user) {
+                    console.log("AUTHENTICATED IN COMMUNITY!");
                     res.render("community", {
                         pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
                         pageID: communityPage,

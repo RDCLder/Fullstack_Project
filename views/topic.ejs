@@ -12,16 +12,14 @@
     </header>
     <div class="container-fluid m-0 p-0">
         <div class="row m-0 p-0">
-
             <div class="col-1"></div>
-
             <!-- Topic Main Content-->
             <div class="col-6 m-0 p-0 TopicMain">
-
                 <!-- Topic Body -->
-                <div class="row">
-                    This is the body.
-                </div>
+                <!-- <div class="row">
+                    
+                </div> -->
+                <% include partials/cards/topicBody.ejs %>
 
                 <!-- Comments -->
                 <div class="container-fluid commentContainer">
@@ -30,7 +28,6 @@
                     <% include partials/cards/comment2.ejs %>
                     <% } %>
                 </div>
-
             </div>
 
             <!-- Topic Side Content-->
@@ -39,9 +36,7 @@
                 <% include partials/cards/comRule.ejs %>
                 <% include partials/cards/comMod.ejs %>
             </div>
-
             <div class="col-1"></div>
-
         </div>
     </div>
     <% include partials/cdn.ejs %>

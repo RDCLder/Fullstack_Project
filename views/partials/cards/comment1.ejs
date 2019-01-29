@@ -1,0 +1,45 @@
+<div class="card commentCard">
+    <div class="row m-0 p-0">
+        <!-- Card Content -->
+        <div class="col-11 m-0 p-0">
+            <div class="m-0 pl-2 commentHeader1">
+                <div>
+                    <a href="#">
+                        <%= comment.user.dataValues.username %>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body commentText1 show" aria-expanded="true" id="titleID">
+                <h6 class="card-text">
+                    <%= comment.body %>
+                </h6>
+            </div>
+            <div class="card-body commentOptions1 show" aria-expanded="true" id="titleID">
+                <div class="smallText commentButton1"><a href="#">Reply</a></div>
+                <div class="smallText commentButton1"><a href="#">Share</a></div>
+                <div class="smallText commentButton1"><a href="#">Save</a></div>
+                <div class="smallText commentButton1"><a href="#">Report</a></div>
+                <!-- <a href="#" class="btn btn-light ml-3">
+                        <div class="smallText">Reply</div>
+                    </a>
+                    <a href="#" class="btn btn-light">
+                        <div class="smallText">Share</div>
+                    </a>
+                    <a href="#" class="btn btn-light">
+                        <div class="smallText">Save</div>
+                    </a>
+                    <a href="#" class="btn btn-light">
+                        <div class="smallText">Report</div>
+                    </a> -->
+            </div>
+        </div>
+        <!-- End of Card Content -->
+        <!-- Upvote/Downvote Sidebar -->
+        <div class="col-1 card-side show" aria-expanded="true" id="titleID">
+            <div class="upvote" id=""></div>
+            <div class="count" id="">1</div>
+            <div class="downvote" id=""></div>
+        </div>
+        <!-- End of Upvote/Downvote Sidebar -->
+    </div>
+</div>

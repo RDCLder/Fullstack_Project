@@ -3,26 +3,22 @@ let router = express.Router();
 const db = require("./../models/");
 
 router.get("/user", (req, res) => {
-    
-    if (!req.isAuthenticated()) {
+    res.redirect("/");
+})
+
+router.get("/user/:username", (req, res) => {
+    let username = req.params.username;
+    if (!req.user || req.user.username != username) {
         res.redirect("/login");
         return;
     }
     else {
-        console.log(req.user.id);
         res.render("user", {
             pageTitle: `${req.user.username}'s Profile`,
-            pageID: `profile:${req.user.id}`
+            pageID: `profile:${req.user.id}`,
+            pageType: "profile"
         });
     }
 });
-
-// router.get("/user/:username", (req, res) => {
-//     var username = db.user[req.params.username];
-//     res.render("user", {
-//         pageTitle: username,
-//         pageID: username
-//     });
-// });
 
 module.exports = router;

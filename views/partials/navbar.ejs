@@ -4,13 +4,19 @@
         <!-- Start of Navbar Content -->
         <div class="row navbarRow">
             <!-- Trender Icon -->
-            <div class="col-3 pl-3 navbarCol">
-                <a href="/">
+            <div class="col-3 navbarCol">
+                <a href="/" class="mr-2">
                     <img src="/media/trender.png" alt="Trender Logo" id="trenderLogo">
                 </a>
-                <!-- <button class="btn btn-outline-success" type="submit" style="background-color:transparent; border:none">
-                    <i class="fas fa-search" style="color: white;"></i>
-                </button> -->
+                <% if (pageType == "community") { %>
+                <% var communityName = topics[0].dataValues.community.dataValues.name %>
+                <a href="/community/<%= communityName %>">
+                    <%= communityName.toUpperCase() %></a>
+                <% } else if (pageType == "topic") { %>
+                <% var communityName = community.name %>
+                <a href="/community/<%= communityName %>">
+                    <%= communityName.toUpperCase() %></a>
+                <% } %>
             </div>
             <!-- Search Bar -->
 
@@ -25,9 +31,11 @@
                 <a href="#">LAST 24 HOURS</a>
             </div>
             <!-- Login/Register Button -->
-            <div class="col-3 justify-content-end navbarCol">
+            <div class="col-3 justify-content-end navbarCol pr-3">
                 <% if (isLoggedIn) { %>
-                User Profile
+                <a href="/user/<%= user.username %>">
+                    <%= user.username %>'s Profile
+                </a>
                 <% } else if (isLoggedIn == false) { %>
 
                 <button type="button" class="btn btn-primary mr-2 ml-2" id="loginButton">

@@ -2,10 +2,14 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models/");
 
+router.get("/topic", (req, res) => {
+    res.redirect("/");
+});
+
 router.get("/topic/:topicID", (req, res) => {
+    
     let topicID = req.params.topicID;
 
-    // Query with Sequelize
     db.comment
         .findAll({
             include: [
@@ -16,6 +20,10 @@ router.get("/topic/:topicID", (req, res) => {
                     include: [
                         {
                             model: db.community,
+                            required: true
+                        },
+                        {
+                            model: db.user,
                             required: true
                         }
                     ]
@@ -31,12 +39,10 @@ router.get("/topic/:topicID", (req, res) => {
             ]
         })
         .then(comment => {
-            console.log(
-                comment[0].dataValues.topic.dataValues.community.dataValues
-            )
-            if (!req.isAuthenticated()) {
-                console.log("NOT AUTHENTICATED IN TOPIC!");
+            console.log(comment);
+            if (!req.user) {
                 res.render("topic", {
+                    // comment[0] is used because all comments will share the same topic & community
                     pageTitle: comment[0].dataValues.topic.title,
                     pageID: topicID,
                     pageType: "topic",
@@ -47,7 +53,6 @@ router.get("/topic/:topicID", (req, res) => {
                 });
             }
             else {
-                console.log("AUTHENTICATED IN TOPIC!");
                 res.render("topic", {
                     pageTitle: comment[0].dataValues.topic.title,
                     pageID: topicID,

@@ -462,6 +462,10 @@ p {
     TOPIC
 ----------------------------------------------------- */
 
+.topicBody {
+    height: auto;
+}
+
 .commentContainer {
     height: auto;
 }
@@ -483,19 +487,46 @@ p {
     margin-bottom: 2%;
 }
 
-.commentText {
+/* Comment Template 1 */
+.commentText1 {
+    background-color: cornflowerblue;
+    color: white;
     margin: 0;
     padding: 1%;
 }
 
-.commentHeader, .commentOptions {
-    background-color: cornflowerblue;
-}
-
-.commentOptions {
+.commentOptions1 {
     margin: 0;
     padding: 1%;
     font-size: 1vh;
+}
+
+.commentButton1 {
+    margin-right: 2%;
+    font-weight: bold; 
+}
+
+/* Comment Template 2 */
+.commentText2 {
+    margin: 0;
+    padding: 1%;
+}
+
+.commentOptions2 {
+    background-color: cornflowerblue;
+}
+
+.commentOptions2 {
+    margin: 0;
+    padding: 1%;
+    font-size: 1vh;
+}
+
+.commentButton2 {
+    margin-right: 2%;
+    padding: 0;
+    color: white;
+    font-weight: bold; 
 }
 
 .smallText {

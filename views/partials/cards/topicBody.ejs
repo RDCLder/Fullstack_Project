@@ -5,16 +5,12 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        <a href="#">
-                            <h5 class="card-title m-0 p-0">
-                                <a href="/topic/<%= topic.id %>">
-                                <%= topic.title %>
-                                </a>
-                            </h5>
-                        </a>
+                        <h5 class="card-title m-0 p-0">
+                            <%= topic.title %>
+                        </h5>
                     </div>
                     <div class="col-1">
-                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#titleID" style="background-color:transparent; border:none">
+                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#topic" style="background-color:transparent; border:none">
                             <span class="oi oi-chevron-bottom" style="color:white"></span>
                         </button>
                     </div>
@@ -23,23 +19,15 @@
                     <div class="col">
                         <div class="card-text text-left">
                             Posted by
-                            <%= topic.user.dataValues.username %>
+                            <a href="/user/<%= topic.user.dataValues.username %>">
+                                <%= topic.user.dataValues.username %>
+                            </a>
                         </div>
                     </div>
                     <div class="col-3 d-flex justify-content-end pr-3">
-                        <% if (pageID == "index") { %>
-                        <a href="<%= pageID %>">
-                            <div class="card-text">
-                                <%= pageTitle %>
-                            </div>
-                        </a>
-                        <% } else { %>
-                        <a href="<%= pageID %>">
-                            <div class="card-text">
-                                <%= pageTitle %>
-                            </div>
-                        </a>
-                        <% } %>
+                        <!-- <a href="community/<%= community.name %>">
+                            <= community.name[0].toUpperCase() + community.name.slice(1, community.name.length) >
+                        </a> -->
                     </div>
                     <!-- <div class="col-1"></div> -->
                 </div>
@@ -49,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body textBody show" aria-expanded="true" id="titleID">
+            <div class="card-body topicBody show" aria-expanded="true" id="titleID">
                 <h6 class="card-text">
                     <%= topic.body %>
                 </h6>
