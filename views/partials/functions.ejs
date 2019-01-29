@@ -130,7 +130,9 @@
 
     $(document).ready(function(){
         $('#mediaDrgDrpBox input').change(()=> {
-            $('#mediaDrgDrpBox label').text(this.files.length + " file(s) selected");
+            var data = [];
+            data.push($(this).files)
+            $('#mediaDrgDrpBox label').text(data.length + " file(s) selected");
         });
     });
 

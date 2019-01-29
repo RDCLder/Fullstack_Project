@@ -50,21 +50,6 @@ body {
     color: #7386D5;
 }
 
-/* .overlay {
-    display: none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 998;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-.overlay.active {
-    display: block;
-    opacity: 1;
-} */
 
 #sidebar .sidebar-header {
     padding: 20px;
@@ -353,10 +338,6 @@ body {
     /* border: solid #3A66A7; */
 }
 
-.videoBody {
-    height: auto;
-    /* min-height: 50%; */
-}
 
 .textBody {
     /* height: auto; */
