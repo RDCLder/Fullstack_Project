@@ -860,10 +860,13 @@ img.logo {
     background-color: #4B8AE5;
     color: white;
     padding: 20px;
-    top: 20%;;
+    top: 20%;
+    left: 0;
+    margin: auto;
     height: 50%;
     width: 50%;
     filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
+    z-index: 3;
 }
 .logoNSlogan {
     margin: 0 auto;
@@ -882,10 +885,13 @@ img.logo {
     background-color: white;
     color: #4B8AE5;
     padding: 20px;
-    top: 20%;;
+    top: 20%;
+    left: 0;
+    margin: auto;
     height: 50%;
     width: 50%;
     filter: drop-shadow(0 0 0.2rem #4B8AE5);
+    z-index: 3;
 }
 
 
@@ -920,16 +926,7 @@ span.forgotusr {
 
 
 /* Modal Content/Box */
-#modalLogin, #modalRegister {
-    background-color: #fefefe;
-    width: 20%;
-    position: relative;
-    top: 20%;
-    left: 0;
-    margin: auto;
-    border: 1px solid #888;
-    z-index: 3;
-}
+
 /* .modal {
     display: none; 
     position: fixed; 
