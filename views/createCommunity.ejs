@@ -6,7 +6,30 @@
 </head>
 
 <body>
-    
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+ 
+    <!-- <div id="createCommunityBackground"></div> -->
+    <div id="createCommunityContainer" class="container"> 
+        <div class="row" id="createCommunityBody">     
+            <div class="col-4" id="createCommunitySide">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="" alt="Side Bar Animation">
+                    </div>
+                </div>
+            </div>
+            <div class="col-8" id="createCommunityMain">
+                <div class="row">
+                    <div class="col-12" id="createCommunityHeader">
+                        <h5><%= pageTitle %></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
 
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>

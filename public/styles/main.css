@@ -836,27 +836,13 @@ span.forgotusr {
 .mcontainer .row a:hover{
     transform: scale(1.2);
 }
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    left: 0;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: visible; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    /* margin-top: 50%;
-    margin-left: 50%; */
-    /* padding-top: 60px; */
-}
-  
+
+
+
 /* Modal Content/Box */
-.modal-content {
+#modalLogin, #modalRegister {
     background-color: #fefefe;
-    width: 40%;
+    width: 20%;
     position: relative;
     top: 20%;
     left: 0;
@@ -864,6 +850,29 @@ span.forgotusr {
     border: 1px solid #888;
     z-index: 3;
 }
+/* .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: visible; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+} */
+/* .modal-content {
+    background-color: #fefefe;
+    width: 20%;
+    position: relative;
+    top: 20%;
+    left: 0;
+    margin: auto;
+    border: 1px solid #888;
+    z-index: 3;
+} */
   
   /* Close Button (x) */
 .close {
@@ -911,6 +920,212 @@ span.forgotusr {
 }
 
 /*   CREATE/DISCUSS TOPIC  */
-#createTopic form div, #createTopic form button{
+#discussTopic form div, #discussTopic form button{
     color: Grey;
+}
+
+#discussTopic {
+    height: 100%;
+}
+
+.discussTopicTabContent {
+    background: #fff;
+    color: #373737;
+    text-align:left;
+    height: 100%; 
+    overflow-y: scroll;
+} 
+
+.discussTopicTabContent > div {
+    display: none;
+    padding: 20px 25px 5px;
+}
+
+#topicText, #topicMedia, #topicLink {
+    display: none;
+}
+.discussTopicTab{
+    width: 100%;
+}
+.discussTopicTabLabel {
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    width: calc(100%  /3);
+    border-right: .5px solid #D0D0D0;
+    border-bottom: .5px solid #D0D0D0;
+    background-color: white;
+}
+
+#discussTopicText form button:hover {
+    color: #4B8AE5;
+    border-bottom: 1px solid #4B8AE5;
+}
+
+.discussTopicTabLabel:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
+
+input:checked + .discussTopicTabLabel {
+    background: #B1C9EF;
+    color: #fff;
+}
+
+#topicText:checked ~ .discussTopicTabContent #discussTopicText,
+#topicMedia:checked ~ .discussTopicTabContent #discussTopicMedia,
+#topicLink:checked ~ .discussTopicTabContent #discussTopicLink
+{
+  display: block;
+}
+
+@media screen and (max-width: 400px) {
+    .discussTopicTabLabel {padding: 15px 10px;} 
+}
+
+#discussTopicHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#openModalDraft{
+    background-color: #D0D0D0;
+    color:white;
+}
+
+
+#modalDraft{
+    top: 20%;
+}
+.draftItem{
+    width: 100%;
+    border-top: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+    padding: 5px;
+}
+#discussDraftModal{
+    display: inline-block;
+    width: auto;
+    
+}
+#discussTitle{
+    display: inline-block;
+    width: auto;  
+}
+
+#communySearchForm{
+    padding-top: 1%;
+    padding-bottom:1%;
+    border-top: 1px solid #D0D0D0;
+}
+#inputContainer{
+    position:relative;
+    padding:0;
+    margin:0;
+}
+#communitySearchInput{
+    width: 30%;
+}
+
+
+/* #iconDown{
+    position: absolute;
+    right: 10px;
+}
+#iconDown::before{
+    position: absolute;
+    right: 10px;
+} */
+
+
+
+/* TOPIC MEDIA BODY */
+
+/* .box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+} */
+#discussTopicMedia{
+    height: auto;
+    width: auto;
+}
+
+#mediaDrgDrpBox {
+    width: 1060px;
+    height: 200px;
+    border: 4px dashed #D0D0D0;
+}
+#mediaDrgDrpBox input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 1060px;
+    height: 200px;
+    outline: none;
+    opacity: 0;
+}
+#mediaDrgDrpBox label {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #D0D0D0;
+    font-family: Arial;
+}
+/* MEDIA QUERY FOR DRAG AND DROP BOX */
+@media screen and (max-width: 510px) {
+    #mediaDrgDrpBox {
+        width: 425px;
+        height: 200px;
+        border: 4px dashed #D0D0D0;
+    }
+    #mediaDrgDrpBox input{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 425px;
+        height: 200px;
+        outline: none;
+        opacity: 0;
+    }
+}
+/* CREATE COMMUNITY PAGE */
+
+/* #createCommunityBackground {
+    position: absolute;
+    z-index: 0;
+    background-color: grey;
+    opacity: .6;
+    height: 100%;
+    width: 100%;
+} */
+#createCommunityBody {
+    height: 100%;
+    width: 100%;   
+    margin: 0;
+    padding: 0;
+}
+#createCommunityContainer{
+    margin-top: 30px;
+    height: 80vh;
+    width: 60%;
+    background-color: white;
+    padding: 0;
+}
+#createCommunityHeader{
+    border-bottom: 1px solid black;
+}
+#createCommunitySide{
+    width: 100%;
+    height: 100%;
+}
+#createCommunityMain{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }

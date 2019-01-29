@@ -128,4 +128,22 @@
 
     // ------------------------------------------------------------------------
 
+    $(document).ready(function(){
+        $('mediaDrgDrpBox input').change(function () {
+            $('mediaDrgDrpBox label').text(this.files.length + " file(s) selected");
+        });
+    });
+
+    // EXAMPLE FOR CATEGORY SEARCH
+    // var mycars = new Array();
+    // mycars[0]='Herr';
+    // mycars[1]='Frau';
+
+    // var options = '';
+
+    // for(var i = 0; i < mycars.length; i++)
+    //     options += '<option value="'+mycars[i]+'" />';
+
+    // document.getElementById('anrede').innerHTML = options;
+    
 </script>
