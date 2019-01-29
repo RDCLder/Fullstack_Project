@@ -320,9 +320,9 @@ body {
     /* border-width: thin; */
 }
 
-.communitySide {
-    /* border: solid orange; */
-}
+/* .communitySide {
+    border: solid orange;
+} */
 
 .card {
     /* filter: drop-shadow(0 0 0.3rem grey); */
@@ -585,9 +585,9 @@ Community Page
     padding-bottom: 0;
 }
 
-#ruleDescription {
-    /* display: none; */
-}
+/* #ruleDescription {
+    display: none;
+} */
 
 /* ---------------------------------------
     USER HOMEPAGE
@@ -1189,20 +1189,101 @@ input:checked + .discussTopicTabLabel {
 #createCommunityContainer{
     margin-top: 30px;
     height: 80vh;
-    width: 60%;
+    width: 70%;
     background-color: white;
     padding: 0;
+    border: 1px solid #D0D0D0;
+    border-radius: 15px;
+    filter: drop-shadow(1px 1px 2px #444444);
 }
 #createCommunityHeader{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #D0D0D0;
 }
 #createCommunitySide{
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(#5680E9, #84CEEB, #5AB9EA, #C1C8E4, #8860D0);
+    
 }
+#createCommunitySide .row{
+    height: 100%;
+    width: 100%;
+}  
 #createCommunityMain{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    border-left: 1px solid #D0D0D0;
+}
+#createCommunityNameSection label{
+    padding-top: 10px;
+}
+#createCommunityNameSection label, #createCommunityNameSection input {
+    width: 100%;
+    margin: 0;
+}
+#createCommunityNameSection input{
+    background-color: rgb(243, 241, 241)
+}
+#createCommunityHeader h5 {
+    height: 100%;
+    padding: 5px;
+    padding-top: 30px;
+}
+#createCommunityNameSection p, #createCommunityDescriptionSection p{
+    padding-top: 10px;
+    font-weight: 400;
+    color: rgb(175, 175, 175);
+}
+#createCommunityDescriptionSection label {
+    width: 100%;
+    padding-top: 10px;
+    margin:0;
+    
+}
+#createCommunityDescriptionSection textarea {
+    background-color: rgb(243, 241, 241);
+}
+
+#createCommunityTypeSection label span, #createCommunityTypeSection label i, #createCommunityCheckAdultSection div label i {
+    padding-right: 10px;
+    padding-left: 10px
+}
+#createCommunityTypeSection {
+    padding-top: 20px;
+}
+#createCommunityTypeSection label {
+    margin: 0;
+}
+#createCommunityTypeSection p {
+    margin-left: 55px;
+    padding-bottom: 10px;
+    color: rgb(175, 175, 175);
+}
+#createCommunityTypeSection div {
+    padding-bottom: 10px;
+}
+#createCommunityCheckAdultSection div label i {
+    /* border-radius: 50%; */
+    color:red;
+}
+#createCommunityButton input, #createCommunityButton button{
+    float: right;
+    margin-top: 40px;
+    margin-right: 20px;
+    background-color: #4B8AE5;
+    color: white;   
+}
+#createCommunityButton input:hover , #createCommunityButton button:hover {
+    color: #5AB9EA;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+#createCommunitySideBackground{
+    background: url('../media/logoTrans.png');
+    background-size: contain;
+    margin-top: 200px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }

@@ -14,8 +14,7 @@
         <div class="row" id="createCommunityBody">     
             <div class="col-4" id="createCommunitySide">
                 <div class="row">
-                    <div class="col-12">
-                        <img src="" alt="Side Bar Animation">
+                    <div class="col-12" id="createCommunitySideBackground">
                     </div>
                 </div>
             </div>
@@ -23,6 +22,66 @@
                 <div class="row">
                     <div class="col-12" id="createCommunityHeader">
                         <h5><%= pageTitle %></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="createCommunityBody">
+                        <form action="" method="POST">
+                            <div class="row">
+                                <div class="col-12" id="createCommunityNameSection" >
+                                    <label for="createCommunityName">Community Name</label>
+                                    <input type="text" id="createCommunityName" class="form-control" placeholder="Community Name ~">
+                                    <p>Community names including capitalization cannot be changed.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="createCommunityDescriptionSection">
+                                    <label for="createCommunityDescription">Community Description</label>
+                                    <textarea class="form-control" id="createCommunityDescription" rows="3" placeholder="Community Description ~"></textarea>
+                                    <p>This will give new members an understanding of your community.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="createCommunityTypeSection">
+                                    <h6>Community Type</h6>
+                                    <div>
+                                        <input type="radio" id="createCommunityPublic" name="communityType" value="public"
+                                        checked>
+                                        <label for="createCommunityPublic"><span class="oi oi-people" aria-hidden="true" style="color: #4B8AE5"></span>Public</label>
+                                        <p>Everyone can view and submit topics to your community.</p>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="createCommunityRestricted" name="communityType" value="restricted"
+                                        checked>
+                                        <label for="createCommunityRestricted"><i class="fas fa-exclamation-circle" style="color:gold"></i>Restricted</label>
+                                        <p>Commuity is accessible to anyone but only authorized users can submit topics.</p>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="createCommunityPrivate" name="communityType" value="private"
+                                        checked>
+                                        <label for="createCommunityPrivate"><i class="fas fa-user-secret" style="color:#444444"></i>Private</label>
+                                        <p>Only authorized users can view and submit to the community.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="createCommunityCheckAdultSection">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="createCommunityAdultCheckbox">
+                                        <label class="form-check-label" for="createCommunityAdultCheckbox">
+                                            <i class="fas fa-hand-paper"></i>
+                                            Community for 18+ years old 
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="createCommunityButton">
+                                    <input class="btn " type="submit" value="Submit">
+                                    <button class="btn " type="button"   onclick="return confirm('Are you sure you would like to return back to the homepage?')"><a href="/">Cancel</a></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

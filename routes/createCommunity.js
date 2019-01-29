@@ -4,8 +4,9 @@ const db = require("../models/");
 
 router.get('/createCommunity',(req, res)=>{
     res.render('createCommunity',{
-        pageTitle: "Create Community",
-        isLoggedIn: false
+        pageTitle: "Create a Community",
+        isLoggedIn: false,
+        pageType: "createCommunity"
     })
 })
 

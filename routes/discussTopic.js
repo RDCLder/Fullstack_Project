@@ -5,7 +5,9 @@ const db = require("../models/");
 router.get('/discussTopic',(req,res)=>{
     res.render('discussTopic',{
         pageTitle: "Discuss Topic",
-        isLoggedIn: false
+        isLoggedIn: false,
+        pageType: "createCommunity"
+
     })
 })
 
