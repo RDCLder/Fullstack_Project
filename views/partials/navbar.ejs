@@ -4,13 +4,19 @@
         <!-- Start of Navbar Content -->
         <div class="row navbarRow">
             <!-- Trender Icon -->
-            <div class="col-3 pl-3 navbarCol">
-                <a href="/">
+            <div class="col-3 navbarCol">
+                <a href="/" class="mr-2">
                     <img src="/media/trender.png" alt="Trender Logo" id="trenderLogo">
                 </a>
-                <button class="btn btn-outline-success" type="submit" style="background-color:transparent; border:none">
-                    <i class="fas fa-search" style="color: white;"></i>
-                </button>
+                <% if (pageType == "community") { %>
+                <% var communityName = topics[0].dataValues.community.dataValues.name %>
+                <a href="/community/<%= communityName %>">
+                    <%= communityName.toUpperCase() %></a>
+                <% } else if (pageType == "topic") { %>
+                <% var communityName = community.name %>
+                <a href="/community/<%= communityName %>">
+                    <%= communityName.toUpperCase() %></a>
+                <% } %>
             </div>
             <!-- Search Bar -->
 
@@ -25,9 +31,11 @@
                 <a href="#">LAST 24 HOURS</a>
             </div>
             <!-- Login/Register Button -->
-            <div class="col-3 justify-content-end navbarCol">
+            <div class="col-3 justify-content-end navbarCol pr-3">
                 <% if (isLoggedIn) { %>
-                User Profile
+                <a href="/user/<%= user.username %>">
+                    <%= user.username %>'s Profile
+                </a>
                 <% } else if (isLoggedIn == false) { %>
 
                 <button type="button" class="btn btn-primary mr-2 ml-2" id="loginButton">
@@ -44,16 +52,8 @@
 <div class="row" style="height: 80px;"></div>
 <!-- End of Navbar -->
 
-<!-- Home Button -->
-<a href="#">
-    <button type="button" class="btn btn-primary floatButton1">
-        <i class="fas fa-home my-float"></i>
-    </button>
-</a>
-<!-- End of Home Button -->
-
 <!-- Sidebar Button -->
-<button type="button" id="sidebarCollapse" class="btn btn-primary floatButton2">
+<button type="button" id="sidebarCollapse" class="btn btn-primary floatButton" id="sidebarButton">
     <i class="fas fa-bars my-float"></i>
 </button>
 <!-- <div class="homeLabel1">
@@ -61,6 +61,22 @@
     <i class="fa fa-play label-arrow"></i>
 </div> -->
 <!-- End of Sidebar Button -->
+
+<!-- Search Button -->
+<a href="#">
+    <button type="button" class="btn btn-primary floatButton" id="searchButton">
+        <i class="fas fa-search my-float"></i>
+    </button>
+</a>
+<!-- End of Search Button -->
+
+<!-- Home Button -->
+<a href="#">
+    <button type="button" class="btn btn-primary floatButton" id="homeButton">
+        <i class="fas fa-home my-float"></i>
+    </button>
+</a>
+<!-- End of Home Button -->
 
 <% include modals/modalLogin.ejs %>
 <% include modals/modalRegister.ejs %>

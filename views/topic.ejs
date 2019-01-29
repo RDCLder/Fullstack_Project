@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <header>
+        <% include partials/navbar.ejs %>
+        <% include partials/sidebar.ejs %>
+    </header>
+    <div class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+            <div class="col-1"></div>
+            <!-- Topic Main Content-->
+            <div class="col-6 m-0 p-0 TopicMain">
+                <!-- Topic Body -->
+                <!-- <div class="row">
+                    
+                </div> -->
+                <% include partials/cards/topicBody.ejs %>
+
+                <!-- Comments -->
+                <div class="container-fluid commentContainer">
+                    <% for (var i = 0; i < comments.length; i ++) { %>
+                    <% var comment = comments[i].dataValues %>
+                    <% include partials/cards/comment2.ejs %>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- Topic Side Content-->
+            <div class="col-4 m-0 p-0 TopicSide">
+                <% include partials/cards/comDesc.ejs %>
+                <% include partials/cards/comRule.ejs %>
+                <% include partials/cards/comMod.ejs %>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
+</body>
+
+</html>

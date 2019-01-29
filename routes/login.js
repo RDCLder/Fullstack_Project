@@ -22,7 +22,7 @@ var myStore = new SequelizeStore({
 router.use(session({
     secret: "keyboard cat",
     store: myStore,
-    // saveUninitialized: true,
+    saveUninitialized: true,
     resave: false,
     proxy: true
 }));
@@ -44,16 +44,9 @@ router.get('/login', function (req, res) {
     }
 });
 
-// router.get('/login', (req, res) => {
-//     res.redirect('login',{
-//         pageTitle: "Login",
-//         pageId: "login"
-//     }); //end of res.send
-// });//end of app.get
-
 router.post('/login',
     passport.authenticate('local', {
-        successRedirect: "/user",
+        successRedirect: "/",
         failureRedirect: "/",
         failureFlash: true,
         successFlash: 'Welcome!'
@@ -62,22 +55,21 @@ router.post('/login',
 
 passport.use(new LocalStrategy((username, password, done) => {
     db.user.findAll({ where: { username: username } }).then((results) => {
-        console.log(results);
         if (results.length > 0) {
-            const data = results[0];
-            bcrypt.compare(password, data.password, function (err, res) {
+            let data = results[0];
+            bcrypt.compare(password, data.password, (err, res) => {
                 if (res) {
-                    console.log("Response received");
+                    console.log("PASSWORD MATCHES");
                     done(null, { id: data.id, username: data.username });
                 }
                 else {
-                    console.log("Returned nothing");
-                    done(null, false)
+                    console.log("PASSWORD DOESN'T MATCH");
+                    done(null, false);
                 }
             })
         }
         else {
-            console.log("Result is null");
+            console.log("NO USERNAME MATCHES");
             done(null, false)
         }
     })

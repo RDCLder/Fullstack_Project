@@ -160,7 +160,7 @@ a.article:hover {
     align-items: center;
     margin: 0;
     padding: 0;
-    border: solid red;
+    /* border: solid red; */
 }
 
 #trenderLogo {
@@ -222,40 +222,44 @@ a:focus {
 	opacity:0.5;
 }
 
-.floatButton1, .floatButton2 {
+.floatButton {
+    color:#FFF;
 	position:fixed;
-	width:60px;
-	height:60px;
-	right:30px;
-	color:#FFF;
-	border-radius:50px;
+	right: 5vh;
+    width: 10vh;
+	height: 10vh;
+	border-radius: 5vh;
 	text-align:center;
-    box-shadow: 2px 2px 3px #999;
+    box-shadow: 0.5vh 0.5vh 1vh #999;
     z-index: 2;
 }
 
-.floatButton1 {
-	bottom:100px;
+#sidebarButton {
+	top: 0vh;
 }
 
-.floatButton2 {
-	bottom:30px;
+#searchButton {
+	top: 25vh;
+}
+
+#homeButton {
+	bottom: 5vh;
 }
 
 .my-float {
 	font-size:24px;
 }
 
-button.floatButton1 + div.label-container1 {
+/* #homeButton + div.homeLabel {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease;
 }
 
-button.floatButton1:hover + div.label-container1 {
+#homeButton:hover + div.homeLabel {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /* ---------------------------------------------------
     MAIN CONTENT
@@ -290,14 +294,6 @@ body {
     padding: 0;
 }
 
-#topicCard {
-    margin-bottom: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    border: solid #DDDDDD;
-    border-width: thin;
-}
-
 #dashboardCard {
     margin-bottom: 4%;
     margin-left: 2%;
@@ -319,16 +315,29 @@ body {
     padding: 0;
     padding-top: 2%;
     padding-left: 5%;
+    /* border: solid orange; */
     /* border-bottom: solid #DDDDDD; */
     /* border-width: thin; */
 }
 
-.card {
-    filter: drop-shadow(0 0 0.3rem grey);
-    /* min-height: 220px; */
-    /* border: solid green; */
-    max-height: 300px;
+.communitySide {
+    /* border: solid orange; */
 }
+
+.card {
+    /* filter: drop-shadow(0 0 0.3rem grey); */
+    box-shadow: 0.5vh 0.5vh 1vh #999;
+}
+
+.topicCard {
+    max-height: 300px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
 .card-header {
     color: white; 
     background-color: #4B8AE5;
@@ -374,7 +383,7 @@ body {
 }
 
 .card-text {
-    font-size: 14px;
+    font-size: 2.5vh;
 }
 
 .card-side {
@@ -413,9 +422,9 @@ p {
     align-items: baseline;
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-bottom: 18px solid #5AB9EA;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-bottom: 2.5vh solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-bottom: 0%;
@@ -426,20 +435,20 @@ p {
     align-items: initial;
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
-    border-top: 18px solid #5AB9EA;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-top: 2.5vh solid #5AB9EA;
     cursor: pointer;
     margin: auto;
     margin-top: 0;
 }
 
 .upvote.on {
-    border-bottom: 18px solid orange;
+    border-bottom: 2.5vh solid orange;
 }
 
 .downvote.on {
-    border-top: 18px solid mediumslateblue;
+    border-top: 2.5vh solid mediumslateblue;
 }
 
 .count {
@@ -447,6 +456,82 @@ p {
     font-weight: 300;
     line-height: 1.0em;
     margin: auto;
+}
+
+/* ---------------------------------------------------
+    TOPIC
+----------------------------------------------------- */
+
+.topicBody {
+    height: auto;
+}
+
+.commentContainer {
+    height: auto;
+}
+
+/* .comment {
+    height: auto;
+} */
+
+.commentRow {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    border: solid orange;
+}
+
+.commentCard {
+    height: auto;
+    margin-bottom: 2%;
+}
+
+/* Comment Template 1 */
+.commentText1 {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 0;
+    padding: 1%;
+}
+
+.commentOptions1 {
+    margin: 0;
+    padding: 1%;
+    font-size: 1vh;
+}
+
+.commentButton1 {
+    margin-right: 2%;
+    font-weight: bold; 
+}
+
+/* Comment Template 2 */
+.commentText2 {
+    margin: 0;
+    padding: 1%;
+}
+
+.commentOptions2 {
+    background-color: cornflowerblue;
+}
+
+.commentOptions2 {
+    margin: 0;
+    padding: 1%;
+    font-size: 1vh;
+}
+
+.commentButton2 {
+    margin-right: 2%;
+    padding: 0;
+    color: white;
+    font-weight: bold; 
+}
+
+.smallText {
+    display: inline-block;
+    font-size: 2vh;
 }
 
 /* ---------------------------------------------------
@@ -465,54 +550,49 @@ p {
 Community Page 
 --------------------------------------------------------*/
 
-#communityDeatails {
+#communityDescription {
     margin-bottom: 4%;
     margin-left: 10%;
     margin-right: 10%;
-    border: solid #DDDDDD;
-    border-width: thin;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
 }
-#communityRules{
+
+#communityRules {
     margin-bottom: 4%;
     margin-left: 10%;
     margin-right: 10%;
-    border: solid #DDDDDD;
-    border-width: thin;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
 }
-#communityModerators{
+
+#communityModerators {
     margin-bottom: 4%;
     margin-left: 10%;
     margin-right: 10%;
-    border: solid #DDDDDD;
-    border-width: thin;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
 }
-.moderators{
+
+.moderators {
     margin-bottom: 2%;
     margin-top: 2%;
 }
-#communityModeratorsBody{
+
+#communityModeratorsBody {
     padding-left: 3%;
     padding-top: 0;
     padding-bottom: 0;
 }
-#ruleDescription1{
-    display: none;
+
+#ruleDescription {
+    /* display: none; */
 }
-#ruleDescription2{
-    display: none;
-}
-#ruleDescription3{
-    display: none;
-}
-#ruleDescription4{
-    display: none;
-}
-#ruleDescription5{
-    display: none;
-}
+
 /* ---------------------------------------
     USER HOMEPAGE
 ---------------------------------------- */
+
 .h100{
     height: 100%;
     padding: 1%;
