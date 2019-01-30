@@ -54,7 +54,7 @@
                                 placeholder="Select a Community" />
                         </div>
 
-                        <datalist id="communitySearch">
+                        <datalist id="communitySearch" >
                             <% for (var i = 0; i < communities.length; i ++) { %>
                             <% var community = communities[i].dataValues %>
                             <option value="<%= community.name %>" id="<%= community.id %>">
@@ -64,17 +64,7 @@
                     <div class="form-group">
                         <label for="topicTextTitle">Title</label>
                         <input type="text" class="form-control" id="topicTextTitle" name="title" placeholder="Title of your topic.">
-                        <div id="inputContainer">
-                                <input list="communitySearch" id="communitySearchInput" name="communitySearchInput" placeholder="Select a Community" />
-                                <!-- <span class="oi oi-caret-bottom" class="iconDown"></span> -->
-                            </div>
                 
-                            <datalist id="communitySearch">
-                                <% for (var i = 0; i < communities.length; i ++) { %>
-                                <% var community = communities[i].dataValues %>
-                                <option value="<%= community.name %>">
-                                    <% } %>
-                            </datalist>
                     </div>
                     <div class="form-group">
                         <label for="topicTextBody">Body</label>

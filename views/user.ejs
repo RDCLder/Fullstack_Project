@@ -14,43 +14,44 @@
                     <div class="row" style="height: 100%">
                         <div class="col-3 p-0">
                             <div id="userSideContent">
-                                <div class="row" style="height: auto">
+                                <div class="row" style="height: auto; margin-left: 3%">
                                     <h4>Trender</h4>
                                 </div>
-                                <div class="row" style="height: auto">
-                                    <div class="col-4" id="userAvatar">
-                                        <img src="" alt="" class="avatar">
+                                <div class="row">
+                                    <div class="col-4 d-inline-block" id="userAvatar">
+                                        <!-- <img src="" alt="" class="avatar"> -->
+                                        <i class="fas fa-user" id="userAvatarPlaceholder"></i>
                                     </div>
-                                    <div class="col-8" id="userInformation">
-                                        <div class="row" style="height: auto">
+                                    <div class="col-8 d-inline-block" id="userInformation">
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
                                             <div class="col-12">
-                                                <h6>Username</h6>
+                                                <p><%= username%></p>
                                             </div>
                                         </div>
-                                        <div class="row" style="height: auto">
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
                                             <div class="col-12">
-                                                <h6>Created Date</h6>
+                                                <p>Created Date:</p>
                                             </div>
                                         </div>
-                                        <div class="row" style="height: auto">
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
                                             <div class="col-12">
-                                                <h6>Last Login</h6>
+                                                <p>Last Login:</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row" style="height: auto">
-                                    <h5>General</h5>
+                                <div class="row " style="height: auto; margin-top: 5%; margin-left: 3%">
+                                    <h5 style="margin:0">General</h5>
                                 </div>
                                 <div class="row" style="height: auto">
                                     <div class="col-12">
-                                        <ul style="list-style-type: none; width: 100%;" >
-                                            <li><a href="#" class="topicList" id="topicNew"><div>New</div></a></li>
-                                            <li><a href="#" class="topicList" id="topicRecent"><div>Recent</div></a></li>
-                                            <li><a href="#" class="topicList" id="topicTrending"><div>Trending</div></a></li>
-                                            <li><a href="#" class="topicList" id="topicSketchy"><div>Sketchy</div></a></li>
-                                            <li><a href="#" class="topicList" id="topicFunny"><div>Funny</div></a></li>
-                                            <li><a href="#" class="topicList" id="topicSad"><div>Sad</div></a></li>
+                                        <ul style="list-style-type: none; width: 100%;" id="tpUL" >
+                                            <li><a href="#" class="topicList" id="topicNew"><p>New</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicRecent"><p>Recent</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicTrending"><p>Trending</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicSketchy"><p>Sketchy</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicFunny"><p>Funny</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicSad"><p>Sad</p></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -62,7 +63,7 @@
                             </div>
                         </div>
                         <div class="col-9 m-0 p-0" style="height: 100%;">
-                            <div id="userMainContent" style="border: 1px solid green">
+                            <div id="userMainContent">
                                 <input class="userTabs" id="userTab1" type="radio" name="tabs" checked="" name="tabs">
                                 <label class="userTabsLabel" for="userTab1">Bio</label>
                                 
@@ -78,7 +79,7 @@
                                 <input class="userTabs" id="userTab5" type="radio" name="tabs">
                                 <label class="userTabsLabel" for="userTab5">Account</label>
                                 
-                                <div class="userTabContent" style="border: 1px solid red">
+                                <div class="userTabContent" >
                                     <div id="userBio">
                                         <p>
                                         This area will contain the username bio.
@@ -97,8 +98,8 @@
                                                     <div class="col-12">
                                                         <h6>Display Name (Optional)</h6>
                                                         <p>Set a display name. This does not change your username.</p>                                                            </p>
-                                                        <input type="text" name="displayName" id="displayName" maxlength="20">
-                                                        <label for="displayName">20 characters left</label>
+                                                        <input type="text" name="displayName" id="displayName" maxlength="20" style="margin: 1% "/>
+                                                        <label for="displayName" style="width: 100%;font-size: 1em;">20 characters left</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
