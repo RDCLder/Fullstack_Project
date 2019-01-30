@@ -5,21 +5,19 @@ const body_parser = require("body-parser");
 
 router.get("/createTopic", (req, res) => {
     if (!req.user) {
-        res.redirect("/login")
+        res.redirect("/login");
     } else {
-
-        db.community.findAll()
-            .then(community => {
-                // console.log(community);
-                res.render("createTopic", {
-                    pageTitle: "Discuss Topic",
-                    pageID: "createTopic",
-                    pageType: "submission",
-                    communities: community,
-                    isLoggedIn: true,
-                    user: req.user
-                });
-            })
+        db.community.findAll().then(community => {
+            // console.log(community);
+            res.render("createTopic", {
+                pageTitle: "Discuss Topic",
+                pageID: "createTopic",
+                pageType: "submission",
+                communities: community,
+                isLoggedIn: true,
+                user: req.user
+            });
+        });
 
         // res.render("createTopic", {
         //     pageTitle: "Discuss Topic",
@@ -33,26 +31,30 @@ router.get("/createTopic", (req, res) => {
 
 router.use(body_parser.urlencoded({ extended: false }));
 router.post("/createTopic", (req, res) => {
-    var title = req.body.title;
-    var body = req.body.body;
-    var communityID = req.body.communitySearchInput
-    console.log(req.body.communitySearchInput)
-    console.log(req.user);
-    db.community.findAll()
-    db.topic
-        .create({
-            title: title,
-            body: body,
-            // community_id: communityID,
-            // author_id: user.id
-            // type: "",
+    db.community
+        .findAll({
+            where: { name: req.body.communitySearchInput }
         })
-    //     .then(() => {
-    //         res.redirect("..");
-    //     })
-    //     .catch(() => {
-    //         res.redirect("/createTopic");
-    //     });
+        .then(community => {
+            community = community[0].dataValues;
+            console.log(community);
+            db.topic
+                .create({
+                    title: req.body.title,
+                    body: req.body.body,
+                    community_id: community.id,
+                    author_id: req.user.id
+                })
+                .then(() => {
+                    res.redirect(`/community/${community.name}`);
+                })
+                .catch(() => {
+                    res.redirect("/createTopic");
+                });
+        })
+        .catch(() => {
+            res.redirect("back");
+        })
 });
 
 module.exports = router;

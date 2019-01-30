@@ -1,4 +1,4 @@
-<div class="card" id="topicCard">
+<div class="card topicCard">
     <div class="row m-0 p-0">
         <!-- Card Content -->
         <div class="col-11 m-0 p-0">
@@ -6,31 +6,56 @@
                 <div class="row">
                     <div class="col">
                         <a href="#">
-                            <h5 class="card-title m-0 p-0">Topic Title</h5>
+                            <h5 class="card-title m-0 p-0">
+                                <a href="/topic/<%= topic.id %>">
+                                    <%= topic.title %>
+                                </a>
+                            </h5>
                         </a>
                     </div>
-                    <div class="col-3">
-                        <% if (pageID == "index") { %>
-                            <a href="#">Community</a>
-                        <% } else if (pageID == "community") { %>
-                            <!-- Blank in community pages -->
-                        <% } %>
-                    </div>
                     <div class="col-1">
-                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#titleID" style="background-color:transparent; border:none" id="collapseTopicText<%= topicID %>">
+                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#titleID" style="background-color:transparent; border:none" id="collapseTopicText">
                             <span class="oi oi-chevron-bottom" style="color:white"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row show" aria-expanded="true" id="titleID">
-                    Posted by User
+                    <div class="col">
+                        <div class="card-text text-left">
+                            Posted by
+                            <%= topic.user.dataValues.username %>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-end pr-3">
+                        <% if (pageType == "index") { %>
+                        <a href="/community/<%= topic.community.dataValues.name %>">
+                            <div class="card-text">
+                                <%= topic.community.dataValues.name.toUpperCase() %>
+                            </div>
+                        </a>
+                        <% } else { %>
+                            <a href="/community/<%= pageTitle %>">
+                            <div class="card-text">
+                                <%= pageTitle.toUpperCase() %>
+                            </div>
+                        </a>
+                        <% } %>
+                    </div>
+                    <!-- <div class="col-1"></div> -->
+                </div>
+                <div class="row show" aria-expanded="true" id="titleID">
+                    <div class="card-text">On
+                        <%= topic.createdAt %>
+                    </div>
                 </div>
             </div>
             <div class="card-body textBody show" aria-expanded="true" id="titleID">
-                <h6 class="card-text">With supporting text below as a natural lead-in to additional content.</h6>
+                <h6 class="card-text">
+                    <%= topic.body %>
+                </h6>
             </div>
             <div class="card-body commentBody show" aria-expanded="true" id="titleID">
-                <a href="#" class="btn btn-primary ml-2">Comment</a>
+                <a href="/topic/<%= topic.id %>" class="btn btn-primary ml-3">Comment</a>
                 <a href="#" class="btn btn-primary">Share</a>
                 <a href="#" class="btn btn-primary">Save</a>
                 <a href="#" class="btn btn-primary">Report</a>

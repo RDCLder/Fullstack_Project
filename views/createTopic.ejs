@@ -38,7 +38,6 @@
             </div>
         </div>
 
-
         <input class="createTopicTab" id="topicText" type="radio" name="tabs" checked=""><label class="createTopicTabLabel"
             for="topicText">Topic Text</label><input class="createTopicTab" id="topicMedia" type="radio" name="tabs"
             name="tabs"><label class="createTopicTabLabel" for="topicMedia">Media</label><input class="createTopicTab"
@@ -47,7 +46,21 @@
 
         <div class="createTopicTabContent">
             <div id="createTopicText">
-                <form action="createTopic" method="POST">
+                <form method="POST">
+                    <!-- Select Community -->
+                    <div class="form-group">
+                        <div id="inputContainer">
+                            <input list="communitySearch" id="communitySearchInput" name="communitySearchInput"
+                                placeholder="Select a Community" />
+                        </div>
+
+                        <datalist id="communitySearch">
+                            <% for (var i = 0; i < communities.length; i ++) { %>
+                            <% var community = communities[i].dataValues %>
+                            <option value="<%= community.name %>" id="<%= community.id %>">
+                                <% } %>
+                        </datalist>
+                    </div>
                     <div class="form-group">
                         <label for="topicTextTitle">Title</label>
                         <input type="text" class="form-control" id="topicTextTitle" name="title" placeholder="Title of your topic.">
@@ -74,7 +87,21 @@
                 </form>
             </div>
             <div id="createTopicMedia">
-                <form action="createTopic" method="POST">
+                <form method="POST">
+                    <!-- Select Community -->
+                    <div class="form-group">
+                        <div id="inputContainer">
+                            <input list="communitySearch" id="communitySearchInput" name="communitySearchInput"
+                                placeholder="Select a Community" />
+                        </div>
+
+                        <datalist id="communitySearch">
+                            <% for (var i = 0; i < communities.length; i ++) { %>
+                            <% var community = communities[i].dataValues %>
+                            <option value="<%= community.name %>" id="<%= community.id %>">
+                                <% } %>
+                        </datalist>
+                    </div>
                     <div class="form-group">
                         <label for="topicMediaTitle">Title</label>
                         <input type="text" class="form-control" id="topicMediaTitle" name="title" placeholder="Title of your topic.">
@@ -84,13 +111,27 @@
                             name="body">
                         <label for="fileDrop">Drag your files here or click in this area.</label>
                     </div>
-                    <button class="btn btn-default pull-right">Save Draft</button>
+                    <!-- <button class="btn btn-default pull-right">Save Draft</button> -->
                     <button type="submit" class="btn btn-default pull-right">Discuss</button>
                     <button type="button" class="btn btn-default pull-right"><a href="/">Cancel</a></button>
                 </form>
             </div>
             <div id="createTopicLink">
-                <form action="createTopic" method="POST">
+                <form method="POST">
+                    <!-- Select Community -->
+                    <div class="form-group">
+                        <div id="inputContainer">
+                            <input list="communitySearch" id="communitySearchInput" name="communitySearchInput"
+                                placeholder="Select a Community" />
+                        </div>
+
+                        <datalist id="communitySearch">
+                            <% for (var i = 0; i < communities.length; i ++) { %>
+                            <% var community = communities[i].dataValues %>
+                            <option value="<%= community.name %>" id="<%= community.id %>">
+                                <% } %>
+                        </datalist>
+                    </div>
                     <div class="form-group">
                         <label for="topicLinkTitle">Title</label>
                         <input type="text" class="form-control" id="topicLinkTitle" name="title" placeholder="Title of your topic.">
@@ -100,7 +141,7 @@
                         <textarea type="url" placeholder="URL" class="form-control" id="topicLinkBody" name="body"
                             rows="6"></textarea>
                     </div>
-                    <button class="btn btn-default pull-right">Save Draft</button>
+                    <!-- <button class="btn btn-default pull-right">Save Draft</button> -->
                     <button type="submit" class="btn btn-default pull-right">Discuss</button>
                     <button type="button" class="btn btn-default pull-right"><a href="/">Cancel</a></button>
                 </form>

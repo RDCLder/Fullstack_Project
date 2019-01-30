@@ -26,29 +26,61 @@ router.get("/community/:communityPage", (req, res) => {
         })
         .then(topic => {
             if (topic.length > 0) {
-                console.log(req.isAuthenticated());
                 if (!req.user) {
-                    console.log("NOT AUTHENTICATED IN COMMUNITY!");
                     res.render("community", {
-                        pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
+                        pageTitle: communityPage,
                         pageID: communityPage,
                         pageType: "community",
                         topics: topic,
+                        noTopics: false,
                         isLoggedIn: false
                     });
                 }
-                else if(req.user) {
-                    console.log("AUTHENTICATED IN COMMUNITY!");
+                else if (req.user) {
                     res.render("community", {
-                        pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
+                        pageTitle: communityPage,
                         pageID: communityPage,
                         pageType: "community",
                         topics: topic,
+                        noTopics: false,
                         isLoggedIn: true,
                         user: req.user
                     });
                 }
+            } else {
+                db.community.findAll({ where: { name: communityPage } })
+                    .then(community => {
+                        let topics = {community: community[0]};
+                        // console.log(topics.community.dataValues.description);
+                        if (!req.user) {
+                            res.render("community", {
+                                pageTitle: communityPage,
+                                pageID: communityPage,
+                                pageType: "community",
+                                // topics: [{community: community[0]}],
+                                community: community[0].dataValues,
+                                noTopics: true,
+                                isLoggedIn: false
+                            });
+                        }
+                        else if (req.user) {
+                            res.render("community", {
+                                pageTitle: communityPage,
+                                pageID: communityPage,
+                                pageType: "community",
+                                // topics: [{community: community[0]}],
+                                community: community[0].dataValues,
+                                noTopics: true,
+                                isLoggedIn: true,
+                                user: req.user
+                            });
+                        }
+                    })
+                // res.resdirect("/404");
             }
+        })
+        .catch(() => {
+            res.redirect("/404");
         });
 });
 

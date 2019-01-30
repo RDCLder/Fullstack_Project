@@ -3,28 +3,47 @@ const router = express.Router();
 const db = require("./../models/");
 
 router.get("/", (req, res) => {
-
-    if (!req.user) {
-        // console.log("NOT AUTHENTICATED IN INDEX!");
-        res.render("index", {
-            pageTitle: "Home",
-            pageID: "index",
-            pageType: "index",
-            isLoggedIn: false
+    db.topic
+        .findAll({
+            include: [
+                {
+                    model: db.community,
+                    required: true
+                },
+                {
+                    model: db.user,
+                    required: true
+                }
+            ]
+        })
+        .then(topic => {
+            db.community.findAll({}).then(community => {
+                if (topic.length > 0) {
+                    if (!req.user) {
+                        res.render("index", {
+                            pageTitle: "Home",
+                            pageID: "index",
+                            pageType: "index",
+                            topics: topic,
+                            communities: community,
+                            exploreCommunity: community[Math.floor(Math.random() * community.length)].dataValues.name,
+                            isLoggedIn: false
+                        });
+                    } else {
+                        res.render("index", {
+                            pageTitle: "Home",
+                            pageID: "index",
+                            pageType: "index",
+                            topics: topic,
+                            communities: community,
+                            exploreCommunity: community[Math.floor(Math.random() * community.length)].dataValues.name,
+                            isLoggedIn: true,
+                            user: req.user
+                        });
+                    }
+                }
+            });
         });
-    }
-    else {
-        // console.log("AUTHENTICATED IN INDEX!");
-        var topicID = db.topic.id
-        res.render("index", {
-            pageTitle: "Home",
-            pageID: "index",
-            pageType: "index",
-            isLoggedIn: true,
-            user: req.user,
-            topicID : topicID
-        });
-    }
 });
 
 module.exports = router;
