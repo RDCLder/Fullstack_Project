@@ -32,9 +32,15 @@
             <!-- Login/Register Button -->
             <div class="col-3 justify-content-end navbarCol pr-3">
                 <% if (isLoggedIn == true) { %>
-                <a href="/user/<%= user.username %>">
-                    <%= user.username %>'s Profile
-                </a>
+                <div class="dropdown">
+                    <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="userNavbarDropdown">
+                        <%= user.username %><i class="fas fa-angle-down" style="color: white; padding-left:10px"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" id="userNavbarDropdownList">
+                        <a class="dropdown-item" href="/user/<%= user.username %>">Settings</a>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </div>
                 <% } else if (isLoggedIn == false) { %>
 
                 <button type="button" class="btn btn-primary mr-2 ml-2" id="loginButton">
@@ -52,7 +58,7 @@
 <!-- End of Navbar -->
 
 <!-- Sidebar Button -->
-<button type="button" id="sidebarCollapse" class="btn btn-primary floatButton" id="sidebarButton">
+<button type="button" id="sidebarCollapse" class="btn btn-primary floatButton sidebarButton">
     <i class="fas fa-bars my-float"></i>
 </button>
 <!-- <div class="homeLabel1">
