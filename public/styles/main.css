@@ -722,10 +722,11 @@ input:checked + .userTabsLabel {
 
 @media screen and (max-width: 400px) { 
     .userTabsLabel {padding: 15px 10px;} 
-    h5 {
+    h5, {
         transform: scale(.7)
     }
 }
+
 #userPreferences {
     position: absolute;
     bottom: 0;
@@ -1124,7 +1125,8 @@ input:checked + .createTopicTabLabel {
 }
 
 @media screen and (max-width: 400px) {
-    .createTopicTabLabel {padding: 15px 10px;} 
+    .createTopicTabLabel {padding: 15px 10px;}
+
 }
 
 @media screen and (max-width: 600px){
