@@ -20,7 +20,7 @@ router.get("/user/:username", (req, res) => {
             isLoggedIn: true,
             user: req.user,
             username: username,
-            // createdDate: `${req.user.createAt}`,
+            email: `${req.user.email}`,
         });
     }
 });

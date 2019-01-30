@@ -52,9 +52,13 @@
         <!-- End of Card Content -->
         <!-- Upvote/Downvote Sidebar -->
         <div class="col-1 card-side show" aria-expanded="true" id="topicBody">
+            <% if (isLoggedIn == true) { %>
             <div class="upvote" id=""></div>
+            <% } %>
             <div class="count" id="">1</div>
+            <% if (isLoggedIn == true) { %>
             <div class="downvote" id=""></div>
+            <% } %>
         </div>
         <!-- End of Upvote/Downvote Sidebar -->
     </div>

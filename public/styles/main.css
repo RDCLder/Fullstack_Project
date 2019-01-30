@@ -1,6 +1,8 @@
 body {
-    background-color: whitesmoke;
-    margin:0;
+    background-image: linear-gradient(to right,#C1C8E4, rgb(215, 232, 238));
+    /* background-color: #C1C8E4; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 /* ---------------------------------------------------
@@ -127,12 +129,12 @@ a.article:hover {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: #3A66A7;
+    background-image: linear-gradient(90deg,#8860D0, #84CEEB, #5AB9EA);
     color: white;
     z-index: 2;
 }
 #userNavbarDropdown {
-    background-color: #3A66A7;
+    background-color: transparent;
     color: white;
 }
 #userNavbarDropdownList {
@@ -257,14 +259,10 @@ a:focus {
     MAIN CONTENT
 ----------------------------------------------------- */
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
 .container {
     height: auto;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: transparent;
     z-index: 1;
     /* border: solid orange; */
 }
@@ -336,7 +334,7 @@ body {
 
 .card-header {
     color: white; 
-    background-color: #4B8AE5;
+    background-image: linear-gradient(90deg, #5680E9,#C1C8E4);
     /* height: auto; */
     /* min-height: 30%; */
     /* max-height: 40%; */
@@ -839,7 +837,7 @@ input:checked + .userTabsLabel {
     z-index: 1;
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
-    max-width: 100%;
+    min-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
@@ -930,6 +928,7 @@ img.logo {
 }
 .logoNSlogan {
     margin: 0 auto;
+    height: auto;
     width: 30%;
     height: auto;
     text-align: center;
@@ -1148,6 +1147,7 @@ input:checked + .createTopicTabLabel {
 #openModalDraft{
     background-color: #D0D0D0;
     color:white;
+    display: none
 }
 
 

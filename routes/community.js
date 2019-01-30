@@ -22,7 +22,8 @@ router.get("/community/:communityPage", (req, res) => {
                     model: db.user,
                     required: true
                 }
-            ]
+            ],
+            order: [["createdAt", "DESC"]]
         })
         .then(topic => {
             if (topic.length > 0) {
