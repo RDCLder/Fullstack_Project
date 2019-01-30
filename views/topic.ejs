@@ -23,6 +23,9 @@
 
                 <!-- Comments -->
                 <div class="container-fluid commentContainer">
+                    <% if (isLoggedIn) { %>
+                    <% include partials/cards/submitComment.ejs %>
+                    <% } %>
                     <% for (var i = 0; i < comments.length; i ++) { %>
                     <% var comment = comments[i].dataValues %>
                     <% include partials/cards/comment2.ejs %>
