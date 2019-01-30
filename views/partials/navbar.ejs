@@ -9,9 +9,8 @@
                     <img src="/media/trender.png" alt="Trender Logo" id="trenderLogo">
                 </a>
                 <% if (pageType == "community") { %>
-                <% var communityName = topics[0].dataValues.community.dataValues.name %>
-                <a href="/community/<%= communityName %>">
-                    <%= communityName.toUpperCase() %></a>
+                <a href="/community/<%= pageTitle %>">
+                    <%= pageTitle.toUpperCase() %></a>
                 <% } else if (pageType == "topic") { %>
                 <% var communityName = community.name %>
                 <a href="/community/<%= communityName %>">

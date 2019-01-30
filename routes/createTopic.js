@@ -51,7 +51,10 @@ router.post("/createTopic", (req, res) => {
                 .catch(() => {
                     res.redirect("/createTopic");
                 });
-        });
+        })
+        .catch(() => {
+            res.redirect("back");
+        })
 });
 
 module.exports = router;
