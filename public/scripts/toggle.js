@@ -50,4 +50,7 @@ $(document).ready(() => {
 $('#userNavbarDropdown').click(function() {
     $("i", this).toggleClass("fa-angle-down fa-angle-up");
 });
+
 // End Of Navbar Dropdown //
+
+// Toggle Topic Cards //

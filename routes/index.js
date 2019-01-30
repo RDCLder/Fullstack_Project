@@ -15,12 +15,14 @@ router.get("/", (req, res) => {
     }
     else {
         // console.log("AUTHENTICATED IN INDEX!");
+        var topicID = db.topic.id
         res.render("index", {
             pageTitle: "Home",
             pageID: "index",
             pageType: "index",
             isLoggedIn: true,
-            user: req.user
+            user: req.user,
+            topicID : topicID
         });
     }
 });
