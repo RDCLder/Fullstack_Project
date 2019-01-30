@@ -11,8 +11,18 @@
         <div class="headerOverlay">
             <div class="logoNSlogan">
                 <img src="/media/logoTrans.png" alt="Trender" class="logo">
-                <h6>What comes to your mind ...</h6>
+                <h6>Set tomorrow's trends today.</h6>
             </div>
+            <!-- <div class="row" style="height: 100%; width: 100%; border: solid orange;">
+                <div class="col-4"></div>
+                <div class="col">
+                    <img src="/media/logoTrans.png" alt="Trender" class="logo" style="height: 12vh;">
+                </div>
+                <div class="col m-auto">
+                    <h6>Set tomorrow's trends today.</h6>
+                </div>
+                <div class="col-4"></div>
+            </div> -->
         </div>
         <div class="mediaOverlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -21,7 +31,7 @@
         <div class="footerOverlay"></div>
    </div>
     <div class="container-fluid" style="width: 100%">
-        <div class="col-sm-12 m-0 p-0" style="height:100vh; background-color: #FEFEFE">
+        <div class="col-sm-12 m-0 p-0" style="height:90vh; background-color: #FEFEFE">
             <form class="modal-content animate" action="/login" method="POST" id="modalLogin">
                 <div class="mcontainer">
                     <div class="row">
@@ -35,9 +45,6 @@
                     <div class="row">
                         <label for="password"><b>Password</b></label>
                         <input class="form-control mr-sm-2" type="password" oninvalid="this.setCustomValidity('Please enter a valid password.')" placeholder="Enter Password" name="password" required>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
                     </div>
                     <div class="row">
                         <button class="btn btn-light" type="submit" id="buttonLogin">Login</button>

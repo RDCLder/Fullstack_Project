@@ -807,7 +807,7 @@ input:checked + .userTabsLabel {
     left: 0px; /* fixed to left. Replace it by right if you want.*/
     min-width: 100%;
     min-height: 100%;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -1018,15 +1018,15 @@ span.forgotusr {
 }
 
 /*   CREATE/DISCUSS TOPIC  */
-#discussTopic form div, #discussTopic form button{
+#createTopic form div, #createTopic form button{
     color: Grey;
 }
 
-#discussTopic {
+#createTopic {
     height: 100%;
 }
 
-.discussTopicTabContent {
+.createTopicTabContent {
     background: #fff;
     color: #373737;
     text-align:left;
@@ -1034,7 +1034,7 @@ span.forgotusr {
     overflow-y: scroll;
 } 
 
-.discussTopicTabContent > div {
+.createTopicTabContent > div {
     display: none;
     padding: 20px 25px 5px;
 }
@@ -1042,10 +1042,10 @@ span.forgotusr {
 #topicText, #topicMedia, #topicLink {
     display: none;
 }
-.discussTopicTab{
+.createTopicTab{
     width: 100%;
 }
-.discussTopicTabLabel {
+.createTopicTabLabel {
     display: inline-block;
     padding: 15px 25px;
     font-weight: 600;
@@ -1057,33 +1057,33 @@ span.forgotusr {
     background-color: white;
 }
 
-#discussTopicText form button:hover {
+#createTopicText form button:hover {
     color: #4B8AE5;
     border-bottom: 1px solid #4B8AE5;
 }
 
-.discussTopicTabLabel:hover {
+.createTopicTabLabel:hover {
     color: #4B8AE5;
     cursor: pointer;
 }
 
-input:checked + .discussTopicTabLabel {
+input:checked + .createTopicTabLabel {
     background: #B1C9EF;
     color: #fff;
 }
 
-#topicText:checked ~ .discussTopicTabContent #discussTopicText,
-#topicMedia:checked ~ .discussTopicTabContent #discussTopicMedia,
-#topicLink:checked ~ .discussTopicTabContent #discussTopicLink
+#topicText:checked ~ .createTopicTabContent #createTopicText,
+#topicMedia:checked ~ .createTopicTabContent #createTopicMedia,
+#topicLink:checked ~ .createTopicTabContent #createTopicLink
 {
   display: block;
 }
 
 @media screen and (max-width: 400px) {
-    .discussTopicTabLabel {padding: 15px 10px;} 
+    .createTopicTabLabel {padding: 15px 10px;} 
 }
 
-#discussTopicHeader{
+#createTopicHeader{
     display: flex;
     justify-content: space-between;
 }
@@ -1147,7 +1147,7 @@ input:checked + .discussTopicTabLabel {
 .box__error {
   display: none;
 } */
-#discussTopicMedia{
+#createTopicMedia{
     height: auto;
     width: auto;
 }
