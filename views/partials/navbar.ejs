@@ -20,7 +20,7 @@
             <!-- Search Bar -->
 
             <!-- Topic Display -->
-            <div class="col-6 justify-content-around navbarCol">
+            <div class="col-6 justify-content-around navbarCol" id="navbarMiddle">
                 <a href="#">HOT</a>
                 <a href="#">NEW</a>
                 <a href="#">TOP</a>
@@ -30,9 +30,9 @@
                 <a href="#">LAST 24 HOURS</a>
             </div>
             <!-- Login/Register Button -->
-            <div class="col-3 justify-content-end navbarCol pr-3">
+            <div class="col justify-content-end navbarCol pr-3">
                 <% if (isLoggedIn == true) { %>
-                <div class="dropdown">
+                <div class="dropdown" id="userNavbarDropdownContainer">
                     <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="userNavbarDropdown">
                         <%= user.username %><i class="fas fa-angle-down" style="color: white; padding-left:10px"></i>
                     </button>
