@@ -628,7 +628,18 @@ Community Page
     background-color: rgba(64, 113, 185,0.4); /* Black w/ opacity */
     padding-top: 0;
 }
-
+#userInformation {
+    height: auto;
+    
+}
+#userInformation div div p{
+    font-weight: bold;
+}
+#userAvatarPlaceholder{
+    padding-top:25%;
+    padding-left: 25%;
+    transform: scale(2);
+}
 .modal#userHome{
     display: initial;
   }
@@ -639,9 +650,13 @@ Community Page
     padding: 2%;
     background-color: #7386D5
 }
-li .topicList div {
+#tpUL{
+    padding: 0;
+}
+li .topicList p{
     width: 100%;
-    margin-top: 2%;
+    margin-top: 5%;
+    font-weight: bold;
 }
 #userMainContent {
     height: 100%;
@@ -655,7 +670,7 @@ li .topicList div {
     color: #373737;
     text-align:left;
     border-top: 1px solid #D0D0D0;
-    height: 92%; 
+    height: auto; 
     overflow-y: scroll;
 }
 
@@ -670,13 +685,16 @@ li .topicList div {
 .userTabs{
     padding: 0;
     margin: 0;
+    display: inline-block;
 }
 .userTabsLabel {
     display: inline-block;
-    padding: 15px 25px;
+    padding: 2% 3%;
     font-weight: 600;
     text-align: center;
     margin: 0;
+    height: auto;
+    width: auto;
 }
 
 .userTabsLabel:hover {
@@ -700,13 +718,22 @@ input:checked + .userTabsLabel {
   display: block;
 }
 
-@media screen and (max-width: 400px) { .userTabsLabel {padding: 15px 10px;} }
-
+@media screen and (max-width: 400px) { 
+    .userTabsLabel {padding: 15px 10px;} 
+    h5 {
+        transform: scale(.7)
+    }
+}
+#userPreferences {
+    position: absolute;
+    bottom: 0;
+}
 #userPreferencesButton {
     background-color: transparent;
     border: 0;
     padding: 0;
-    width: 100%;
+    height: auto;
+    width: auto;
     margin: 0;
     text-align: left
 }
@@ -723,6 +750,9 @@ input:checked + .userTabsLabel {
 /*  Profile Tab */
 #userProfile{
     height: auto;
+}
+#userProfileImages{
+    margin: 1% 0;
 }
 
 /* --------------------------------------------
@@ -805,8 +835,8 @@ input:checked + .userTabsLabel {
     z-index: 1;
     top: 0px;
     left: 0px; /* fixed to left. Replace it by right if you want.*/
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
 }
@@ -872,6 +902,7 @@ img.logo {
     margin: 0 auto;
 }
 #buttonLogin {
+    margin-top: 5%;
     background-color: white;
 }
 #buttonLogin:hover {
@@ -880,14 +911,18 @@ img.logo {
 #modalLogin{
     background-color: #4B8AE5;
     color: white;
-    padding: 20px;
-    top: 20%;
+    padding: 3%;
+    top: 30%;
     left: 0;
     margin: auto;
-    height: 50%;
+    height: auto;
     width: 50%;
     filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
     z-index: 3;
+}
+#loginPasswordLabel, #loginUsernameLabel{
+    margin-top: 2%;
+    margin-bottom: 0;
 }
 .logoNSlogan {
     margin: 0 auto;
@@ -901,7 +936,6 @@ img.logo {
     width: 30%;
 }
 
-
 #modalRegister {
     background-color: white;
     color: #4B8AE5;
@@ -909,14 +943,15 @@ img.logo {
     top: 20%;
     left: 0;
     margin: auto;
-    height: 50%;
+    height: auto;
     width: 50%;
     filter: drop-shadow(0 0 0.2rem #4B8AE5);
     z-index: 3;
 }
-
-
-
+.regParams label {
+    margin-bottom:0;
+    margin-top: 2%
+}
 .loginRow {
     height: auto;
     width: 100%;
@@ -1191,6 +1226,20 @@ input:checked + .createTopicTabLabel {
         opacity: 0;
     }
 }
+@media screen and (max-width: 700px) {
+    #mediaDrgDrpBox {
+        transform: scale(.7);
+        border: 4px dashed #D0D0D0;
+    }
+    #mediaDrgDrpBox input{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        transform: scale(.7);
+        outline: none;
+        opacity: 0;
+    }
+}
 /* CREATE COMMUNITY PAGE */
 
 /* #createCommunityBackground {
@@ -1208,8 +1257,8 @@ input:checked + .createTopicTabLabel {
     padding: 0;
 }
 #createCommunityContainer{
-    margin-top: 30px;
-    height: 80vh;
+    margin-top: 2%;
+    height: 100%;
     width: 70%;
     background-color: white;
     padding: 0;
@@ -1222,9 +1271,9 @@ input:checked + .createTopicTabLabel {
 }
 #createCommunitySide{
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: linear-gradient(#5680E9, #84CEEB, rgb(158, 232, 255), white,#5AB9EA, #C1C8E4, #8860D0);
-    
+    border-radius: 15px 0px 0px 15px;
 }
 #createCommunitySide .row{
     height: 100%;
@@ -1238,7 +1287,7 @@ input:checked + .createTopicTabLabel {
     border-left: 1px solid #D0D0D0;
 }
 #createCommunityNameSection label{
-    padding-top: 10px;
+    padding-top: 1.5%;
 }
 #createCommunityNameSection label, #createCommunityNameSection input {
     width: 100%;
@@ -1249,17 +1298,17 @@ input:checked + .createTopicTabLabel {
 }
 #createCommunityHeader h5 {
     height: 100%;
-    padding: 5px;
-    padding-top: 30px;
+    padding: 1%;
+    padding-top: 2%;
 }
 #createCommunityNameSection p, #createCommunityDescriptionSection p{
-    padding-top: 10px;
+    padding-top: 1.5%;
     font-weight: 400;
     color: rgb(175, 175, 175);
 }
 #createCommunityDescriptionSection label {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 1.5%;
     margin:0;
     
 }
@@ -1268,31 +1317,40 @@ input:checked + .createTopicTabLabel {
 }
 
 #createCommunityTypeSection label span, #createCommunityTypeSection label i, #createCommunityCheckAdultSection div label i {
-    padding-right: 10px;
-    padding-left: 10px
+    padding-right: 2%;
+    padding-left: 2%;
 }
 #createCommunityTypeSection {
-    padding-top: 20px;
+    padding-top: 2%;
 }
 #createCommunityTypeSection label {
     margin: 0;
+    width: 50%;
 }
 #createCommunityTypeSection p {
     margin-left: 55px;
-    padding-bottom: 10px;
+    padding-bottom: 1.5%;
     color: rgb(175, 175, 175);
 }
 #createCommunityTypeSection div {
-    padding-bottom: 10px;
+    padding-bottom: 1.5%;
+}
+#createCommunityCheckAdultSection div label {
+    width: 100%;
+}
+#createCommunityCheckAdultSection div label h6{
+    display: inline-block
 }
 #createCommunityCheckAdultSection div label i {
     /* border-radius: 50%; */
+    display: inline-block;
     color:red;
 }
 #createCommunityButton input, #createCommunityButton button{
-    float: right;
-    margin-top: 40px;
-    margin-right: 20px;
+    /* float: right; */
+    margin-top: 4%;
+    margin-right: 1.5%;
+    margin-bottom: 4%;
     background-color: #4B8AE5;
     color: white;   
 }
@@ -1303,8 +1361,9 @@ input:checked + .createTopicTabLabel {
 #createCommunitySideBackground{
     background: url('../media/logoTrans.png');
     background-size: contain;
-    margin-top: 230px;
+    top: 35%;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    
 }

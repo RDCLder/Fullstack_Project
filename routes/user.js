@@ -18,7 +18,9 @@ router.get("/user/:username", (req, res) => {
             pageID: `profile:${req.user.id}`,
             pageType: "profile",
             isLoggedIn: true,
-            user: req.user
+            user: req.user,
+            username: username,
+            // createdDate: `${req.user.createAt}`,
         });
     }
 });
