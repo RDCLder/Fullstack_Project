@@ -931,14 +931,19 @@ img.logo {
 .logoNSlogan {
     margin: 0 auto;
     width: 30%;
+    height: auto;
     text-align: center;
     vertical-align: middle;
     line-height: 100%;  
     
 }
-
-.logoNSlogan img{
+.logoNSlogan p{
+    height:auto;
+    font-size: 2vh;
+}
+.logoNSlogan a img{
     width: 30%;
+    height: auto;
 }
 
 #modalRegister {
