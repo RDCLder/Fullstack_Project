@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
                     model: db.user,
                     required: true
                 }
-            ]
+            ],
+            order: [["createdAt", "DESC"]]
         })
         .then(topic => {
             db.community.findAll({}).then(community => {
