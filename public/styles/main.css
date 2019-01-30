@@ -286,6 +286,10 @@ body {
     padding: 0;
 }
 
+.mainContent {
+    display: block;
+}
+
 #dashboardCard {
     margin-bottom: 4%;
     margin-left: 5%;
@@ -930,6 +934,7 @@ img.logo {
     text-align: center;
     vertical-align: middle;
     line-height: 100%;  
+    
 }
 
 .logoNSlogan img{
@@ -1116,6 +1121,18 @@ input:checked + .createTopicTabLabel {
 
 @media screen and (max-width: 400px) {
     .createTopicTabLabel {padding: 15px 10px;} 
+}
+
+@media screen and (max-width: 600px){
+    #sidebarCollapse,#sideContent, #searchButton, #homeButton, #navbarMiddle{
+        display: none;
+    }
+    #mainContent {
+        display:block;
+    }
+    #userNavbarDropdownContainer{
+        float:right;
+    }
 }
 
 #createTopicHeader{
