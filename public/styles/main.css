@@ -296,16 +296,16 @@ body {
 
 #dashboardCard {
     margin-bottom: 4%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     border: solid #DDDDDD;
     border-width: thin;
 }
 
 #communityCard {
     margin-bottom: 4%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     border: solid #DDDDDD;
     border-width: thin;
 }
@@ -573,24 +573,24 @@ Community Page
 
 #communityDescription {
     margin-bottom: 4%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     /* border: solid #DDDDDD;
     border-width: thin; */
 }
 
 #communityRules {
     margin-bottom: 4%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     /* border: solid #DDDDDD;
     border-width: thin; */
 }
 
 #communityModerators {
     margin-bottom: 4%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     /* border: solid #DDDDDD;
     border-width: thin; */
 }

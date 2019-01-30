@@ -16,13 +16,12 @@
             <div class="col-1"></div>
 
             <!-- Main Content -->
-            <div class="col-6 m-0" id="mainContent">
+            <div class="col-6 m-0 p-0" id="mainContent">
 
-                <!-- Mock-up Example -->
-                <% include partials/cards/topicText.ejs %>
-                <% include partials/cards/topicLink.ejs %>
-                <% include partials/cards/topicText.ejs %>
-                <% include partials/cards/topicLink.ejs %>
+                <% for (var i = 0; i < topics.length; i ++) { %>
+                    <% var topic = topics[i].dataValues %>
+                    <% include partials/cards/topicText.ejs %>
+                    <% } %>
 
             </div>
             <!-- End of Main Content -->

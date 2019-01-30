@@ -26,11 +26,9 @@ router.get("/community/:communityPage", (req, res) => {
         })
         .then(topic => {
             if (topic.length > 0) {
-                console.log(req.isAuthenticated());
                 if (!req.user) {
-                    console.log("NOT AUTHENTICATED IN COMMUNITY!");
                     res.render("community", {
-                        pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
+                        pageTitle: communityPage,
                         pageID: communityPage,
                         pageType: "community",
                         topics: topic,
@@ -38,9 +36,8 @@ router.get("/community/:communityPage", (req, res) => {
                     });
                 }
                 else if(req.user) {
-                    console.log("AUTHENTICATED IN COMMUNITY!");
                     res.render("community", {
-                        pageTitle: communityPage[0].toUpperCase() + communityPage.slice(1, communityPage.length),
+                        pageTitle: communityPage,
                         pageID: communityPage,
                         pageType: "community",
                         topics: topic,
@@ -48,7 +45,12 @@ router.get("/community/:communityPage", (req, res) => {
                         user: req.user
                     });
                 }
+            } else {
+                res.resdirect("/404");
             }
+        })
+        .catch(() => {
+            res.redirect("/404");
         });
 });
 
