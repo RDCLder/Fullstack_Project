@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+    <div class="container" id="createTopic">
+        <div id="createTopicHeader">
+            <div id="discussTitle" class="row">
+                <h4 style="color: gray;">Discuss a Topic</h4>
+            </div>
+            <div id="discussDraftModal">
+                <button id="openModalDraft" class="btn" data-toggle="modal" data-target="#modalDraft">Draft</button>
+                <div class="modal fade" id="modalDraft" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="modalDraftContent">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Drafts</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="draftItem">draftItem1 Title</div>
+                            <div class="draftItem">draftItem2 Title</div>
+                            <div class="draftItem">draftItem3 Title</div>
+                            <div class="draftItem">draftItem4 Title</div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <input class="createTopicTab" id="topicText" type="radio" name="tabs" checked=""><label class="createTopicTabLabel"
+            for="topicText">Topic Text</label><input class="createTopicTab" id="topicMedia" type="radio" name="tabs"
+            name="tabs"><label class="createTopicTabLabel" for="topicMedia">Media</label><input class="createTopicTab"
+            id="topicLink" type="radio" name="tabs" name="tabs"><label class="createTopicTabLabel" style="border-right:none;"
+            for="topicLink">Link</label>
+
+        <div class="createTopicTabContent">
+            <div id="createTopicText">
+                <form action="createTopic" method="POST">
+                    <div class="form-group">
+                        <label for="topicTextTitle">Title</label>
+                        <input type="text" class="form-control" id="topicTextTitle" name="title" placeholder="Title of your topic.">
+                        <div id="inputContainer">
+                                <input list="communitySearch" id="communitySearchInput" name="communitySearchInput" placeholder="Select a Community" />
+                                <!-- <span class="oi oi-caret-bottom" class="iconDown"></span> -->
+                            </div>
+                
+                            <datalist id="communitySearch">
+                                <% for (var i = 0; i < communities.length; i ++) { %>
+                                <% var community = communities[i].dataValues %>
+                                <option value="<%= community.name %>">
+                                    <% } %>
+                            </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="topicTextBody">Body</label>
+                        <textarea type="text" placeholder="Text(optional)" class="form-control" id="topicTextBody" name="body"
+                            rows="6"></textarea>
+                    </div>
+                    <!-- <button class="btn btn-default pull-right">Save Draft</button> -->
+                    <button type="submit" class="btn btn-default pull-right">Discuss</button>
+                    <button type="button" class="btn btn-default pull-right"><a href="/">Cancel</a></button>
+                </form>
+            </div>
+            <div id="createTopicMedia">
+                <form action="createTopic" method="POST">
+                    <div class="form-group">
+                        <label for="topicMediaTitle">Title</label>
+                        <input type="text" class="form-control" id="topicMediaTitle" name="title" placeholder="Title of your topic.">
+                    </div>
+                    <div class="form-group" id="mediaDrgDrpBox">
+                        <input type="file" id="fileDrop" multiple placeholder="Drag your files here or click in this area."
+                            name="body">
+                        <label for="fileDrop">Drag your files here or click in this area.</label>
+                    </div>
+                    <button class="btn btn-default pull-right">Save Draft</button>
+                    <button type="submit" class="btn btn-default pull-right">Discuss</button>
+                    <button type="button" class="btn btn-default pull-right"><a href="/">Cancel</a></button>
+                </form>
+            </div>
+            <div id="createTopicLink">
+                <form action="createTopic" method="POST">
+                    <div class="form-group">
+                        <label for="topicLinkTitle">Title</label>
+                        <input type="text" class="form-control" id="topicLinkTitle" name="title" placeholder="Title of your topic.">
+                    </div>
+                    <div class="form-group">
+                        <label for="topicLinkBody">Body</label>
+                        <textarea type="url" placeholder="URL" class="form-control" id="topicLinkBody" name="body"
+                            rows="6"></textarea>
+                    </div>
+                    <button class="btn btn-default pull-right">Save Draft</button>
+                    <button type="submit" class="btn btn-default pull-right">Discuss</button>
+                    <button type="button" class="btn btn-default pull-right"><a href="/">Cancel</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
+</body>
+
+</html>

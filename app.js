@@ -16,7 +16,7 @@ app.use(require("./routes/topic"));
 app.use(require("./routes/logout"));
 app.use(require("./routes/authenticate"));
 app.use(require("./routes/user"));
-app.use(require("./routes/discussTopic"));
+app.use(require("./routes/createTopic"));
 app.use(require("./routes/createCommunity"));
 app.use((req, res) => {
     

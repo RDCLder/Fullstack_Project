@@ -44,3 +44,10 @@ $(document).ready(() => {
     });
 });
 // End of Sidebar JS
+
+// Toggle Navbar Dropdown //
+
+$('#userNavbarDropdown').click(function() {
+    $("i", this).toggleClass("fa-angle-down fa-angle-up");
+});
+// End Of Navbar Dropdown //

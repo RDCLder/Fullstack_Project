@@ -16,7 +16,9 @@ router.get("/user/:username", (req, res) => {
         res.render("user", {
             pageTitle: `${req.user.username}'s Profile`,
             pageID: `profile:${req.user.id}`,
-            pageType: "profile"
+            pageType: "profile",
+            isLoggedIn: true,
+            user: req.user
         });
     }
 });
