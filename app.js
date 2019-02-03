@@ -19,8 +19,8 @@ app.use(require("./routes/user"));
 app.use(require("./routes/createTopic"));
 app.use(require("./routes/createCommunity"));
 app.use((req, res) => {
-    
-    if (!req.isAuthenticated()) { 
+
+    if (!req.isAuthenticated()) {
         var isLoggedIn = true;
     }
     else {
@@ -54,6 +54,12 @@ app.use((req, res) => {
 // db.sequelize.drop();
 db.sequelize.sync();
 
-app.listen(3000, ()=>{
-    console.log('listening on port 3000')
-})
+db.sequelize.sync().then(() => {
+    http.createServer(app).listen(app.get('port'), () => {
+        console.log('Express server listening on port ' + app.get('port'));
+    });
+});
+
+// app.listen(3000, () => {
+//     console.log('listening on port 3000')
+// })
