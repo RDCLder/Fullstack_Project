@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 if (!global.hasOwnProperty('db')) {
 	var Sequelize = require('sequelize')
@@ -30,4 +30,4 @@ if (!global.hasOwnProperty('db')) {
 	*/
 }
 
-module.exports = global.db
+module.exports = global.db;
