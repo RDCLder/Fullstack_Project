@@ -1,9 +1,9 @@
 // Dependencies
 const express = require("express");
 const app = express();
-const db = require('./models/')
+const db = require('./models/');
 
-app.set('port', process.env.PORT || 3000);
+// app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
