@@ -1,5 +1,7 @@
 'use strict';
 
+const config = require(__dirname + '/../config/config.json')[env];
+
 if (!global.hasOwnProperty('db')) {
 	var Sequelize = require('sequelize')
 		, sequelize = null
