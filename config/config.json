@@ -7,6 +7,11 @@
     "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "HEROKU_POSTGRESQL_BRONZE_URL"
+    "use_env_variable": "HEROKU_POSTGRESQL_BRONZE_URL",
+    "username": "postgres",
+    "password": null,
+    "database": "trenderDB",
+    "host": "app-trender.herokuapp.com",
+    "dialect": "postgres"
   }
 }
