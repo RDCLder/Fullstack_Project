@@ -6,28 +6,7 @@
 </head>
 <body>
 
-    <!-- <form action="/register" class="modal-content" method="POST">
-        <div class="mcontainer">
-            <div class="row">
-                <h5 style="font-weight:bold"><%= pageTitle %></h3>
-            </div>
-            <div class="row">
-                <label><b>Username</b></label>
-                <input class="form-control mr-sm-2" type="text" name="username" placeholder="Please enter Username." value=""/>
-            </div>
-            <div class="row">
-                <label><b>Password</b></label>
-                <input class="form-control mr-sm-2" type="password" name="password" placeholder="Please enter Password" value=""/>
-            </div>
-            <div class="row">
-                <label><b>Email</b></label>
-                <input class="form-control mr-sm-2" type="text" name="email" placeholder="Please enter Email" value=""/>
-            </div>
-            <div class="row">
-                <input class="btn" style="background-color:royalblue; color:white" type="submit" />
-            </div>
-        </div>
-    </form> -->
+    <!-- Background Overlay Starts -->
     <div class="videoContainer">
         <div class="headerOverlay1">
             <div class="logoNSlogan">
@@ -41,6 +20,9 @@
         </video>
         <div class="footerOverlay1"></div>
     </div>
+    <!-- End of Background Overlay -->
+
+    <!-- Login Modal Starts -->
     <div class="container-fluid" style="width: 100%">
         <div class="col-sm-12 m-0 p-0" style="height:100vh; background-color: #FEFEFE">
             <form class="modal-content" method="POST" id="modalRegister">
@@ -76,7 +58,7 @@
             </form>
         </div>
     </div>
-
+    <!-- End of Login Modal -->
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>
 </body>

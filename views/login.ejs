@@ -6,23 +6,13 @@
 </head>
 
 <body>
-
+    <!-- Background Overlay Starts -->
    <div class="videoContainer">
         <div class="headerOverlay">
             <div class="logoNSlogan">
                 <a href="/"><img src="/media/logoTrans.png" alt="Trender" class="logo"></a>
                 <p>Set tomorrow's trends today.</p>
             </div>
-            <!-- <div class="row" style="height: 100%; width: 100%; border: solid orange;">
-                <div class="col-4"></div>
-                <div class="col">
-                    <img src="/media/logoTrans.png" alt="Trender" class="logo" style="height: 12vh;">
-                </div>
-                <div class="col m-auto">
-                    <h6>Set tomorrow's trends today.</h6>
-                </div>
-                <div class="col-4"></div>
-            </div> -->
         </div>
         <div class="mediaOverlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -30,6 +20,9 @@
         </video>
         <div class="footerOverlay"></div>
    </div>
+    <!-- End of Background Overlay -->
+    
+    <!-- Login Modal Starts -->
     <div class="container-fluid" style="width: 100%">
         <div class="col-sm-12 m-0 p-0" style="height:90vh; background-color: #FEFEFE">
             <form class="modal-content animate" action="/login" method="POST" id="modalLogin">
@@ -53,6 +46,7 @@
             </form>
         </div>
     </div>
+    <!-- End of Login Modal -->
 
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>
