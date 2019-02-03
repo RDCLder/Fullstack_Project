@@ -52,7 +52,7 @@ app.use((req, res) => {
 
 // db.sequelize.migrate;
 // db.sequelize.drop();
-// db.sequelize.sync();
+db.sequelize.sync();
 
 app.listen(3000, ()=>{
     console.log('listening on port 3000')
