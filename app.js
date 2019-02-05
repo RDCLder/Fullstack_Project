@@ -63,7 +63,7 @@ app.use((req, res) => {
 // app.listen(3000, ()=>{
 //     console.log('listening on port 3000')
 // })
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
