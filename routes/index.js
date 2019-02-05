@@ -28,7 +28,8 @@ router.get("/", (req, res) => {
                             topics: topic,
                             communities: community,
                             exploreCommunity: community[Math.floor(Math.random() * community.length)].dataValues.name,
-                            isLoggedIn: false
+                            isLoggedIn: false,
+                            // user: {username: "test"}
                         });
                     } else {
                         res.render("index", {

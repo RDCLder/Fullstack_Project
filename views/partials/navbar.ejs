@@ -31,17 +31,17 @@
             </div>
             <!-- Login/Register Button -->
             <div class="col justify-content-end navbarCol pr-3">
-                <% if (isLoggedIn == true) { %>
+                <!-- <% if (isLoggedIn == true) { %> -->
                 <div class="dropdown" id="userNavbarDropdownContainer">
                     <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="userNavbarDropdown">
-                        <%= user.username %><i class="fas fa-angle-down" style="color: white; padding-left:10px"></i>
+                        <i class="fas fa-angle-down" style="color: white; padding-left:10px"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" id="userNavbarDropdownList">
-                        <a class="dropdown-item" href="/user/<%= user.username %>">Settings</a>
+                        <a class="dropdown-item" href="/user/">Settings</a>
                         <a class="dropdown-item" href="/logout">Logout</a>
                     </div>
                 </div>
-                <% } else if (isLoggedIn == false) { %>
+                <% } if (isLoggedIn == false) { %>
 
                 <button type="button" class="btn btn-primary mr-2 ml-2" id="loginButton">
                     <a href="/login">Login</a></button>
