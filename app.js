@@ -1,9 +1,9 @@
 // Dependencies
 const express = require("express");
 const app = express();
-const db = require('./models/')
+const db = require('./models/');
 
-app.set('port', process.env.PORT || 3000);
+// app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -53,6 +53,12 @@ app.use((req, res) => {
 // db.sequelize.migrate;
 // db.sequelize.drop();
 // db.sequelize.sync();
+
+// db.sequelize.sync().then(function () {
+//     http.createServer(app).listen(app.get('port'), function () {
+//         console.log('Express server listening on port ' + app.get('port'));
+//     });
+// });
 
 app.listen(3000, ()=>{
     console.log('listening on port 3000')
