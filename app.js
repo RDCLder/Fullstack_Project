@@ -60,6 +60,10 @@ app.use((req, res) => {
 //     });
 // });
 
-app.listen(3000, ()=>{
-    console.log('listening on port 3000')
-})
+// app.listen(3000, ()=>{
+//     console.log('listening on port 3000')
+// })
+const port = process.env.PORT || 8000;
+server.listen(port, () => {
+    console.log("App is running on port " + port);
+});
