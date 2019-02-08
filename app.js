@@ -1,12 +1,12 @@
 // Dependencies
 const express = require("express");
 const app = express();
-const db = require('./models/')
+const db = require('./models/');
 
+// app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// app.use(express.static(__dirname + "public"));
 app.use(express.static("public"));
 app.use(require("./routes/login"));
 app.use(require("./routes/register"));
@@ -54,6 +54,16 @@ app.use((req, res) => {
 // db.sequelize.drop();
 // db.sequelize.sync();
 
-app.listen(3000, ()=>{
-    console.log('listening on port 3000')
-})
+// db.sequelize.sync().then(function () {
+//     http.createServer(app).listen(app.get('port'), function () {
+//         console.log('Express server listening on port ' + app.get('port'));
+//     });
+// });
+
+// app.listen(3000, ()=>{
+//     console.log('listening on port 3000')
+// })
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
