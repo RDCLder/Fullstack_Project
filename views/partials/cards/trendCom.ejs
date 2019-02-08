@@ -16,7 +16,7 @@
             <div class="row m-0 p-0">
                 <div class="col-8 m-0 p-0">
                     <% var community = communities[i].dataValues %>
-                    <%= community.name.toUpperCase() %>
+                    <a href="/community/<%= community.name %>"><%= community.name.toUpperCase() %></a>
                     <p>NUMBER FOLLOWERS</p>
                 </div>
                 <div class="col-4 m-0 p-0">
