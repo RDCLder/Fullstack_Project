@@ -1,54 +1,39 @@
-# Trender: A Reddit Clone
+# [Trender (Coming Soon)](https://github.com/RDCLder/Trender) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RDCLder/Trender/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RDCLder/Trender/pulls)
+
+<p align="center">
+  <a href="/"><img width="460" height="300" src="https://github.com/RDCLder/Trender/blob/master/public/media/trender.png"></a>
+</p>
+
+<p align="center">
+  Set tomorrow's trends today
+</p>
+
+## Demo (Coming Soon)
 
 ## General
 
-- Need it addresses
-    - Hackernews is a well-curated community
-    - Reddit's biggest pitfall is the lack of quality content because of the "hivemind" mentality that downvoting encourages.
+Trender is a social media and content aggregator inspired by the popular website, Reddit. Trender provides a platform where users can create communities to discuss specific, related topics and comment, share, and vote on content of interest. Trender's mission is to help bring the online community a little closer and let users set tomorrow's trends today.
 
-- API Calls
-    - Popular Words Data Visualization
-        - [Example](https://io9.gizmodo.com/fascinating-data-visualization-shows-which-words-we-use-1720354752)
-        - Need to find actual API
-    - [Clarifai Computer Vision AI](https://clarifai.com/)
-        - Upload image/video and the AI will classify what the image with a certain probability
-        - Can be used to help users filter by topics similar to results
-            - Maybe tie to first five results
-            - Give user the chance to remove result that is inaccurate
-            - Could this be used to train their model?
+## Features
 
+- **Content Creation**
+  - Create an account and start trending your favorite topics.
+  - Can't find a suitable community?  Create your own!
+- **Content Curation**
+  - Comment on topics of interest.
+  - Vote on your favorite topics and comments.
+- **Open source**
+  - Think we're doing something wrong? Want to create your own version of Trender that's better in every way?
+  - Sounds great!  We'll help you get started by providing all the code right here.
 
-- Database
-    - Sequelize & PostgreSQL
-    - Tables
-        - Subreddits
-        - Topics
-        - Users
-        - Posts
+## Technologies
 
-## Ideas
-
-- Allow for custom subs
-    - Merge together existing subs
-
-- Reactions Instead of Upvote/Downvote
-    - Generic upvote/like/good reaction by default
-    - Add ability to have other reactions enabled
-        - Funny
-        - Informative
-        - Sad/Angry
-    - Downvote/dislike/bad reaction restricted by a certain metric
-        - Default metric could be 500 good/neutral reactions/karma
-        - Other metrics:
-            - Time subscribed to sub
-            - Age of account
-        - Make it customizable by subcreator/moderators
-
-- Inspiration & Guides
-    - [Dribble Designs](https://dribbble.com/RDCLder/buckets/1011227-Reddit-Clone)
-    - [React/Firebase Clone](https://www.sitepoint.com/reddit-clone-react-firebase/)
-    - [Official Reddit Github](https://github.com/reddit/)
-
-## Schedule
-
-- TBD
+- **Frontend**
+  - HTML, CSS, & Bootstrap
+  - JavaScript, jQuery, & EJS
+- **Backend**
+  - Node & Express
+  - PostgreSQL & Sequelize
+- **Other**
+  - Heroku
+  - Git & GitHub
