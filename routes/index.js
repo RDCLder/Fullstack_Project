@@ -43,6 +43,14 @@ router.get("/", (req, res) => {
                             user: req.user
                         });
                     }
+                } else {
+                    res.render("index", {
+                        pageTitle: "Home",
+                        pageID: "index",
+                        pageType: "index",
+                        topics: [],
+                        isLoggedIn: false
+                    });
                 }
             });
         });
