@@ -8,16 +8,32 @@
   Set tomorrow's trends today
 </p>
 
-## General
+## Demo (Coming Soon)
 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/RDCLder/Trender)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/RDCLder/Trender)
+## General
 
 Trender is a social media and content aggregator inspired by the popular website, Reddit. Trender provides a platform where users can create communities to discuss specific, related topics and comment, share, and vote on content of interest. Trender's mission is to help bring the online community a little closer and let users set tomorrow's trends today.
 
 ## Features
 
-- 
-- Open source!
+- **Content Creation**
+  - Create an account and start trending your favorite topics.
+  - Can't find a suitable community?  Create your own!
+- **Content Curation**
+  - Comment on topics of interest.
+  - Vote on your favorite topics and comments.
+- **Open source**
+  - Think we're doing something wrong? Want to create your own version of Trender that's better in every way?
+  - Sounds great!  We'll help you get started by providing all the code right here.
 
-## Demo
+## Technologies
+
+- **Frontend**
+  - HTML, CSS, & Bootstrap
+  - JavaScript, jQuery, & EJS
+- **Backend**
+  - Node & Express
+  - PostgreSQL & Sequelize
+- **Other**
+  - Heroku
+  - Git & GitHub
