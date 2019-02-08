@@ -9,16 +9,15 @@ router.use(flash());
 router.get('/createCommunity',(req, res)=>{
     console.log(req.user)
     if (!req.user) {
-        console.log("NOT AUTHENTICATED IN CREATE COMMUNITY!");
         res.redirect("/login");
     }
     else{
-        console.log("AUTHENTICATED IN CREATE COMMUNITY!");
         res.render('createCommunity',{
             pageTitle: "Create a Community",
             pageID: "createCommunity",
-            isLoggedIn: false,
-            pageType: "createCommunity"
+            isLoggedIn: true,
+            pageType: "createCommunity",
+            user: req.user
         })
     }
 })
