@@ -51,8 +51,8 @@ app.use((req, res) => {
 });
 
 // db.sequelize.migrate;
-db.sequelize.drop();
-// db.sequelize.sync();
+// db.sequelize.drop();
+db.sequelize.sync();
 // db.user.create({
 //     username: 'test',
 //     password: '123456'
