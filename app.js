@@ -53,18 +53,18 @@ app.use((req, res) => {
 // db.sequelize.migrate;
 // db.sequelize.drop();
 // db.sequelize.sync();
-db.user.create({
-    username: 'test',
-    password: '123456'
-})
-db.community.create({
-    name: 'Games',
-    description: 'Gamers only'
-})
-db.topic.create({
-    title: 'APEX Legends',
-    body: 'Solid game. Need more balancing, otherwise the game is smooth.'
-})
+// db.user.create({
+//     username: 'test',
+//     password: '123456'
+// })
+// db.community.create({
+//     name: 'Games',
+//     description: 'Gamers only'
+// })
+// db.topic.create({
+//     title: 'APEX Legends',
+//     body: 'Solid game. Need more balancing, otherwise the game is smooth.'
+// })
 // db.sequelize.sync().then(function () {
 //     http.createServer(app).listen(app.get('port'), function () {
 //         console.log('Express server listening on port ' + app.get('port'));
