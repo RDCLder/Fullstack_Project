@@ -1,7 +1,7 @@
-# [Trender (Coming Soon)](https://github.com/RDCLder/Trender) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RDCLder/Trender/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RDCLder/Trender/pulls)
+# [Trender](https://app-trender.herokuapp.com/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/RDCLder/Trender/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/RDCLder/Trender/pulls)
 
 <p align="center">
-  <a href="/"><img width="460" height="300" src="https://github.com/RDCLder/Trender/blob/master/public/media/trender.png"></a>
+  <a href="https://app-trender.herokuapp.com/"><img width="460" height="300" src="https://github.com/RDCLder/Trender/blob/master/public/media/trender.png"></a>
 </p>
 
 <p align="center">
