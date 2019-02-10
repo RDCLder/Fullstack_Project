@@ -5,9 +5,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title m-0 p-0">
-                            <%= topic.title %>
-                        </h5>
+                        <h5 class="card-title m-0 p-0"><%= topic.title %></h5>
                     </div>
                     <div class="col-1">
                         <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#topicBody" style="background-color:transparent; border:none">
@@ -17,30 +15,18 @@
                 </div>
                 <div class="row show" aria-expanded="true" id="topicBody">
                     <div class="col">
-                        <div class="card-text text-left">
-                            Posted by
-                            <a href="/user/<%= topic.user.dataValues.username %>">
-                                <%= topic.user.dataValues.username %>
-                            </a>
+                        <div class="card-text text-left">Posted by <a href="/user/<%= topic.user.dataValues.username %>"> <%= topic.user.dataValues.username %></a>
                         </div>
                     </div>
                     <div class="col-3 d-flex justify-content-end pr-3">
-                        <!-- <a href="community/<%= community.name %>">
-                            <= community.name[0].toUpperCase() + community.name.slice(1, community.name.length) >
-                        </a> -->
                     </div>
-                    <!-- <div class="col-1"></div> -->
                 </div>
                 <div class="row show" aria-expanded="true" id="topicBody">
-                    <div class="card-text">On
-                        <%= topic.createdAt %>
-                    </div>
+                    <div class="card-text">On <%= topic.createdAt %></div>
                 </div>
             </div>
             <div class="card-body topicBody show" aria-expanded="true" id="topicBody">
-                <h6 class="card-text">
-                    <%= topic.body %>
-                </h6>
+                <h6 class="card-text"><%= topic.body %></h6>
             </div>
             <div class="card-body commentBody show" aria-expanded="true" id="topicBody">
                 <a href="#" class="btn btn-primary ml-3" data-toggle="collapse" data-target=".submitCommentCard1">Comment</a>

@@ -374,6 +374,7 @@ a:focus {
 
 .card-text {
     font-size: 2vh;
+    white-space: pre-line;
 }
 
 .card-side {
@@ -722,7 +723,7 @@ input:checked + .userTabsLabel {
 
 @media screen and (max-width: 400px) { 
     .userTabsLabel {padding: 15px 10px;} 
-    h5, {
+    h5 {
         transform: scale(.7)
     }
 }

@@ -14,39 +14,32 @@
                         </a>
                     </div>
                     <div class="col-1">
-                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#titleID" style="background-color:transparent; border:none"
-                            id="collapseTopicText">
+                        <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#titleID"
+                            style="background-color:transparent; border:none" id="collapseTopicText">
                             <span class="oi oi-chevron-bottom" style="color:white"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row show" aria-expanded="true" id="titleID">
-                    <div class="col">
-                        <div class="card-text text-left">
-                            Posted by
-                            <%= topic.user.dataValues.username %>
-                        </div>
+                    <!-- <div class="col"> -->
+                    <div class="card-text text-left">Posted by <%= topic.user.dataValues.username %>
                     </div>
-                    <div class="col-3 d-flex justify-content-end pr-3">
+                    <!-- </div> -->
+                </div>
+                <div class="row show" aria-expanded="true" id="titleID">
+                    <div class="col">
+                        <div class="card-text">On <%= topic.createdAt %></div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-end">
                         <% if (pageType == "index") { %>
                         <a href="/community/<%= topic.community.dataValues.name %>">
-                            <div class="card-text">
-                                <%= topic.community.dataValues.name.toUpperCase() %>
-                            </div>
+                            <div class="card-text"><%= topic.community.dataValues.name.toUpperCase() %></div>
                         </a>
                         <% } else { %>
                         <a href="/community/<%= pageTitle %>">
-                            <div class="card-text">
-                                <%= pageTitle.toUpperCase() %>
-                            </div>
+                            <div class="card-text"><%= pageTitle.toUpperCase() %></div>
                         </a>
                         <% } %>
-                    </div>
-                    <!-- <div class="col-1"></div> -->
-                </div>
-                <div class="row show" aria-expanded="true" id="titleID">
-                    <div class="card-text">On
-                        <%= topic.createdAt %>
                     </div>
                 </div>
             </div>

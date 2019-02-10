@@ -4,15 +4,11 @@
         <div class="col-11 m-0 p-0">
             <div class="m-0 pl-2 commentHeader2">
                 <div style=>
-                    <a href="/user/<%= comment.user.dataValues.username %>">
-                        <%= comment.user.dataValues.username %>
-                    </a>
+                    <a href="/user/<%= comment.user.dataValues.username %>"><%= comment.user.dataValues.username %></a>
                 </div>
             </div>
             <div class="card-body commentText2 show" aria-expanded="true" id="titleID">
-                <h6 class="card-text">
-                    <%= comment.body %>
-                </h6>
+                <h6 class="card-text"><%= comment.body %></h6>
             </div>
             <div class="card-body commentOptions2 show" aria-expanded="true" id="titleID">
                 <!-- <div class="smallText commentButton2"><a href="#">Reply</a></div>
