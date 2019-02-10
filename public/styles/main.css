@@ -364,20 +364,12 @@ a:focus {
     /* border: solid orange; */
 }
 
-/* .btn-primary {
-    border: solid red;
-} */
-
 .card-title {
     font-size: 18px;
 }
 
 .card-text {
     font-size: 2vh;
-    /* white-space: pre-line; */
-    /* -moz-tab-size:    4;
-    -o-tab-size:      4;
-    tab-size:         4; */
 }
 
 pre {
@@ -392,13 +384,6 @@ textarea {
     -o-tab-size:      4;
     tab-size:         4;
 }
-
-/* Converts tabs to 4 spaces */
-/* pre {
-    -moz-tab-size:    4;
-    -o-tab-size:      4;
-    tab-size:         4;
-} */
 
 .card-side {
     display: flex;
