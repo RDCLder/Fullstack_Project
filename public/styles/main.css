@@ -965,21 +965,24 @@ img.logo {
     margin-bottom: 0;
 }
 .logoNSlogan {
-    margin: 0 auto;
     height: auto;
-    width: 30%;
+    width: 100%;
     height: auto;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     line-height: 100%;  
     
 }
 .logoNSlogan p{
-    height:auto;
-    font-size: 2vh;
+    font-size: 1.2em;
+    display: inline;
+    margin-left: 30%;
+}
+.logoNSlogan a {
+    display: inline;
 }
 .logoNSlogan a img{
-    width: 30%;
+    width: 12%;
     height: auto;
 }
 
