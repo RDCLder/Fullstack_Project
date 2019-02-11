@@ -52,7 +52,6 @@ router.get("/", (req, res) => {
                         }
                         topicTimes.push(ago);
                     }
-                    console.log(topicTimes);
 
                     if (!req.user) {
                         res.render("index", {

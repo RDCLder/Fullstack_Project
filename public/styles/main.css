@@ -487,6 +487,20 @@ p {
     height: auto;
 }
 
+.commentHeader2 {
+    margin-top: 1%;
+    padding-left: 1.5%;
+    width: 100%;
+}
+
+.commentHeader2 > div {
+    display: inline-block;
+}
+
+.commentUsername {
+    font-size: 2.4vh;
+}
+
 /* .comment {
     height: auto;
 } */
@@ -530,13 +544,16 @@ p {
     padding-left: 1.5%;
 }
 
-.commentOptions2 {
+.commentOptions1 {
     background-color: cornflowerblue;
+    margin-left: 3%;
 }
 
 .commentOptions2 {
+    background-color: cornflowerblue;
     margin: 0;
     padding: 1%;
+    padding-left: 1.5%;
     font-size: 1vh;
 }
 

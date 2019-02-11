@@ -2,10 +2,12 @@
     <div class="row m-0 p-0">
         <!-- Card Content -->
         <div class="col-11 m-0 p-0">
-            <div class="mt-1 pl-2 commentHeader2">
-                <div style=>
+            <div class="commentHeader2">
+                <div class="commentUsername">
                     <a href="/user/<%= comment.user.dataValues.username %>"><%= comment.user.dataValues.username %></a>
                 </div>
+                <div class="card-text pl-2 pr-2">&#9679</div>
+                <div class="card-text"><%= commentTime %></div>
             </div>
             <div class="card-body commentText2 show" aria-expanded="true" id="titleID">
                 <!-- <h6 class="card-text"></h6> -->

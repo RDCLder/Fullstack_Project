@@ -16,9 +16,6 @@
             <!-- Topic Main Content-->
             <div class="col-6 m-0 p-0 TopicMain">
                 <!-- Topic Body -->
-                <!-- <div class="row">
-                    
-                </div> -->
                 <% include partials/cards/topicBody.ejs %>
 
                 <!-- Comments -->
@@ -28,6 +25,7 @@
                     <% } %>
                     <% for (var i = 0; i < comments.length; i ++) { %>
                     <% var comment = comments[i].dataValues %>
+                    <% var commentTime = commentTimes[i] %>
                     <% include partials/cards/comment2.ejs %>
                     <% } %>
                 </div>
