@@ -388,11 +388,10 @@ textarea {
 .card-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     background-color: #D9E8FB;
     margin: 0;
     padding: 0;
-    /* border: solid red; */
+    max-height: 100%;
 }
 
 .reactionIcon {
@@ -416,11 +415,18 @@ p {
     /* border: solid orange; */
 }
 
+.voteDiv {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    min-height: 10%;
+}
+
 .upvote {
     display: flex;
     align-items: baseline;
     width: 0;
-    height: 0;
+    height: auto;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
     border-bottom: 2.5vh solid lightslategray;
@@ -433,7 +439,7 @@ p {
     display: flex;
     align-items: initial;
     width: 0;
-    height: 0;
+    height: auto;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
     border-top: 2.5vh solid lightslategray;
@@ -452,9 +458,10 @@ p {
 
 .count {
     font-size: 0.8em;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 1.0em;
-    margin: auto;
+    text-align: center;
+    /* margin: auto; */
 }
 
 /* ---------------------------------------------------
@@ -470,9 +477,9 @@ p {
 
 .topicBody {
     height: auto;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%;
     padding-left: 3%;
-    padding-right: 3%;
+    padding-right: 3%; */
     /* border: solid orange; */
 }
 
@@ -520,6 +527,7 @@ p {
 .commentText2 {
     margin: 0;
     padding: 1%;
+    padding-left: 1.5%;
 }
 
 .commentOptions2 {

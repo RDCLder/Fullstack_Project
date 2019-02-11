@@ -39,8 +39,36 @@ router.get("/topic/:topicID", (req, res) => {
             ]
         })
         .then(comment => {
-            console.log(comment);
             if (comment.length > 0) {
+
+                let timestamp = comment[0].dataValues.topic.dataValues.createdAt;
+                let currentTime = new Date();
+                let timeDifference = Math.abs(currentTime.getTime() - timestamp.getTime());
+
+                if (timeDifference < 60000) {
+                    var ago = "just now";
+                }
+                else if (60000 <= timeDifference && timeDifference < 3600000) {
+                    let diffMinutes = Math.abs(Math.floor(timeDifference / (1000 * 60)));
+                    var ago = `${diffMinutes} minutes ago`;
+                }
+                else if (3600000 <= timeDifference && timeDifference < 86400000) {
+                    let diffHours = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60)));
+                    var ago = `${diffHours} hours ago`;
+                }
+                else if (86400000 <= timeDifference && timeDifference < 2592000000) {
+                    let diffDays = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+                    var ago = `${diffDays} days ago`;
+                }
+                else if (2592000000 <= timeDifference && timeDifference < 77760000000) {
+                    let diffMonths = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30)));
+                    var ago = `${diffMonths} months ago`;
+                }
+                else if (77760000000 <= timeDifference) {
+                    let diffYears = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30 * 12)));
+                    var ago = `${diffYears} years ago`;
+                }
+
                 if (!req.user) {
                     res.render("topic", {
                         // comment[0] is used because all comments will share the same topic & community
@@ -49,6 +77,7 @@ router.get("/topic/:topicID", (req, res) => {
                         pageType: "topic",
                         comments: comment,
                         topic: comment[0].dataValues.topic.dataValues,
+                        topicTime: ago,
                         community:
                             comment[0].dataValues.topic.dataValues.community.dataValues,
                         isLoggedIn: false
@@ -60,6 +89,7 @@ router.get("/topic/:topicID", (req, res) => {
                         pageType: "topic",
                         comments: comment,
                         topic: comment[0].dataValues.topic.dataValues,
+                        topicTime: ago,
                         community:
                             comment[0].dataValues.topic.dataValues.community.dataValues,
                         isLoggedIn: true,
@@ -82,6 +112,35 @@ router.get("/topic/:topicID", (req, res) => {
                         where: { id: topicID }
                     })
                     .then(topic => {
+
+                        let timestamp = topic[0].dataValues.createdAt;
+                        let currentTime = new Date();
+                        let timeDifference = Math.abs(currentTime.getTime() - timestamp.getTime());
+
+                        if (timeDifference < 60000) {
+                            var ago = "just now";
+                        }
+                        else if (60000 <= timeDifference && timeDifference < 3600000) {
+                            let diffMinutes = Math.abs(Math.floor(timeDifference / (1000 * 60)));
+                            var ago = `${diffMinutes} minutes ago`;
+                        }
+                        else if (3600000 <= timeDifference && timeDifference < 86400000) {
+                            let diffHours = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60)));
+                            var ago = `${diffHours} hours ago`;
+                        }
+                        else if (86400000 <= timeDifference && timeDifference < 2592000000) {
+                            let diffDays = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+                            var ago = `${diffDays} days ago`;
+                        }
+                        else if (2592000000 <= timeDifference && timeDifference < 77760000000) {
+                            let diffMonths = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30)));
+                            var ago = `${diffMonths} months ago`;
+                        }
+                        else if (77760000000 <= timeDifference) {
+                            let diffYears = Math.abs(Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30 * 12)));
+                            var ago = `${diffYears} years ago`;
+                        }
+
                         if (!req.user) {
                             res.render("topic", {
                                 pageTitle: topic.title,
@@ -89,6 +148,7 @@ router.get("/topic/:topicID", (req, res) => {
                                 pageType: "topic",
                                 comments: [],
                                 topic: topic[0],
+                                topicTime: ago,
                                 community: topic[0].dataValues.community.dataValues,
                                 isLoggedIn: false
                             });
@@ -99,6 +159,7 @@ router.get("/topic/:topicID", (req, res) => {
                                 pageType: "topic",
                                 comments: [],
                                 topic: topic[0],
+                                topicTime: ago,
                                 community: topic[0].dataValues.community.dataValues,
                                 isLoggedIn: true,
                                 user: req.user

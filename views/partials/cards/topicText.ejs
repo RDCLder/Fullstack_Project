@@ -21,14 +21,13 @@
                     </div>
                 </div>
                 <div class="row show" aria-expanded="true" id="titleID">
-                    <!-- <div class="col"> -->
-                    <div class="card-text text-left">Posted by <%= topic.user.dataValues.username %>
-                    </div>
-                    <!-- </div> -->
-                </div>
-                <div class="row show" aria-expanded="true" id="titleID">
                     <div class="col">
-                        <div class="card-text">On <%= topic.createdAt %></div>
+                        <div class="card-text">Posted by
+                            <a
+                                href="/user/<%= topic.user.dataValues.username %>"><%= topic.user.dataValues.username %></a>
+                        </div>
+                        <div class="card-text pl-2 pr-2">&#9679</div>
+                        <div class="card-text"><%= topicTime %></div>
                     </div>
                     <div class="col-3 d-flex justify-content-end">
                         <% if (pageType == "index") { %>
@@ -45,7 +44,7 @@
             </div>
             <div class="card-body textBody show" aria-expanded="true" id="titleID">
                 <!-- <h6 class="card-text"> -->
-                    <pre><%= topic.body %></pre>
+                <pre><%= topic.body %></pre>
                 <!-- </h6> -->
             </div>
             <div class="card-body commentBody show" aria-expanded="true" id="titleID">
@@ -59,11 +58,23 @@
         <!-- Upvote/Downvote Sidebar -->
         <div class="col-1 card-side show" aria-expanded="true" id="titleID">
             <% if (isLoggedIn == true) { %>
-            <div class="upvote" id=""></div>
+            <div class="voteDiv pt-1">
+                <div class="upvote" id=""></div>
+            </div>
+            <% } else { %>
+            <div class="voteDiv pt-1">
+            </div>
             <% } %>
-            <div class="count" id="">1</div>
+            <div class="voteDiv">
+                <div class="count" id="">1</div>
+            </div>
             <% if (isLoggedIn == true) { %>
-            <div class="downvote" id=""></div>
+            <div class="voteDiv">
+                <div class="downvote" id=""></div>
+            </div>
+            <% } else { %>
+            <div class="voteDiv pt-1">
+            </div>
             <% } %>
         </div>
         <!-- End of Upvote/Downvote Sidebar -->

@@ -10,7 +10,7 @@
     <% include partials/sidebar.ejs %>
     <% include partials/navbar.ejs %>
     
-    <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
         <div class="row m-0 p-0">
 
             <div class="col-1"></div>
@@ -21,6 +21,7 @@
                 <% if (topics.length > 0) { %>
                 <% for (var i = 0; i < topics.length; i ++) { %>
                     <% var topic = topics[i].dataValues %>
+                    <% var topicTime = topicTimes[i] %>
                     <% include partials/cards/topicText.ejs %>
                 <% } %>
                 <% } %>

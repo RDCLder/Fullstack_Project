@@ -20,6 +20,7 @@
                 <% if (noTopics == false) { %>
                 <% for (var i = 0; i < topics.length; i ++) { %>
                 <% var topic = topics[i].dataValues %>
+                <% var topicTime = topicTimes[i] %>
                 <% include partials/cards/topicText.ejs %>
                 <% } %>
                 <% } %>
