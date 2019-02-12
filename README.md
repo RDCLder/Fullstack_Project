@@ -10,6 +10,10 @@
 
 ## Demo (Coming Soon)
 
+<video width="320" height="240" controls>
+  <source src="https://github.com/RDCLder/Trender/blob/master/public/media/TrenderDemo.mp4" type="video/mp4">
+</video>
+
 ## General
 
 Trender is a social media and content aggregator inspired by the popular website, Reddit. Trender provides a platform where users can create communities to discuss specific, related topics and comment, share, and vote on content of interest. Trender's mission is to help bring the online community a little closer and let users set tomorrow's trends today.
