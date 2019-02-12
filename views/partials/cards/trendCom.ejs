@@ -15,7 +15,7 @@
         <div class="card-body communityBody" id="trendingCommunities<%= i %>">
             <div class="row m-0 p-0">
                 <div class="col-8 m-0 p-0">
-                    <% var community = communities[i].dataValues %>
+                    <% var community = communities[communities.length - i - 1].dataValues %>
                     <a href="/community/<%= community.name %>"><%= community.name.toUpperCase() %></a>
                     <p>NUMBER FOLLOWERS</p>
                 </div>
