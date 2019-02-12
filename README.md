@@ -10,9 +10,7 @@
 
 ## Demo (Coming Soon)
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/RDCLder/Trender/blob/master/public/media/TrenderDemo.mp4" type="video/mp4">
-</video>
+[![YouTube Video Thumbnail](https://img.youtube.com/vi/ZZkowl_-5GY/maxresdefault.jpg)](https://youtu.be/ZZkowl_-5GY)
 
 ## General
 
