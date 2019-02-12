@@ -8,7 +8,7 @@
   Set tomorrow's trends today
 </p>
 
-## Demo (Coming Soon)
+## Demo
 
 [![YouTube Video Thumbnail](https://img.youtube.com/vi/ZZkowl_-5GY/maxresdefault.jpg)](https://youtu.be/ZZkowl_-5GY)
 
