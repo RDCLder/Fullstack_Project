@@ -21,7 +21,8 @@ router.get("/community/:communityPage", (req, res) => {
                 where: { community_id: community[0].dataValues.id },
                 include: [
                     { model: db.user, required: true }
-                ]
+                ],
+                order: [["updatedAt", "DESC"]]
             })
                 .then(topics => {
                     console.log(topics);

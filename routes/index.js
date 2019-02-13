@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
                     required: true
                 }
             ],
-            order: [["createdAt", "DESC"]]
+            order: [["updatedAt", "DESC"]]
         })
         .then(topic => {
             results["topics"] = topic;
