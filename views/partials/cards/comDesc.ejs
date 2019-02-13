@@ -29,11 +29,7 @@
                 <div class="row m-0 p-0">
                     <div class="col-12 m-2 p-0" id="communityDescription">
                         <% if (pageType == "community") { %>
-                        <% if (noTopics == false) { %>
-                        <%= topic.community.dataValues.description %>
-                        <% } else { %>
                         <%= community.description %>
-                        <% } %>
                         <% } else if (pageType == "topic") { %>
                         <%= community.description %>
                         <% } %>

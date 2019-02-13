@@ -4,6 +4,9 @@ const db = require("./../models/");
 const timeAgo = require("../functions/timeAgo");
 
 router.get("/", (req, res) => {
+    
+    var results = {};
+
     db.topic
         .findAll({
             include: [
@@ -19,6 +22,7 @@ router.get("/", (req, res) => {
             order: [["createdAt", "DESC"]]
         })
         .then(topic => {
+            results["topics"] = topic;
             db.community.findAll({}).then(community => {
                 if (topic.length > 0) {
 
