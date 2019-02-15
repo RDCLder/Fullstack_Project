@@ -6,47 +6,28 @@
 </head>
 <body>
 
-    <!-- <form action="/register" class="modal-content" method="POST">
-        <div class="mcontainer">
-            <div class="row">
-                <h5 style="font-weight:bold"><%= pageTitle %></h3>
-            </div>
-            <div class="row">
-                <label><b>Username</b></label>
-                <input class="form-control mr-sm-2" type="text" name="username" placeholder="Please enter Username." value=""/>
-            </div>
-            <div class="row">
-                <label><b>Password</b></label>
-                <input class="form-control mr-sm-2" type="password" name="password" placeholder="Please enter Password" value=""/>
-            </div>
-            <div class="row">
-                <label><b>Email</b></label>
-                <input class="form-control mr-sm-2" type="text" name="email" placeholder="Please enter Email" value=""/>
-            </div>
-            <div class="row">
-                <input class="btn" style="background-color:royalblue; color:white" type="submit" />
-            </div>
-        </div>
-    </form> -->
+    <!-- Background Overlay Starts -->
     <div class="videoContainer">
         <div class="headerOverlay1">
             <div class="logoNSlogan">
-                <a href="/"><img src="/media/logoTrans.png" alt="Trender" class="logo"></a>
-                <p>Set tomorrow's trends today.</p>
+                <a href="/"><img src="/media/logoTrans.png" alt="Trender" class="logo"></a><p>Set tomorrow's trends today.</p>
             </div>
         </div>
         <div class="mediaOverlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="/media/loginPage.mp4" type="video/mp4">
+            <source src="/media/background.mp4" type="video/mp4">
         </video>
         <div class="footerOverlay1"></div>
     </div>
+    <!-- End of Background Overlay -->
+
+    <!-- Login Modal Starts -->
     <div class="container-fluid" style="width: 100%">
         <div class="col-sm-12 m-0 p-0" style="height:100vh; background-color: #FEFEFE">
             <form class="modal-content" method="POST" id="modalRegister">
                 <div class="mcontainer">
                     <div class="row">
-                        <h4 style="font-weight:bold;color: #4B8AE5; padding:10px;margin:auto auto;"><%= pageTitle %></h4>
+                        <h4 style="font-weight:bold;color: #4B8AE5; padding:10px;margin:auto auto;"><u><%= pageTitle %></u></h4>
                         <a name="login" id="redirectLogin" class="btn" href="/login" role="button" style="font-weight:bold;font-size: 20px;margin-left: 30%;margin: auto auto;">Login</a>
                     </div>
                     <div class="row">
@@ -69,14 +50,14 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <input class="btn" style="background-color:#4B8AE5; color:white; margin-top: 5%;" type="submit" />
+                            <input class="btn" style="background-color:#4B8AE5; color:white; margin-top: 5%;" type="submit">
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-
+    <!-- End of Login Modal -->
     <% include partials/cdn.ejs %>
     <% include partials/functions.ejs %>
 </body>

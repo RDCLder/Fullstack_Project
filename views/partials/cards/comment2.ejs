@@ -2,17 +2,16 @@
     <div class="row m-0 p-0">
         <!-- Card Content -->
         <div class="col-11 m-0 p-0">
-            <div class="m-0 pl-2 commentHeader2">
-                <div style=>
-                    <a href="/user/<%= comment.user.dataValues.username %>">
-                        <%= comment.user.dataValues.username %>
-                    </a>
+            <div class="commentHeader2">
+                <div class="commentUsername">
+                    <a href="/user/<%= comment.user.dataValues.username %>"><%= comment.user.dataValues.username %></a>
                 </div>
+                <div class="card-text pl-2 pr-2">&#9679</div>
+                <div class="card-text"><%= commentTime %></div>
             </div>
             <div class="card-body commentText2 show" aria-expanded="true" id="titleID">
-                <h6 class="card-text">
-                    <%= comment.body %>
-                </h6>
+                <!-- <h6 class="card-text"></h6> -->
+                <pre><%= comment.body %></pre>
             </div>
             <div class="card-body commentOptions2 show" aria-expanded="true" id="titleID">
                 <!-- <div class="smallText commentButton2"><a href="#">Reply</a></div>
@@ -37,11 +36,23 @@
         <!-- Upvote/Downvote Sidebar -->
         <div class="col-1 card-side show" aria-expanded="true" id="titleID">
             <% if (isLoggedIn == true) { %>
-            <div class="upvote" id=""></div>
+            <div class="voteDiv pt-1">
+                <div class="upvote" id=""></div>
+            </div>
+            <% } else { %>
+            <div class="voteDiv pt-1">
+            </div>
             <% } %>
-            <div class="count" id="">1</div>
+            <div class="voteDiv">
+                <div class="count" id="">1</div>
+            </div>
             <% if (isLoggedIn == true) { %>
-            <div class="downvote" id=""></div>
+            <div class="voteDiv">
+                <div class="downvote" id=""></div>
+            </div>
+            <% } else { %>
+            <div class="voteDiv pt-1">
+            </div>
             <% } %>
         </div>
         <!-- End of Upvote/Downvote Sidebar -->

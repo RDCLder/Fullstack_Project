@@ -352,6 +352,7 @@ a:focus {
     /* height: auto; */
     max-height: 11.5vh;
     overflow: hidden;
+    text-overflow: ellipsis;
     /* border: solid red; */
 }
 
@@ -364,10 +365,6 @@ a:focus {
     /* border: solid orange; */
 }
 
-/* .btn-primary {
-    border: solid red;
-} */
-
 .card-title {
     font-size: 18px;
 }
@@ -376,14 +373,28 @@ a:focus {
     font-size: 2.5vh;
 }
 
+pre {
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+textarea {
+    -moz-tab-size:    4;
+    -o-tab-size:      4;
+    tab-size:         4;
+}
+
 .card-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     background-color: #D9E8FB;
     margin: 0;
     padding: 0;
-    /* border: solid red; */
+    max-height: 100%;
 }
 
 .reactionIcon {
@@ -407,11 +418,18 @@ p {
     /* border: solid orange; */
 }
 
+.voteDiv {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    min-height: 10%;
+}
+
 .upvote {
     display: flex;
     align-items: baseline;
     width: 0;
-    height: 0;
+    height: auto;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
     border-bottom: 2.5vh solid lightslategray;
@@ -424,7 +442,7 @@ p {
     display: flex;
     align-items: initial;
     width: 0;
-    height: 0;
+    height: auto;
     border-left: 2.5vh solid transparent;
     border-right: 2.5vh solid transparent;
     border-top: 2.5vh solid lightslategray;
@@ -443,9 +461,10 @@ p {
 
 .count {
     font-size: 0.8em;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 1.0em;
-    margin: auto;
+    text-align: center;
+    /* margin: auto; */
 }
 
 /* ---------------------------------------------------
@@ -461,14 +480,28 @@ p {
 
 .topicBody {
     height: auto;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%;
     padding-left: 3%;
-    padding-right: 3%;
+    padding-right: 3%; */
     /* border: solid orange; */
 }
 
 .commentContainer {
     height: auto;
+}
+
+.commentHeader2 {
+    margin-top: 1%;
+    padding-left: 1.5%;
+    width: 100%;
+}
+
+.commentHeader2 > div {
+    display: inline-block;
+}
+
+.commentUsername {
+    font-size: 2.4vh;
 }
 
 /* .comment {
@@ -511,15 +544,19 @@ p {
 .commentText2 {
     margin: 0;
     padding: 1%;
+    padding-left: 1.5%;
+}
+
+.commentOptions1 {
+    background-color: cornflowerblue;
+    margin-left: 3%;
 }
 
 .commentOptions2 {
     background-color: cornflowerblue;
-}
-
-.commentOptions2 {
     margin: 0;
     padding: 1%;
+    padding-left: 1.5%;
     font-size: 1vh;
 }
 
@@ -726,6 +763,7 @@ input:checked + .userTabsLabel {
         transform: scale(.7)
     }
 }
+
 #userPreferences {
     position: absolute;
     bottom: 0;
@@ -927,29 +965,32 @@ img.logo {
     margin-bottom: 0;
 }
 .logoNSlogan {
-    margin: 0 auto;
     height: auto;
-    width: 30%;
+    width: 100%;
     height: auto;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     line-height: 100%;  
     
 }
 .logoNSlogan p{
-    height:auto;
-    font-size: 2vh;
+    font-size: 1.2em;
+    display: inline;
+    margin-left: 30%;
+}
+.logoNSlogan a {
+    display: inline;
 }
 .logoNSlogan a img{
-    width: 30%;
+    width: 12%;
     height: auto;
 }
 
 #modalRegister {
     background-color: white;
     color: #4B8AE5;
-    padding: 20px;
-    top: 20%;
+    padding: 3%;
+    top: 25%;
     left: 0;
     margin: auto;
     height: auto;
@@ -1124,7 +1165,8 @@ input:checked + .createTopicTabLabel {
 }
 
 @media screen and (max-width: 400px) {
-    .createTopicTabLabel {padding: 15px 10px;} 
+    .createTopicTabLabel {padding: 15px 10px;}
+
 }
 
 @media screen and (max-width: 600px){

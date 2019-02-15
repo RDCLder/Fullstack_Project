@@ -6,10 +6,14 @@
             <div class="card-header">
                 <h6 class="card-title m-0 p-0">
                     <% if (pageType == "community") { %>
-                    <%= pageTitle.toUpperCase() %> COMMUNITY
+                    <a href="/community/<%= pageTitle %>">
+                        <%= pageTitle.toUpperCase() %> COMMUNITY
+                    </a>
                     <% } else if (pageType == "topic") { %>
-                    <%= community.name.toUpperCase() %> COMMUNITY
-                    <% } %>
+                    <a href="/community/<%= community.name %>">
+                        <%= community.name.toUpperCase() %> COMMUNITY
+                        <% } %>
+                    </a>
                 </h6>
             </div>
             <!-- End of Card Title-->
@@ -19,18 +23,15 @@
                     <div class="col-12 m-0 p-0" id="communityName"></div>
                 </div>
                 <div class="row m-0 p-0">
-                    <div class="col m-0 p-0 d-flex justify-content-center" id="communityFollowers">1000000 Followers</div>
+                    <div class="col m-0 p-0 d-flex justify-content-center" id="communityFollowers">NUMBER FOLLOWERS
+                    </div>
                 </div>
                 <div class="row m-0 p-0">
                     <div class="col-12 m-2 p-0" id="communityDescription">
                         <% if (pageType == "community") { %>
-                            <% if (noTopics == false) { %>   
-                                <%= topic.community.dataValues.description %>
-                            <% } else { %>
-                                <%= community.description %>
-                            <% } %>
+                        <%= community.description %>
                         <% } else if (pageType == "topic") { %>
-                            <%= community.description %>
+                        <%= community.description %>
                         <% } %>
                     </div>
                 </div>

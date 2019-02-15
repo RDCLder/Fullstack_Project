@@ -10,18 +10,21 @@
     <% include partials/sidebar.ejs %>
     <% include partials/navbar.ejs %>
     
-    <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
         <div class="row m-0 p-0">
 
             <div class="col-1"></div>
 
             <!-- Main Content -->
-            <div class="col m-0 p-0 mainContent" id="mainContent">
+            <div class="col-6 m-0 p-0 mainContent" id="mainContent">
 
+                <% if (topics.length > 0) { %>
                 <% for (var i = 0; i < topics.length; i ++) { %>
                     <% var topic = topics[i].dataValues %>
+                    <% var topicTime = topicTimes[i] %>
                     <% include partials/cards/topicText.ejs %>
-                    <% } %>
+                <% } %>
+                <% } %>
 
             </div>
             <!-- End of Main Content -->
@@ -29,8 +32,10 @@
             <!-- Side Content -->
             <div class="col-4 m-0 p-0" id="sideContent">
 
+                <% if (topics.length > 0) { %>
                 <% include partials/cards/dashboard.ejs %>
                 <% include partials/cards/trendCom.ejs %>
+                <% } %>
 
             </div>
             <!-- End of Side Content -->
