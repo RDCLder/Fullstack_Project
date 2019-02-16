@@ -25,7 +25,6 @@ router.get("/community/:communityPage", (req, res) => {
                 order: [["updatedAt", "DESC"]]
             })
                 .then(topics => {
-                    console.log(topics);
                     let topicTimes = [];
                     for (let i = 0; i < topics.length; i++) {
                         let topicStamp = topics[i].dataValues.createdAt;

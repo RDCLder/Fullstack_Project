@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         "community",
         {
             name:{
-                type: DataTypes.STRING(40),
+                type: DataTypes.STRING(20),
                 allowNull: false,
                 unique: true
             },

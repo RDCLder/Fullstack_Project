@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
         "topic",
         {
             title: DataTypes.STRING(100),
-            body: DataTypes.STRING(10000)
+            body: DataTypes.STRING(10000),
+            type: DataTypes.STRING(5),
         },
         {
             freezeTableName: true

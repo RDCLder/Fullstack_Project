@@ -20,11 +20,11 @@ app.use(require("./routes/createTopic"));
 app.use(require("./routes/createCommunity"));
 app.use((req, res) => {
     
-    if (!req.isAuthenticated()) { 
-        var isLoggedIn = true;
+    if (!req.user) { 
+        var isLoggedIn = false;
     }
     else {
-        var isLoggedIn = false;
+        var isLoggedIn = true;
     }
 
     if (req.accepts("html")) {

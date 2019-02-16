@@ -37,7 +37,8 @@
                         id="userNavbarDropdown">
                         <%= user.username %><i class="fas fa-angle-down" style="color: white; padding-left:10px"></i>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" id="userNavbarDropdownList">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"
+                        id="userNavbarDropdownList">
                         <a class="dropdown-item" href="/user/<%= user.username %>">Settings</a>
                         <a class="dropdown-item" href="/logout">Logout</a>
                     </div>
@@ -57,6 +58,14 @@
 <div class="row" id="top" style="height: 80px;"></div>
 <!-- End of Navbar -->
 
+<!-- Search Button -->
+<a href="#">
+    <button type="button" class="btn btn-primary floatButton" id="searchButton">
+        <i class="fas fa-search my-float"></i>
+    </button>
+</a>
+<!-- End of Search Button -->
+
 <!-- Sidebar Button -->
 <button type="button" id="sidebarCollapse" class="btn btn-primary floatButton sidebarButton">
     <i class="fas fa-bars my-float"></i>
@@ -66,14 +75,6 @@
     <i class="fa fa-play label-arrow"></i>
 </div> -->
 <!-- End of Sidebar Button -->
-
-<!-- Search Button -->
-<a href="#">
-    <button type="button" class="btn btn-primary floatButton" id="searchButton">
-        <i class="fas fa-search my-float"></i>
-    </button>
-</a>
-<!-- End of Search Button -->
 
 <!-- Home Button -->
 <a href="#top">

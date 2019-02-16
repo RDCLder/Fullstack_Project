@@ -31,28 +31,52 @@ router.get("/createTopic", (req, res) => {
 
 router.use(body_parser.urlencoded({ extended: false }));
 router.post("/createTopic", (req, res) => {
+    let communityName = req.body.communitySearchInput;
     db.community
         .findAll({
             where: { name: req.body.communitySearchInput }
         })
         .then(community => {
             community = community[0].dataValues;
-            console.log(community);
-            db.topic
+            if (Object.keys(req.body).includes("textBody")) {
+                db.topic
                 .create({
                     title: req.body.title,
-                    body: req.body.body,
+                    body: req.body.textBody,
                     community_id: community.id,
-                    author_id: req.user.id
+                    author_id: req.user.id,
+                    type: "text"
                 })
                 .then(() => {
-                    res.redirect(`/community/${community.name}`);
+                    res.redirect(`/community/${communityName}`);
                 })
-                .catch(() => {
-                    res.redirect("/createTopic");
-                });
+            } else if (Object.keys(req.body).includes("mediaBody")) {
+                db.topic
+                .create({
+                    title: req.body.title,
+                    body: req.body.mediaBody,
+                    community_id: community.id,
+                    author_id: req.user.id,
+                    type: "media"
+                })
+                .then(() => {
+                    res.redirect(`/community/${communityName}`);
+                })
+            } else if (Object.keys(req.body).includes("linkBody")) {
+                db.topic
+                .create({
+                    title: req.body.title,
+                    body: req.body.linkBody,
+                    community_id: community.id,
+                    author_id: req.user.id,
+                    type: "link"
+                })
+                .then(() => {
+                    res.redirect(`/community/${communityName}`);
+                })
+            }
         })
-        .catch(() => {
+        .catch((err) => {
             res.redirect("back");
         })
 });
