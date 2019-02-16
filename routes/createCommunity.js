@@ -30,11 +30,10 @@ router.post('/createCommunity',(req,res)=>{
         description: description
     })
     .then(()=>{
-        res.redirect('..');
+        res.redirect(`/community/${name}`);
     })
     .catch(()=>{
-        res.redirect('/createCommunity')
-        // res.redirect('/createCommunity');
+        res.redirect('/createCommunity');
     });
 
 })
