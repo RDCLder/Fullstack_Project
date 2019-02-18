@@ -5,7 +5,13 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
+                        <% if (topic.type == "media" || topic.type == "link") { %>
+                        <a href="<%= topic.body %>" target="_blank">
                         <h5 class="card-title m-0 p-0"><%= topic.title %></h5>
+                        </a>
+                        <% } else { %>
+                        <h5 class="card-title m-0 p-0"><%= topic.title %></h5>
+                        <% } %>
                     </div>
                     <div class="col-1">
                         <button class="collapsible btn m-0 p-0" data-toggle="collapse" href="#topic<%= topic.id %>"
@@ -32,7 +38,9 @@
             </div>
             <% } else if (topic.type == "media") { %>
             <div class="card-body topicBody show" aria-expanded="true" id="topic<%= topic.id %>">
-                <pre><img class="media" src="<%= topic.body %>" alt="<%= topic.body %>"></pre>
+                <a href="<%= topic.body %>" target="_blank">
+                    <pre><img class="media" src="<%= topic.body %>" alt="<%= topic.body %>"></pre>
+                </a>
             </div>
             <% } else if (topic.type == "link") { %>
                 <!-- For Future Use -->
