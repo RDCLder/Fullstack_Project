@@ -8,20 +8,23 @@ const body_parser = require("body-parser");
 // ----------------------------------------------------------------------
 
 function createAndRedirect(req, res, type, community) {
-    db.topic
-    .create({
+    db.topic.create({
         title: req.body.title,
         body: req.body[type],
         community_id: community.id,
         author_id: req.user.id,
         type: type
-    })
-    .then(() => {
-        db.topic.findAll({
-            where: { title: req.body.title }
-        }).then(topic => {
-            let topicID = topic[0].dataValues.id;
-            res.redirect(`/community/${community.name}/${topicID}`);
+    }).then(() => {
+        db.community.update(
+            { updatedAt: new Date() },
+            { where: { id: community.id } }
+        ).then(() => {
+            db.topic.findAll({
+                where: { title: req.body.title }
+            }).then(topic => {
+                let topicID = topic[0].dataValues.id;
+                res.redirect(`/community/${community.name}/${topicID}`);
+            })
         })
     })
 }
@@ -50,20 +53,20 @@ router.get("/createTopic", (req, res) => {
 router.use(body_parser.urlencoded({ extended: false }));
 router.post("/createTopic", (req, res) => {
     let communityName = req.body.communitySearchInput;
-    db.community.findAll({where: { name: req.body.communitySearchInput }})
-    .then(community => {
-        community = community[0].dataValues;
-        if (Object.keys(req.body).includes("text")) {
-            createAndRedirect(req, res, "text", community);
-        } else if (Object.keys(req.body).includes("media")) {
-            createAndRedirect(req, res, "media", community);
-        } else if (Object.keys(req.body).includes("link")) {
-            createAndRedirect(req, res, "link", community);
-        }
-    })
-    .catch(() => {
-        res.redirect("back");
-    })
+    db.community.findAll({ where: { name: req.body.communitySearchInput } })
+        .then(community => {
+            community = community[0].dataValues;
+            if (Object.keys(req.body).includes("text")) {
+                createAndRedirect(req, res, "text", community);
+            } else if (Object.keys(req.body).includes("media")) {
+                createAndRedirect(req, res, "media", community);
+            } else if (Object.keys(req.body).includes("link")) {
+                createAndRedirect(req, res, "link", community);
+            }
+        })
+        .catch(() => {
+            res.redirect("back");
+        })
 });
 
 module.exports = router;
