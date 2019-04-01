@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     const community = sequelize.define(
         "community",
         {
-            name:{
+            name: {
                 type: DataTypes.STRING(20),
                 allowNull: false,
                 unique: true

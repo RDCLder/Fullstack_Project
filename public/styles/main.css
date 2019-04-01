@@ -217,6 +217,7 @@ a:focus {
 }
 
 .floatButton {
+    background-image: linear-gradient(90deg, #8860D0, #5680E9);
     color:#FFF;
 	position:fixed;
 	right: 5vh;

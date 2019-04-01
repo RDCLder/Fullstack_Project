@@ -4,7 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     const comment = sequelize.define(
         "comment",
         {
-            body: DataTypes.STRING(2000)
+            body: {
+                type: DataTypes.STRING(2000),
+                allowNull: false
+            }
         },
         {
             freezeTableName: true
